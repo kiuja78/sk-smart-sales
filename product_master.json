@@ -1,0 +1,976 @@
+{
+  "version": "0.5.0",
+  "updated": "2026-11-01",
+  "products": [
+    {
+      "id": "ice425",
+      "category": "정수기",
+      "subcategory": "얼음정수기",
+      "name": "원코크 플러스 얼음물 정수기",
+      "model": "WPU-IAC425 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "물·얼음 원코크 구조",
+        "얼음 보관 0.94kg (교육자료)",
+        "일일 제빙량 6.3kg (교육자료)",
+        "4단계 정량 출수",
+        "고온수",
+        "스테인리스 직수관",
+        "LED 디스플레이 (교육자료)"
+      ],
+      "attributes": {
+        "얼음": "지원",
+        "온수": "지원",
+        "냉수": "지원",
+        "보관량": "0.94kg (교육)",
+        "일일제빙": "6.3kg (교육)",
+        "특징": "LED 디스플레이 / 제빙 모드"
+      },
+      "fab": [
+        {
+          "f": "물과 얼음을 하나의 코크에서 출수",
+          "a": "컵 이동과 조작을 줄일 수 있음",
+          "b": "아이스 음료를 자주 만드는 고객에게 편리함",
+          "e": "원코크 작동 영상을 확보하여 안내",
+          "status": "교육자료 기반·상담 문구 초안"
+        }
+      ],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "물과 얼음을 자주 함께 사용하는 고객에게 원코크 편의성을 설명. 정확한 판매 코드/색상/관리 유형별 구독 조건은 별도 확인.",
+      "attention": "",
+      "sourceImage": "IMG_5622.jpeg",
+      "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000070085&menuNo=100104",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상) / 공식 SK매직몰 일부 확인",
+      "verified": "공식 일부확인·판매조건 별도",
+      "checkedAt": "2026-11-01",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "ice414",
+      "category": "정수기",
+      "subcategory": "얼음정수기",
+      "name": "원코크 얼음물 정수기",
+      "model": "WPU-IAC414 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "물·얼음 원코크 구조",
+        "얼음 보관 0.94kg (교육자료)",
+        "일일 제빙량 6.3kg (교육자료)",
+        "4단계 정량 출수",
+        "고온수"
+      ],
+      "attributes": {
+        "얼음": "지원",
+        "온수": "지원",
+        "냉수": "지원",
+        "보관량": "0.94kg (교육)",
+        "일일제빙": "6.3kg (교육)",
+        "특징": "원코크"
+      },
+      "fab": [
+        {
+          "f": "물과 얼음이 하나의 출수구에서 나옴",
+          "a": "물과 얼음을 동시에 받을 수 있음",
+          "b": "음료 준비 동작과 시간을 줄이는 데 도움",
+          "e": "실제 출수 영상 등록 필요",
+          "status": "교육자료"
+        },
+        {
+          "f": "고온수 기능",
+          "a": "일반 온수보다 높은 온도로 사용 가능",
+          "b": "따뜻한 음료나 즉석식품 준비에 활용",
+          "e": "정확한 온도·모델 사양 검증 필요",
+          "status": "교육자료·세부 검증"
+        }
+      ],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "단종 표기 제품: 기존 고객과 과거 라인업 비교 참고 전용. 새 구독 추천 전 판매 여부 반드시 확인.",
+      "attention": "2026년 11월 가격표에서 [단종] 표기. 추천 대상 제외, 과거 비교 참고용.",
+      "sourceImage": "IMG_5622.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "11월 가격표 단종 표시·현재 판매 확인 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "water115",
+      "category": "정수기",
+      "subcategory": "직수정수기",
+      "name": "초소형 플러스 직수 정수기",
+      "model": "WPU-JAC115 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "고온수",
+        "10mL 섬세 출수 (교육)",
+        "스테인리스 직수관",
+        "UV 코크 케어",
+        "IoT 기능 (교육자료)",
+        "무빙코크 (공식 일부모델)"
+      ],
+      "attributes": {
+        "얼음": "미지원",
+        "온수": "지원",
+        "냉수": "지원",
+        "출수": "4단계 정량·10mL (교육)",
+        "특징": "IoT / 무빙코크"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "복잡한 기능이 필요하고 주방 공간이 좁은 고객에게 비교용. 세부 사양은 판매 색상·구성별 확인.",
+      "attention": "",
+      "sourceImage": "IMG_5623.jpeg",
+      "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069985",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상) / 공식 SK매직몰 일부 확인",
+      "verified": "공식 일부확인·판매조건 별도",
+      "checkedAt": "2026-11-01",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "water104",
+      "category": "정수기",
+      "subcategory": "직수정수기",
+      "name": "초소형 직수 정수기",
+      "model": "WPU-JAC104 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "고온수",
+        "10mL 섬세 출수 (교육)",
+        "상단 디스플레이 (교육)",
+        "IoT (교육자료)"
+      ],
+      "attributes": {
+        "얼음": "미지원",
+        "온수": "지원",
+        "냉수": "지원",
+        "출수": "4단계 정량·10mL (교육)",
+        "특징": "상단 디스플레이"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "초소형 라인업 비교용. 색상별/관리방식별 모델코드 검증 필요.",
+      "attention": "",
+      "sourceImage": "IMG_5623.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "교육자료 참고·검증 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "water125",
+      "category": "정수기",
+      "subcategory": "직수정수기",
+      "name": "초소형 라이트 직수 정수기",
+      "model": "WPU-JAC125 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "고온수",
+        "스테인리스 직수관",
+        "UV 코크 자동살균",
+        "에너지소비효율 1등급 (공식)"
+      ],
+      "attributes": {
+        "얼음": "미지원",
+        "온수": "지원",
+        "냉수": "지원",
+        "출수": "4단계 정량 (교육)",
+        "특징": "슬림·라이트"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "비교적 간결한 기능 구성을 선호하는 고객에게 설명할 모델.",
+      "attention": "",
+      "sourceImage": "IMG_5623.jpeg",
+      "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069526&menuNo=",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상) / 공식 SK매직몰 일부 확인",
+      "verified": "공식 일부확인·판매조건 별도",
+      "checkedAt": "2026-11-01",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "water103",
+      "category": "정수기",
+      "subcategory": "직수정수기",
+      "name": "스스로 플러스 직수 정수기",
+      "model": "WPU-JAC103 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "고온수 (교육)",
+        "4단계 정량 (교육)",
+        "UV 코크 케어 (교육)"
+      ],
+      "attributes": {
+        "얼음": "미지원",
+        "온수": "지원 (교육)",
+        "냉수": "지원 (교육)",
+        "출수": "4단계 정량 (교육)",
+        "특징": "스스로 플러스"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "직수정수기 비교 후보. 상세 스펙 공식 검증 필요.",
+      "attention": "",
+      "sourceImage": "IMG_5623.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "교육자료 참고·검증 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "waterpbc",
+      "category": "정수기",
+      "subcategory": "직수정수기",
+      "name": "뉴미니 정수기",
+      "model": "WPU-PBC204 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "정수 전용 (교육)",
+        "4단계 정량 (교육)"
+      ],
+      "attributes": {
+        "얼음": "미지원",
+        "온수": "미지원",
+        "냉수": "미지원",
+        "출수": "4단계 정량 (교육)",
+        "특징": "정수 전용"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "온·냉수가 필요 없는 고객에게 설명하는 후보.",
+      "attention": "",
+      "sourceImage": "IMG_5623.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "교육자료 참고·검증 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "watergbc",
+      "category": "정수기",
+      "subcategory": "직수정수기",
+      "name": "에코 미니 정수기",
+      "model": "WPU-GBC102 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "정수 전용 (교육)",
+        "다이얼 수압 조절 (교육)",
+        "슬림 폭 9.4cm (교육)"
+      ],
+      "attributes": {
+        "얼음": "미지원",
+        "온수": "미지원",
+        "냉수": "미지원",
+        "출수": "확인 필요",
+        "특징": "슬림 9.4cm (교육)"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "최소 공간과 단순한 정수 기능에 집중하는 고객에게 비교.",
+      "attention": "",
+      "sourceImage": "IMG_5623.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "교육자료 참고·검증 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "bidet51",
+      "category": "비데",
+      "subcategory": "비데",
+      "name": "올클린 케어 비데",
+      "model": "BID-S51D 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "순간온수 방식 (교육)",
+        "노즐 위생 케어 (교육)",
+        "IPX5 표기 (교육)"
+      ],
+      "attributes": {
+        "온수": "순간온수 (교육)",
+        "방수": "IPX5 (교육)",
+        "관리": "확인 필요",
+        "특징": "올클린 케어"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "비데 위생관리와 노즐 구조를 중심으로 비교. 교육표와 공식몰 모델별 스펙이 다를 수 있어 정확한 판매코드 확인.",
+      "attention": "",
+      "sourceImage": "IMG_5616.jpeg",
+      "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069623",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상) / 공식 SK매직몰 일부 확인",
+      "verified": "판매코드별 공식 재검증 필요",
+      "checkedAt": "2026-11-01",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "bidet17",
+      "category": "비데",
+      "subcategory": "비데",
+      "name": "풀스텐 케어 비데",
+      "model": "BID-S17D 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "연속온수 (교육)",
+        "IPX6 (교육)",
+        "원터치 교체 필터 (교육)"
+      ],
+      "attributes": {
+        "온수": "연속온수 (교육)",
+        "방수": "IPX6 (교육)",
+        "관리": "확인 필요",
+        "특징": "풀스텐 케어"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "노즐·위생 관리 중심 비교 후보.",
+      "attention": "",
+      "sourceImage": "IMG_5616.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "교육자료 참고·검증 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "bidetf17",
+      "category": "비데",
+      "subcategory": "비데",
+      "name": "풀스텐 스파 비데",
+      "model": "BID-F17D 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "연속온수 (교육)",
+        "IPX6 (교육)",
+        "원터치 교체 필터 (교육)"
+      ],
+      "attributes": {
+        "온수": "연속온수 (교육)",
+        "방수": "IPX6 (교육)",
+        "관리": "확인 필요",
+        "특징": "풀스텐 스파"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "풀스텐 케어와 모델별 기능 차이 검증 필요.",
+      "attention": "",
+      "sourceImage": "IMG_5616.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "교육자료 참고·검증 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "bidet96",
+      "category": "비데",
+      "subcategory": "비데",
+      "name": "파워업 비데 (저수압용)",
+      "model": "BID-096P 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "저수압용 (교육)",
+        "IPX4 (교육)",
+        "연속온수 (교육)"
+      ],
+      "attributes": {
+        "온수": "연속온수 (교육)",
+        "방수": "IPX4 (교육)",
+        "관리": "확인 필요",
+        "특징": "저수압용"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "저수압 환경 상담용 후보. 설치 가능 조건 반드시 현장 확인.",
+      "attention": "",
+      "sourceImage": "IMG_5616.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "교육자료 참고·검증 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "air22pet",
+      "category": "공기청정기",
+      "subcategory": "공기청정기",
+      "name": "디아트 펫 공기청정기",
+      "model": "ACL-22P1C 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "360° 흡입 (교육)",
+        "바닥 흡입 (교육)",
+        "분리형 그릴·팬 (교육)",
+        "반려동물 관련 필터 (교육)",
+        "22평형 (공식)"
+      ],
+      "attributes": {
+        "면적": "22평형 (공식)",
+        "흡입": "360° + 바닥 (교육)",
+        "IoT": "지원 (공식)",
+        "특징": "반려동물 특화"
+      },
+      "fab": [
+        {
+          "f": "360° 방향과 바닥 부근 흡입 구조",
+          "a": "바닥 근처의 먼지·털 유입에 도움",
+          "b": "반려동물과 생활하는 공간의 공기관리 편의",
+          "e": "흡입구 구조 및 필터 실물 사진 등록",
+          "status": "교육자료 근거·효과 단정 주의"
+        },
+        {
+          "f": "그릴과 팬 분리 세척 구조",
+          "a": "오염 부위 접근과 청소가 쉬움",
+          "b": "제품을 직접 관리하는 부담 완화",
+          "e": "실제 분리·세척 시연 영상 등록",
+          "status": "교육자료 근거"
+        }
+      ],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "반려동물 있는 집의 먼지·털 관리 니즈를 확인한 뒤 설명. 의학적 효능 등 과장 표현은 피함.",
+      "attention": "",
+      "sourceImage": "IMG_5615.jpeg",
+      "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000067179",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상) / 공식 SK매직몰 일부 확인",
+      "verified": "공식 일부확인·판매조건 별도",
+      "checkedAt": "2026-11-01",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "air22alarm",
+      "category": "공기청정기",
+      "subcategory": "공기청정기",
+      "name": "디아트 공기청정기 (알러지/펫)",
+      "model": "ACL-22C1 알러지/펫 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "72.6㎡ (교육)",
+        "360°+바닥 흡입 (교육)",
+        "8단계 올인원 필터 (교육)"
+      ],
+      "attributes": {
+        "면적": "72.6㎡ (교육)",
+        "흡입": "360° + 바닥 (교육)",
+        "IoT": "교육자료 표기",
+        "특징": "알러지/펫 필터 옵션"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "필터 종류와 알러지/펫의 차이를 모델코드별로 확인할 것.",
+      "attention": "",
+      "sourceImage": "IMG_5615.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "교육자료 참고·검증 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "air22",
+      "category": "공기청정기",
+      "subcategory": "공기청정기",
+      "name": "디아트 공기청정기",
+      "model": "ACL-22C1/2 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "72.6㎡ (교육)",
+        "360° + 바닥 흡입 (교육)",
+        "8단계 올인원 필터 (교육)"
+      ],
+      "attributes": {
+        "면적": "72.6㎡ (교육)",
+        "흡입": "360° + 바닥 (교육)",
+        "IoT": "교육자료 표기",
+        "특징": "다크그레이/오트밀 베이지"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "색상·모델 세부 구분 확인.",
+      "attention": "",
+      "sourceImage": "IMG_5615.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "교육자료 참고·검증 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "air16",
+      "category": "공기청정기",
+      "subcategory": "공기청정기",
+      "name": "디아트 공기청정기",
+      "model": "ACL-16C 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "52.8㎡ (교육)",
+        "360° + 바닥 흡입 (교육)"
+      ],
+      "attributes": {
+        "면적": "52.8㎡ (교육)",
+        "흡입": "360° + 바닥 (교육)",
+        "IoT": "교육자료 표기",
+        "특징": "16평형"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "16평형 제품군 비교 후보.",
+      "attention": "",
+      "sourceImage": "IMG_5615.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "교육자료 참고·검증 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "airround",
+      "category": "공기청정기",
+      "subcategory": "공기청정기",
+      "name": "올클린 공기청정기",
+      "model": "ACL-25/20/15C1A 계열",
+      "hero": "",
+      "gallery": [],
+      "features": [
+        "25/20/15평 제품군 (교육)",
+        "360° + 바닥 흡입 (교육)"
+      ],
+      "attributes": {
+        "면적": "82.4/66/49.5㎡ (교육)",
+        "흡입": "360° + 바닥 (교육)",
+        "IoT": "교육자료 표기",
+        "특징": "면적별 3개 모델군"
+      },
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "pitch": "면적별로 독립 모델을 추가 등록해야 정확한 추천이 가능.",
+      "attention": "",
+      "sourceImage": "IMG_5615.jpeg",
+      "officialUrl": "",
+      "sourceLabel": "SK 입문교육 촬영자료 (촬영일 미상)",
+      "verified": "교육자료 참고·검증 필요",
+      "checkedAt": "",
+      "price": null,
+      "priceStatus": "미검증·고객노출 금지",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "mega506",
+      "category": "정수기",
+      "subcategory": "얼음정수기",
+      "name": "MEGA ICE 얼음정수기",
+      "model": "WPU-IAC506 계열",
+      "features": [
+        "얼음·냉수·온수·정수",
+        "스테인리스 직수관",
+        "UV 코크 자동살균",
+        "조리수 연결 가능(공식 제품 사양)"
+      ],
+      "attributes": {
+        "얼음": "지원",
+        "온수": "지원",
+        "냉수": "지원",
+        "폭": "240mm",
+        "깊이": "505mm",
+        "높이": "492mm",
+        "조리수": "가능"
+      },
+      "pitch": "큰 얼음 사용량이나 사용 환경에 따른 추천 후보. 구체 제빙량은 추가 확인 필요.",
+      "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069846",
+      "hero": "",
+      "gallery": [],
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "attention": "",
+      "sourceImage": "",
+      "sourceLabel": "SK매직몰 제품 상세사양 확인 / 2026년 11월 구독료 가격표",
+      "verified": "공식 일부확인·판매조건 별도",
+      "checkedAt": "2026-11-01",
+      "price": null,
+      "priceStatus": "2026년 11월 가격표 조건별 조회",
+      "lastEdited": "2026-11-01"
+    },
+    {
+      "id": "mega606",
+      "category": "정수기",
+      "subcategory": "얼음정수기",
+      "name": "MEGA ICE 얼음정수기 mini",
+      "model": "WPU-IAC606 계열 (WPUIAC606SNW 확인)",
+      "features": [
+        "폭 195mm 슬림한 설치 크기",
+        "11g 라지 / 9g 레귤러 제빙 모드 (공식 상세 이미지)",
+        "냉수·온수·정수·얼음",
+        "약 100℃ 고온수 (공식 상세 이미지)",
+        "스테인리스 직수관",
+        "UV 코크 자동살균 및 UV 안심케어",
+        "4단계 맞춤 출수 / 얼음물",
+        "조리수 연결 불가 (필수 확인)"
+      ],
+      "attributes": {
+        "확인한 제품 코드": "WPUIAC606SNW / 내추럴 화이트 / 방문관리",
+        "가로×깊이×높이": "195 × 435 × 435mm",
+        "무게": "14.4kg",
+        "냉수/온수/정수/얼음": "모두 지원",
+        "제빙 모드": "라지 약 11g · 레귤러 약 9g (제조사 이미지)",
+        "일일 최대 제빙": "라지 약 4.1kg · 레귤러 약 3.8kg (제조사 시험기준)",
+        "고온수": "약 100℃ (제조사 안내)",
+        "스테인리스 직수관": "지원",
+        "UV 코크 자동살균": "지원",
+        "UV 안심케어": "지원",
+        "에너지소비효율": "공식 주요스펙에 1등급 표시 (고지정보 병행 확인)",
+        "IoT 케어": "미지원",
+        "어린이 전용 버튼": "미지원",
+        "무빙 코크": "미지원",
+        "조리수 연결": "불가",
+        "출시일": "2026-06-01 (공식몰 표기)",
+        "설치": "본사 설치기사 배송·설치 (공식몰 안내)"
+      },
+      "pitch": "얼음정수기가 필요하지만 주방 공간은 아끼고 싶은 고객에게 우선 비교 추천. 195mm 폭, 얼음 모드, 약 100℃ 고온수와 위생 기능을 소개하고 조리수 연결 불가 여부를 반드시 함께 안내하세요.",
+      "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069931&menuNo=100104",
+      "hero": "https://static.skmagic.com/image/goods/G000069931/G000069931_2_480x480.png",
+      "gallery": [],
+      "fab": [
+        {
+          "f": "본체 폭 195mm의 슬림한 크기",
+          "a": "주방 상판에서 제품이 차지하는 가로 공간을 줄일 수 있습니다.",
+          "b": "주방이 좁거나 조리 공간을 더 확보하고 싶은 고객에게 유리할 수 있습니다.",
+          "e": "공식 상세 이미지의 195mm 제품 크기 및 주방 연출 사진 확인 / 실제 설치 여유 공간은 현장 확인",
+          "status": "공식 사양 + 상담 문구"
+        },
+        {
+          "f": "라지 약 11g·레귤러 약 9g 얼음 모드",
+          "a": "원하는 얼음 크기와 제빙 특성을 선택할 수 있습니다.",
+          "b": "아이스커피, 음료용 등 사용 목적에 따라 얼음을 선택할 수 있습니다.",
+          "e": "공식 모드 비교 이미지 / 생산량 수치는 제조사 시험기준이며 사용 환경에 따라 달라질 수 있음",
+          "status": "공식 상세 이미지 + 조건 안내"
+        },
+        {
+          "f": "약 100℃ 고온수 기능",
+          "a": "물을 별도 기구로 끓여야 하는 상황을 줄일 수 있습니다.",
+          "b": "따뜻한 음료나 간단한 조리가 필요한 고객에게 편리합니다.",
+          "e": "공식 상세 페이지의 고온수 사용 장면 / 실제 출수 온도는 환경에 따라 차이 가능",
+          "status": "공식 상세 이미지 + 상담 문구"
+        },
+        {
+          "f": "스테인리스 직수관과 UV 코크 자동살균",
+          "a": "제품이 제공하는 위생 관리 기능을 활용할 수 있습니다.",
+          "b": "정수기 물길과 출수구 관리를 중요하게 생각하는 고객에게 설명할 만한 요소입니다.",
+          "e": "공식 주요스펙 표의 스테인리스 직수관·UV코크자동살균 표기 / 모든 유해물질 제거를 보증하는 의미 아님",
+          "status": "공식 주요스펙 + 상담 문구"
+        }
+      ],
+      "benefits": [],
+      "installation": [],
+      "reviews": [
+        {
+          "id": "ext606-a",
+          "title": "얼음 크기 선택이 편리하다는 후기",
+          "author": "김*호",
+          "date": "2026.08.10",
+          "body": "기존 정수기를 메가 아이스 미니로 교체했고, 레귤러·라지 얼음 크기를 선택할 수 있는 점을 만족스럽게 평가했습니다.",
+          "source": "외부 판매처 공개 후기 (SK매직 공식몰 아님)",
+          "sourceUrl": "https://www.skmagic-shop.co.kr/user/product_detail?product_no=202605-1158",
+          "status": "실제 공개 후기 요약 · 원문과 다름",
+          "photos": []
+        },
+        {
+          "id": "ext606-b",
+          "title": "깔끔한 디자인과 설치 과정이 만족스럽다는 후기",
+          "author": "이*희",
+          "date": "2026.08.10",
+          "body": "제품 디자인이 깔끔해 마음에 들었으며, 설치 기사의 친절하고 꼼꼼한 안내를 좋게 평가했습니다. 작성 당시 사용 기간은 길지 않다고 밝혔습니다.",
+          "source": "외부 판매처 공개 후기 (SK매직 공식몰 아님)",
+          "sourceUrl": "https://www.skmagic-shop.co.kr/user/product_detail?product_no=202605-1158",
+          "status": "실제 공개 후기 요약 · 원문과 다름",
+          "photos": []
+        },
+        {
+          "id": "ext606-c",
+          "title": "차·얼음물·온수 활용에 관한 후기",
+          "author": "조*현",
+          "date": "2026.08.10",
+          "body": "여러 얼음정수기를 비교하다가 이 모델을 선택했고, 설치 후 차와 얼음물, 온수를 상황에 따라 사용하는 편리함을 긍정적으로 평가했습니다.",
+          "source": "외부 판매처 공개 후기 (SK매직 공식몰 아님)",
+          "sourceUrl": "https://www.skmagic-shop.co.kr/user/product_detail?product_no=202605-1158",
+          "status": "실제 공개 후기 요약 · 원문과 다름",
+          "photos": []
+        }
+      ],
+      "video": [],
+      "compareNotes": "",
+      "attention": "조리수 연결 및 사용이 불가합니다(공식몰 필수고지). 본체 크기와 별개로 통풍·배관·조작 여유공간은 설치 전 확인. 사이트 가격 및 후기 수는 수시로 변할 수 있어 자동 고정 표시하지 않음. 공식 연출사진은 실제 고객 설치사진이 아님.",
+      "sourceImage": "",
+      "sourceLabel": "SK매직 공식몰 G000069931 / 제조사 제품 사진 및 상세 이미지 / 2026년 11월 구독료 파일",
+      "verified": "공식 일부확인·판매조건 별도",
+      "checkedAt": "2026-11-01",
+      "price": null,
+      "priceStatus": "2026년 11월 가격표 기준 / 계약 전 필수 재확인",
+      "lastEdited": "2026-11-01",
+      "officialPhotos": [
+        {
+          "title": "공식 제품사진 · 사선",
+          "src": "https://static.skmagic.com/image/goods/G000069931/G000069931_2_480x480.png",
+          "description": "내추럴 화이트 / 공식몰 이미지"
+        },
+        {
+          "title": "공식 제품사진 · 정면",
+          "src": "https://static.skmagic.com/image/goods/G000069931/G000069931_4_480x480.png",
+          "description": "전면 디자인 / 공식몰 이미지"
+        },
+        {
+          "title": "공식 제품사진 · 측면",
+          "src": "https://static.skmagic.com/image/goods/G000069931/G000069931_5_480x480.png",
+          "description": "측면·통풍부 / 공식몰 이미지"
+        }
+      ],
+      "officialMedia": [
+        {
+          "title": "제품 소개·주방 연출",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_01_pc.png",
+          "description": "제품과 설치 연출 이미지 (실제 고객 설치사진 아님)",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "폭 19.5cm 공간활용",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_05_pc.png",
+          "description": "협소한 주방 공간 상담용 이미지",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "11g 라지 모드",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_07_pc.png",
+          "description": "얼음 크기 설명",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "스테인리스 직수관",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_09_pc.png",
+          "description": "물 흐름 경로·위생 관련 제조사 설명",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "무드라이팅과 디자인",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_11_pc.png",
+          "description": "인테리어·디자인 상담",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "약 100℃ 고온수",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_13_pc.png",
+          "description": "고온수 기능 설명",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "고온수 실제 사용 연출",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_14_pc.png",
+          "description": "공식 연출사진, 실제 후기 아님",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "얼음 모드별 제빙량",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_23_pc.png",
+          "description": "라지 약 11g / 레귤러 약 9g 안내",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "스테인리스 직수 시스템",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_27_pc.png",
+          "description": "직수 시스템 관련 제조사 상세 이미지",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "3가지 색상·무드라이팅",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_32_pc.png",
+          "description": "실제 판매 색상은 계약 상품 코드별 확인",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "고온수 사용 장면",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_36_pc.png",
+          "description": "공식 연출사진, 실제 후기 아님",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "4단계 맞춤 출수",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_38_pc.png",
+          "description": "출수량 조절 설명",
+          "category": "공식 상세 이미지"
+        },
+        {
+          "title": "4단계 얼음물",
+          "src": "https://static.skmagic.com/image/editor/goods_desc/202605/WPUIAC606S_44_pc.png",
+          "description": "얼음물 출수 기능 안내",
+          "category": "공식 상세 이미지"
+        }
+      ],
+      "officialReviewUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069931&menuNo=100104",
+      "customerReviewStatus": "외부 판매처에 공개된 후기 3건을 출처를 표기하여 요약. 공식 SK매직몰 후기 원문/사진은 직접 수집하지 않음.",
+      "mediaOnlineOnly": true,
+      "reviewApiModel": "WPU-IAC606",
+      "reviewGoodsId": "G000069931"
+    },
+    {
+      "id": "twowater306",
+      "category": "정수기",
+      "subcategory": "직수정수기",
+      "name": "투워터 정수기",
+      "model": "WPU-MAC306 계열",
+      "features": [
+        "냉수·온수·정수",
+        "스테인리스 직수관",
+        "UV 코크 자동살균",
+        "IoT 케어",
+        "조리수 연결 가능"
+      ],
+      "attributes": {
+        "얼음": "미지원",
+        "온수": "지원",
+        "냉수": "지원",
+        "폭": "170mm",
+        "깊이": "480mm",
+        "높이": "360mm",
+        "조리수": "가능"
+      },
+      "pitch": "미네랄워터와 일반 정수 관련 기능에 관심 있는 고객의 비교 후보. 구체 물 기능은 공식 상세페이지 참조.",
+      "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069843",
+      "hero": "",
+      "gallery": [],
+      "fab": [],
+      "benefits": [],
+      "installation": [],
+      "reviews": [],
+      "video": [],
+      "compareNotes": "",
+      "attention": "",
+      "sourceImage": "",
+      "sourceLabel": "SK매직몰 제품 상세사양 확인 / 2026년 11월 구독료 가격표",
+      "verified": "공식 일부확인·판매조건 별도",
+      "checkedAt": "2026-11-01",
+      "price": null,
+      "priceStatus": "2026년 11월 가격표 조건별 조회",
+      "lastEdited": "2026-11-01"
+    }
+  ]
+}

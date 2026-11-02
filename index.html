@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#101e37"><title>SK 스마트 세일즈 | 제품 자료실</title><link rel="stylesheet" href="styles.css?v=074"></head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><div class="brandmark">S<span>✦</span></div><div><strong>SMART SALES</strong><small>제품 자료실 · 공식 이미지 연동</small></div></div>
+    <p class="nav-label">WORKSPACE</p>
+    <button class="nav active" data-view="library"><span>▦</span> 제품 자료실</button>
+    <button class="nav" data-view="compare"><span>⚖</span> 라인업 비교 <b id="compareCount">0</b></button>
+    <button class="nav" data-view="dashboard"><span>◫</span> 자료 등록 현황</button>
+    <p class="nav-label" style="margin-top:30px">MANAGEMENT</p>
+    <button class="nav" data-view="admin"><span>✎</span> 자료 편집 / 백업</button>
+    <div class="sidebar-note"><strong>데이터 검증 원칙</strong><p>교육자료는 참고용입니다. 검증되지 않은 기능·구독료는 고객에게 확정 정보로 안내하지 않습니다.</p><span>기준: 월별 가격표 · v0.7.4</span></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><div class="eyebrow" id="crumb">PRODUCT LIBRARY</div><div class="page-title" id="pageTitle">제품 자료실</div></div><div class="header-actions"><label class="month-selector-label" for="globalMonth"><span>가격 기준월</span><select id="globalMonth" aria-label="가격 기준월"><option value="2026-11">2026년 11월</option></select></label><span class="draft-pill">v0.7.4 · 월별 가격·수수료 통합</span><button class="outline-btn" id="resetView">처음 화면</button></div></header>
+    <section class="screen active" id="libraryView">
+      <div class="hero"><div><span class="hero-kicker">SALES CONTENT HUB</span><h1>설명은 더 선명하게.<br><em>상담은 더 자연스럽게.</em></h1><p>제품 사양과 실제 후기, 월별 구독료와 예상 판매수수료까지 한곳에서 확인하세요.</p><div class="hero-note">기존 모델도 보존 · 월별 가격은 SK매직 제품정보 사이트와 연계</div></div><div class="hero-decor" aria-hidden="true"><div class="deco-card"><span>FEATURE</span><strong>01</strong><p>핵심 기능</p></div><div class="deco-card float"><span>BENEFIT</span><strong>02</strong><p>고객의 가치</p></div><div class="deco-ring"></div></div></div>
+      <div class="stats" id="statsBar"></div>
+      <div class="browse-title"><div><h2>제품 찾아보기</h2><p>제품군을 고른 뒤 원하는 모델을 빠르게 찾을 수 있어요.</p></div><div class="search"><span>⌕</span><input id="searchInput" placeholder="모델명, 코드, 특징 검색" autocomplete="off"></div></div>
+      <div class="chips" id="catChips"></div><div class="chips subchips" id="subChips"></div><div class="result-row"><span id="resultCount"></span><small>제품 카드를 누르면 상세 설명이 열립니다</small></div><div class="product-grid" id="productGrid"></div>
+    </section>
+    <section class="screen" id="compareView"><div class="section-head"><h2>제품 라인업 비교</h2><p>고객이 관심 있는 제품을 최대 3개까지 선택해 핵심 차이를 비교해요.</p></div><div id="compareArea"></div></section>
+    <section class="screen" id="dashboardView"><div class="section-head"><h2>자료 준비 현황</h2><p>정확하고 신뢰할 수 있는 고객 상담자료로 채워갈 준비 목록입니다.</p></div><div id="dashboardArea"></div></section>
+    <section class="screen" id="adminView"><div class="section-head"><h2>자료 편집 및 백업</h2><p>제품정보를 직접 수정하고 백업 파일을 저장할 수 있습니다. 이 기기에서만 변경 내용이 저장됩니다.</p></div><div class="admin-actions"><button class="primary-btn" id="addProduct">+ 제품 추가</button><button class="outline-btn" id="exportJSON">수정 자료 JSON 백업</button><button class="outline-btn" id="importJSON">JSON 불러오기</button><input type="file" id="jsonFile" accept=".json,application/json" hidden></div><div class="warning-box"><strong>공식몰 후기는 페이지 단위로 실시간 요청합니다.</strong><br>Google Apps Script 서버가 공식몰에서 현재 요청한 페이지의 후기 5건만 가져와 표시합니다. 후기 본문과 고객 사진을 제품자료실이나 태블릿에 대량 저장하지 않습니다. 웹 앱 배포 URL은 config.js에 설정해야 합니다.</div><div class="warning-box">⚠ 제품 사진 업로드는 시제품 테스트용으로만 권장합니다. 브라우저 저장 공간이 제한되어 있으므로 중요한 자료는 JSON 파일로 수시로 백업하세요. 공식몰 사진·상세 이미지는 온라인 연결이 필요합니다. 공식몰 후기는 Google Apps Script 배포 URL과 인터넷 연결이 필요하며, PC와 태블릿 간 자동 동기화는 아직 지원하지 않습니다.</div><div id="adminList"></div></section>
+  </main>
+</div>
+<div class="modal-layer" id="detailLayer" aria-hidden="true"><div class="modal-backdrop" id="closeBackdrop"></div><div class="detail-panel" role="dialog" aria-modal="true" aria-label="제품 상세"><button class="close-x" id="closeDetail" aria-label="닫기">✕</button><div id="detailContent"></div></div></div>
+
+<div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+  <div class="image-lightbox-bg" data-lightbox-close></div>
+  <section class="image-lightbox-dialog" role="dialog" aria-modal="true" aria-label="사진 확대 보기">
+    <header class="image-lightbox-header"><div><strong id="lightboxTitle">사진 보기</strong><span id="lightboxCounter">1 / 1</span></div><button type="button" class="image-lightbox-close" data-lightbox-close aria-label="닫기">✕</button></header>
+    <div class="image-lightbox-stage">
+      <button class="image-lightbox-arrow" id="lightboxPrev" type="button" data-lightbox-step="-1" aria-label="이전 사진">❮</button>
+      <img id="lightboxImage" alt="사진 확대" loading="eager">
+      <button class="image-lightbox-arrow" id="lightboxNext" type="button" data-lightbox-step="1" aria-label="다음 사진">❯</button>
+    </div>
+    <p id="lightboxCaption" class="image-lightbox-caption"></p>
+    <div id="lightboxThumbs" class="image-lightbox-thumbs" aria-label="사진 목록"></div>
+  </section>
+</div>
+<div class="calc-layer" id="commissionLayer" aria-hidden="true"><div class="calc-backdrop" data-commission-close></div><section class="calc-dialog" role="dialog" aria-modal="true" aria-labelledby="calcTitle"><header class="calc-header"><div><small>SALES COMMISSION ESTIMATE</small><h2 id="calcTitle">예상 판매수수료</h2><p id="calcContext"></p></div><button type="button" class="calc-close" data-commission-close aria-label="수수료 계산 닫기">✕</button></header><div id="calcBody"></div></section></div><div class="toast" id="toast"></div>
+<script src="data.js?v=074"></script><script src="prices.js?v=072"></script><script src="https://kiuja78.github.io/skmagic-product-info/data.js?v=6.12" onerror="window.SK_PRICE_REMOTE_ERROR=true"></script><script src="official_links.js?v=073"></script>
+<script src="config.js?v=072"></script><script src="app.js?v=074"></script>
+</body></html>
