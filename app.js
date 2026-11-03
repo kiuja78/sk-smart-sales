@@ -48,7 +48,7 @@ function priceRowsForMonth(p){
 }
 function priceTable(p){
  const rows=priceRowsForMonth(p),s=archiveMonth(),prod=archiveProduct(p);
- const source=s&&prod?'연동 가격정보 사이트 월별 요금표':'첨부 2026년 11월 구독료 원본';
+ const source=s&&prod?'SK매직 제품정보 앱 공통 월별 가격자료':'내장된 2026년 11월 참고 가격';
  const guide=`<div class="price-table-tools"><div><strong>월별 구독료 확인</strong><p>${safe(source)} · 금액을 누르면 수수료 계산창이 열립니다.</p></div><div class="price-month-controls"><label>기준월 <select data-price-month aria-label="가격표 기준월">${availableMonths().map(m=>`<option value="${safe(m)}" ${m===selectedMonth?'selected':''}>${safe(m.replace('-','년 '))}월</option>`).join('')}</select></label><span class="price-source-tag">${s&&prod?'온라인 월별 연동':'검증 원본 내장'}</span></div></div>`;
  if(!rows.length){return `${guide}<div class="warning-box">선택한 월에 해당 모델의 계약가격이 확인되지 않았습니다. 다른 기준월을 선택하거나 관리자가 가격표를 추가해 주세요. 임의의 금액은 표시하지 않습니다.</div>`;}
  const cell=(r,k,label)=>{const val=r[k];return typeof val==='number'&&val>0?`<button type="button" class="price-select" data-select-price="${r.idx}" data-price-type="${k}" title="${safe(label)} ${priceKRW(val)} 수수료 계산">${priceKRW(val)}<span>계산 ↗</span></button>`:'<span class="no-rate">—</span>';};
@@ -77,7 +77,7 @@ function showCommission(idx,type){
  const payoutPercent=payout!=null?+(payout*100).toFixed(2):null;
  selectedCommission={p:detail,row:r,amount,type,month:selectedMonth};
  $('#calcContext').textContent=`${detail.name} · ${detail.model} · ${selectedMonth} · ${policyName}`;
- $('#calcBody').innerHTML=`<div class="calc-amount"><span>선택된 월 구독료</span><strong>${priceKRW(amount)}</strong><small>${safe(r.management||'')} · ${safe(r.contract||'')}</small></div><div class="calc-fields">${numericField('계약배수','calcMultiplier',multip, multip==null?'공식 정책값 확인 필요':'월별 정책 반영')}${numericField('이익배수','calcProfit',profit,profit==null?'공식 정책값 확인 필요':'월별 정책 반영')}${numericField('지급률 (%)','calcPayout',payoutPercent,payout==null?'수수료 유형별 정책 확인 필요':'월별 정책 반영')}${numericField('추가 수수료 (원)','calcExtra',0)}</div><div class="calc-result"><span>예상 판매수수료</span><strong id="calcResult">정책값 입력 필요</strong><p id="calcFormula"></p></div><div class="calc-caution">월 구독료 × 계약배수 × 이익배수 × 지급률 + 추가 수수료. 입력된 정책값이 없으면 결과를 임의로 산출하지 않습니다. 실제 지급액은 SK매직 지급정책과 계약 확정 조건이 우선합니다.</div>`;
+ $('#calcBody').innerHTML=`<div class="calc-amount"><span>선택된 월 구독료</span><strong>${priceKRW(amount)}</strong><small>${safe(r.management||'')} · ${safe(r.contract||'')}</small></div><div class="calc-fields">${numericField('계약배수','calcMultiplier',multip, multip==null?'공식 정책값 확인 필요':'월별 정책 반영')}${numericField('이익배수','calcProfit',profit,profit==null?'공식 정책값 확인 필요':'월별 정책 반영')}${numericField('지급률 (%)','calcPayout',payoutPercent,payout==null?'수수료 유형별 정책 확인 필요':'월별 정책 반영')}${numericField('추가 수수료 (원)','calcExtra',0)}</div><div class="calc-result"><span>예상 판매수수료</span><strong id="calcResult">정책값 입력 필요</strong><p id="calcFormula"></p></div><div class="calc-caution">기존 제품정보 앱의 월별 계약배수·수수료 정책값을 참조한 예상액입니다. 스마트세일즈의 계산 화면은 별도 구현이므로 실제 지급 결과는 기준 계산기와 대조가 필요합니다. 입력된 정책값이 없으면 임의로 산출하지 않습니다. 실제 지급액은 SK매직 지급정책과 계약 확정 조건이 우선합니다.</div>`;
  $('#commissionLayer').classList.add('open');$('#commissionLayer').setAttribute('aria-hidden','false');calcCommission();
 }
 function calcCommission(){
@@ -129,7 +129,7 @@ function standardizeProduct(p){
 }
 function save(){try{localStorage.setItem(STORE,JSON.stringify({version:'0.5.0',updated:new Date().toISOString().slice(0,10),products}));return true}catch(e){toast('저장 공간이 부족합니다. JSON으로 백업하고 사진 용량을 줄여주세요.');return false}}
 function toast(message){const el=$('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),3200)}
-function navigate(v){view=v;document.querySelectorAll('.screen').forEach(n=>n.classList.toggle('active',n.id===v+'View'));document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.view===v));const t={library:['PRODUCT LIBRARY','제품 자료실'],compare:['PRODUCT COMPARISON','라인업 비교'],dashboard:['CONTENT STATUS','자료 등록 현황'],admin:['CONTENT MANAGEMENT','자료 편집 / 백업']}[v];$('#crumb').textContent=t[0];$('#pageTitle').textContent=t[1];window.scrollTo(0,0);if(v==='compare')renderCompare();if(v==='dashboard')renderDashboard();if(v==='admin')renderAdmin()}
+function navigate(v){view=v;document.querySelectorAll('.screen').forEach(n=>n.classList.toggle('active',n.id===v+'View'));document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.view===v));const t={library:['제품 찾아보기','제품 설명, 실사용 후기, 월별 가격과 수수료를 한눈에.'],compare:['라인업 비교','제품별 주요 기능을 한눈에 비교하세요.'],dashboard:['자료 등록 현황','준비된 제품자료와 누락 항목을 확인하세요.'],admin:['자료 편집 / 백업','제품 정보 수정과 자료 백업을 관리하세요.']}[v];$('#crumb').textContent='SK MAGIC · '+t[0];$('#pageTitle').textContent='SK 스마트 세일즈 어시스턴트';$('#pageSubtitle').textContent=t[1];window.scrollTo(0,0);if(v==='compare')renderCompare();if(v==='dashboard')renderDashboard();if(v==='admin')renderAdmin()}
 function metrics(){return [products.length,new Set(products.map(p=>p.category)).size,products.filter(p=>p.fab?.length).length,products.filter(p=>p.hero||officialInfo(p).cover).length]}
 function renderStats(){
  const [count,categories,fab,photos]=metrics();
@@ -585,39 +585,35 @@ function importOfficialReviews(file){
 }
 function hash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return (h>>>0).toString(36)}
 // Left navigation can be collapsed on desktop and opened as an overlay on phones.
-const SIDEBAR_PREF='sk_smart_sales_sidebar_collapsed_v076';
-const layout=$('#appLayout'),sidebarToggle=$('#sidebarToggle'),sidebarEdgeToggle=$('#sidebarEdgeToggle'),sidebarScrim=$('#sidebarScrim'),appSidebar=$('#appSidebar');
+const SIDEBAR_PREF='sk_smart_sales_sidebar_collapsed_v079';
+const layout=$('#appLayout'),sidebarToggle=$('#sidebarToggle'),sidebarClose=$('#sidebarClose'),sidebarScrim=$('#sidebarScrim'),appSidebar=$('#appSidebar');
 const mobileSidebar=()=>window.matchMedia('(max-width:900px)').matches;
 function syncSidebar(){
-  const open=mobileSidebar()?layout.classList.contains('mobile-sidebar-open'):!layout.classList.contains('sidebar-collapsed');
-  sidebarToggle.setAttribute('aria-expanded',String(open));
-  sidebarToggle.setAttribute('aria-label',open?'왼쪽 메뉴 접기':'왼쪽 메뉴 펼치기');
-  sidebarToggle.title=open?'메뉴 접기':'메뉴 펼치기';
-  sidebarToggle.querySelector('span').textContent='☰';
-  sidebarEdgeToggle.setAttribute('aria-expanded',String(open));
-  sidebarEdgeToggle.setAttribute('aria-label',open?'왼쪽 메뉴 접기':'왼쪽 메뉴 펼치기');
-  sidebarEdgeToggle.title=open?'메뉴 접기':'메뉴 펼치기';
-  sidebarEdgeToggle.querySelector('span').textContent=open?'‹':'›';
-  appSidebar.inert=!open;
-  appSidebar.setAttribute('aria-hidden',String(!open));
-  sidebarScrim.setAttribute('aria-hidden',String(!open||!mobileSidebar()));
+ const open=mobileSidebar()?layout.classList.contains('mobile-sidebar-open'):!layout.classList.contains('sidebar-collapsed');
+ sidebarToggle.setAttribute('aria-expanded',String(open));
+ sidebarToggle.setAttribute('aria-label',open?'왼쪽 메뉴 접기':'왼쪽 메뉴 펼치기');
+ sidebarToggle.title=open?'메뉴 접기':'메뉴 펼치기';
+ sidebarClose.setAttribute('aria-expanded',String(open));
+ appSidebar.inert=!open;
+ appSidebar.setAttribute('aria-hidden',String(!open));
+ sidebarScrim.setAttribute('aria-hidden',String(!open||!mobileSidebar()));
 }
 function toggleSidebar(force){
-  if(mobileSidebar()){
-    const open=force===undefined?!layout.classList.contains('mobile-sidebar-open'):Boolean(force);
-    if(!open && appSidebar.contains(document.activeElement)) sidebarToggle.focus();
-    layout.classList.toggle('mobile-sidebar-open',open);
-  }else{
-    const collapsed=force===undefined?!layout.classList.contains('sidebar-collapsed'):!Boolean(force);
-    if(collapsed && appSidebar.contains(document.activeElement))sidebarEdgeToggle.focus();
-    layout.classList.toggle('sidebar-collapsed',collapsed);
-    try{localStorage.setItem(SIDEBAR_PREF,collapsed?'1':'0')}catch(e){}
-  }
-  syncSidebar();
+ if(mobileSidebar()){
+  const open=force===undefined?!layout.classList.contains('mobile-sidebar-open'):Boolean(force);
+  if(!open&&appSidebar.contains(document.activeElement))sidebarToggle.focus();
+  layout.classList.toggle('mobile-sidebar-open',open);
+ }else{
+  const collapsed=force===undefined?!layout.classList.contains('sidebar-collapsed'):!Boolean(force);
+  if(collapsed&&appSidebar.contains(document.activeElement))sidebarToggle.focus();
+  layout.classList.toggle('sidebar-collapsed',collapsed);
+  try{localStorage.setItem(SIDEBAR_PREF,collapsed?'1':'0')}catch(e){}
+ }
+ syncSidebar();
 }
 try{layout.classList.toggle('sidebar-collapsed',localStorage.getItem(SIDEBAR_PREF)==='1')}catch(e){}
 sidebarToggle.addEventListener('click',()=>toggleSidebar());
-sidebarEdgeToggle.addEventListener('click',()=>toggleSidebar());
+sidebarClose.addEventListener('click',()=>toggleSidebar(false));
 sidebarScrim.addEventListener('click',()=>toggleSidebar(false));
 window.addEventListener('resize',syncSidebar);
 syncSidebar();
@@ -653,6 +649,7 @@ $('#searchInput').addEventListener('input',e=>{query=e.target.value.trim();rende
 renderLibrary();
 
 renderMonthSelect();
+updatePriceFeedStatus();
 $('#globalMonth')?.addEventListener('change',e=>{
  selectedMonth=e.target.value;
  try{localStorage.setItem(PRICE_MONTH_KEY,selectedMonth)}catch(err){}
@@ -662,5 +659,33 @@ $('#globalMonth')?.addEventListener('change',e=>{
  renderDashboard();
  toast(selectedMonth.replace('-', '년 ')+'월 가격표로 전환했습니다.');
 });
+function updatePriceFeedStatus(){
+ const el=$('#priceFeedStatus');if(!el)return;
+ if(Object.keys(REMOTE_ARCHIVE).length){
+  el.textContent='가격·정책 자료: 기존 SK매직 제품정보 앱과 월별 데이터 공유 · 기준월 선택 가능';
+ }else if(window.SK_PRICE_REMOTE_ERROR){
+  el.textContent='기준 앱 연결 실패 · 현재는 내장 2026년 11월 참고 가격만 사용 중';
+ }else{
+  el.textContent='SK매직 제품정보 앱 월별 자료를 확인하는 중…';
+ }
+}
+// Shared monthly pricing archive from the existing SK Magic product-info app.
+// This independent script can finish after UI render. Reuse one monthly source and refresh views.
+window.addEventListener('sk-remote-pricing-ready',()=>{
+ const archive=window.SK_MONTH_ARCHIVE||{};
+ for(const key of Object.keys(REMOTE_ARCHIVE))delete REMOTE_ARCHIVE[key];
+ Object.assign(REMOTE_ARCHIVE,archive);
+ window.SK_PRICE_REMOTE_ERROR=false;
+ updatePriceFeedStatus();
+ renderMonthSelect();
+ if(detail&&activeTab==='price')renderDetail();
+ if(view==='compare')renderCompare();
+ if(view==='dashboard')renderDashboard();
+});
+window.addEventListener('sk-remote-pricing-error',()=>{
+ updatePriceFeedStatus();
+ if(detail&&activeTab==='price')renderDetail();
+});
+
 $('#commissionLayer')?.addEventListener('input',e=>{if(e.target.matches('input'))calcCommission();});
 })();
