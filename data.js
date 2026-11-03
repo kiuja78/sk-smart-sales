@@ -47,7 +47,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-01",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "ice414",
@@ -106,7 +107,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "2026년 11월 가격표상 단종·기존고객 참고",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "water115",
@@ -146,7 +148,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-01",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "water104",
@@ -184,7 +187,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "water125",
@@ -222,7 +226,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-01",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "water103",
@@ -259,7 +264,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "waterpbc",
@@ -295,7 +301,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "watergbc",
@@ -332,7 +339,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "bidet51",
@@ -368,7 +376,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-01",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "bidet17",
@@ -404,7 +413,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "bidetf17",
@@ -440,7 +450,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "bidet96",
@@ -476,7 +487,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "air22pet",
@@ -529,7 +541,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-01",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "air22alarm",
@@ -565,7 +578,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "air22",
@@ -601,7 +615,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "air16",
@@ -636,7 +651,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "airround",
@@ -671,7 +687,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "",
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "mega506",
@@ -711,7 +728,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-01",
     "price": null,
     "priceStatus": "2026년 11월 가격표 조건별 조회",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "mega606",
@@ -930,7 +948,8 @@ window.SEED_PRODUCTS = [
     ],
     "officialReviewUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069931&menuNo=100104",
     "customerReviewStatus": "외부 판매처에 공개된 후기 3건을 출처를 표기하여 요약. 공식 SK매직몰 후기 원문/사진은 직접 수집하지 않음.",
-    "mediaOnlineOnly": true
+    "mediaOnlineOnly": true,
+    "ebookDetailUrl": "https://ebookimage.skmagic.com/images/%EC%A0%95%EC%88%98%EA%B8%B0%20%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%9A%A9/606/WPU-IAC606S(%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0).html"
   },
   {
     "id": "twowater306",
@@ -971,7 +990,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-01",
     "price": null,
     "priceStatus": "2026년 11월 가격표 조건별 조회",
-    "lastEdited": "2026-11-01"
+    "lastEdited": "2026-11-01",
+    "ebookDetailUrl": ""
   },
   {
     "id": "standice110",
@@ -1006,7 +1026,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-03",
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
-    "lastEdited": "2026-11-03"
+    "lastEdited": "2026-11-03",
+    "ebookDetailUrl": ""
   },
   {
     "id": "airclean15",
@@ -1036,7 +1057,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-03",
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
-    "lastEdited": "2026-11-03"
+    "lastEdited": "2026-11-03",
+    "ebookDetailUrl": ""
   },
   {
     "id": "airclean20",
@@ -1066,7 +1088,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-03",
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
-    "lastEdited": "2026-11-03"
+    "lastEdited": "2026-11-03",
+    "ebookDetailUrl": ""
   },
   {
     "id": "airclean25",
@@ -1096,7 +1119,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-03",
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
-    "lastEdited": "2026-11-03"
+    "lastEdited": "2026-11-03",
+    "ebookDetailUrl": ""
   },
   {
     "id": "namuhx",
@@ -1130,7 +1154,8 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-03",
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
-    "lastEdited": "2026-11-03"
+    "lastEdited": "2026-11-03",
+    "ebookDetailUrl": ""
   },
   {
     "id": "ice302",
@@ -1164,6 +1189,7 @@ window.SEED_PRODUCTS = [
     "checkedAt": "2026-11-03",
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
-    "lastEdited": "2026-11-03"
+    "lastEdited": "2026-11-03",
+    "ebookDetailUrl": ""
   }
 ];

@@ -181,3 +181,34 @@ body{color:var(--ink);background:#f5f8fc}
 
 .price-month-controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.price-month-controls label{font-size:10px;font-weight:850;color:#45607b;display:flex;align-items:center;gap:6px}.price-month-controls select{border-radius:9px;border:1px solid #c8dcea;padding:9px 11px;background:white;color:#125b9a;font-weight:900;cursor:pointer}.price-table-tools{align-items:center}
 @media(max-width:760px){.price-month-controls{width:100%;justify-content:space-between}}
+
+
+/* v0.7.5 — manufacturer e-book explanation embedded in official tab */
+.ebook-quick-action{margin-top:12px;display:flex;justify-content:flex-start}
+.ebook-open-cta,.ebook-jump{border:1px solid #a9d5db;border-radius:12px;background:#e9f7f7;color:#0e6974;font-weight:900;padding:12px 16px;cursor:pointer;font-size:13px;box-shadow:0 4px 12px #0c72800e}
+.ebook-open-cta:hover,.ebook-jump:hover{background:#def2f3;border-color:#66b7c2}
+.ebook-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin:0 0 16px}
+.ebook-heading h3{margin:7px 0 8px;font-size:19px;font-weight:900;color:#163047}
+.ebook-heading p{font-size:12px;line-height:1.8;color:#698092;margin:0}
+.ebook-kicker{font-size:10px;color:#14878d;font-weight:900;letter-spacing:.11em}
+.ebook-source{white-space:nowrap;font-size:11px;color:#0d766d;background:#e7f7ef;border-radius:100px;padding:8px 10px;font-weight:850}
+.ebook-viewport{width:100%;height:clamp(490px,75vh,980px);border:1px solid #dbe7ed;background:#fff;border-radius:16px;overflow:hidden;position:relative}
+.ebook-frame{width:100%;height:100%;display:block;border:0;background:#fff}
+.ebook-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:12px 2px 0}
+.ebook-footer span{font-size:11px;color:#718397;line-height:1.65}
+.ebook-footer a{font-size:12px;text-decoration:none;font-weight:800;color:#166c87;white-space:nowrap;padding:9px 12px;background:#eef7fa;border-radius:9px}
+.ebook-jump{display:inline-flex;align-items:center;justify-content:center;text-align:center}
+@media(max-width:700px){
+ .ebook-viewport{height:74vh;min-height:420px;border-radius:12px}
+ .ebook-heading{display:block}
+ .ebook-source{display:inline-flex;margin-top:12px}
+ .ebook-footer a{white-space:normal;width:100%;text-align:center}
+ .ebook-open-cta{width:100%;}
+}
+
+.ebook-gallery-backup{border:1px solid #deebf2;border-radius:14px;margin:15px 0;background:#f6fafc;overflow:hidden}
+.ebook-gallery-backup summary{font-size:12px;font-weight:850;color:#176781;cursor:pointer;padding:13px 16px;line-height:1.55}
+.ebook-gallery-content{background:#fff;padding:10px;display:grid;gap:16px}
+.ebook-gallery-content figure{margin:0;border:1px solid #edf1f5;border-radius:12px;overflow:hidden}
+.ebook-gallery-content img{display:block;width:100%;height:auto;object-fit:contain}
+.ebook-gallery-content figcaption{font-size:11px;color:#687f8d;padding:10px 12px;line-height:1.5}
