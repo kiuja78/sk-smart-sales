@@ -124,21 +124,30 @@ function standardizeProduct(p){
   if(mapping[p.id])p.subcategory=mapping[p.id];
   if(p.id==='namuhx')p.category='나무엑스';
   const verifiedSeed=(window.SEED_PRODUCTS||[]).find(s=>s.id===p.id);
-  if(verifiedSeed){if(!p.hero&&verifiedSeed.hero)p.hero=verifiedSeed.hero;if(!p.officialUrl&&verifiedSeed.officialUrl)p.officialUrl=verifiedSeed.officialUrl;if(!p.ebookDetailUrl&&verifiedSeed.ebookDetailUrl)p.ebookDetailUrl=verifiedSeed.ebookDetailUrl;if(!p.heroFallback&&verifiedSeed.heroFallback)p.heroFallback=verifiedSeed.heroFallback;if(!p.officialMedia?.length&&verifiedSeed.officialMedia?.length)p.officialMedia=deep(verifiedSeed.officialMedia);if(!p.officialPhotos?.length&&verifiedSeed.officialPhotos?.length)p.officialPhotos=deep(verifiedSeed.officialPhotos);if(p.id==='ice425')p.attributes={...verifiedSeed.attributes,...(p.attributes||{})};}
+  if(verifiedSeed){if(!p.hero&&verifiedSeed.hero)p.hero=verifiedSeed.hero;if(!p.officialUrl&&verifiedSeed.officialUrl)p.officialUrl=verifiedSeed.officialUrl;if(officialInfo(p).ebookDetailUrl)p.ebookDetailUrl=officialInfo(p).ebookDetailUrl;else if(!p.ebookDetailUrl&&verifiedSeed.ebookDetailUrl)p.ebookDetailUrl=verifiedSeed.ebookDetailUrl;if(!p.heroFallback&&verifiedSeed.heroFallback)p.heroFallback=verifiedSeed.heroFallback;if(!p.officialMedia?.length&&verifiedSeed.officialMedia?.length)p.officialMedia=deep(verifiedSeed.officialMedia);if(!p.officialPhotos?.length&&verifiedSeed.officialPhotos?.length)p.officialPhotos=deep(verifiedSeed.officialPhotos);if(p.id==='ice425')p.attributes={...verifiedSeed.attributes,...(p.attributes||{})};}
   return p;
 }
 function save(){try{localStorage.setItem(STORE,JSON.stringify({version:'0.5.0',updated:new Date().toISOString().slice(0,10),products}));return true}catch(e){toast('저장 공간이 부족합니다. JSON으로 백업하고 사진 용량을 줄여주세요.');return false}}
 function toast(message){const el=$('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),3200)}
 function navigate(v){view=v;document.querySelectorAll('.screen').forEach(n=>n.classList.toggle('active',n.id===v+'View'));document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.view===v));const t={library:['PRODUCT LIBRARY','제품 자료실'],compare:['PRODUCT COMPARISON','라인업 비교'],dashboard:['CONTENT STATUS','자료 등록 현황'],admin:['CONTENT MANAGEMENT','자료 편집 / 백업']}[v];$('#crumb').textContent=t[0];$('#pageTitle').textContent=t[1];window.scrollTo(0,0);if(v==='compare')renderCompare();if(v==='dashboard')renderDashboard();if(v==='admin')renderAdmin()}
 function metrics(){return [products.length,new Set(products.map(p=>p.category)).size,products.filter(p=>p.fab?.length).length,products.filter(p=>p.hero||officialInfo(p).cover).length]}
-function renderStats(){const m=metrics();$('#statsBar').innerHTML=[['등록 제품군 모델',m[0],'▣'],['제품 카테고리',m[1],'◈'],['FAB 초안 등록',m[2],'▤'],['고화질 대표사진',m[3],'▧']].map(([t,n,i])=>`<div class="stat"><div class="stat-i">${i}</div><div><strong>${n}</strong><span>${t}</span></div></div>`).join('')}
+function renderStats(){
+ const [count,categories,fab,photos]=metrics();
+ const stats=[
+  {title:'등록 모델',value:count,desc:'현재 제품자료실',symbol:'01'},
+  {title:'제품 카테고리',value:categories,desc:'정수기 · 공청기 · 비데 등',symbol:'02'},
+  {title:'FAB 설명',value:fab,desc:'상담용 설명 카드 등록',symbol:'03'},
+  {title:'제품사진 보유',value:photos,desc:'대표사진 등록 모델',symbol:'04'}
+ ];
+ $('#statsBar').innerHTML=stats.map(x=>`<article class="stat"><div class="stat-index">${x.symbol}</div><div class="stat-content"><span class="stat-label">${x.title}</span><div class="stat-value">${x.value}<small>${x.title==='제품 카테고리'?'개':'개 모델'}</small></div><span class="stat-desc">${x.desc}</span></div></article>`).join('');
+}
 function renderFilters(){const cats=[...new Set(['전체','정수기','공기청정기','비데','나무엑스',...products.map(p=>p.category)])];$('#catChips').innerHTML=cats.map(c=>`<button class="chip ${category===c?'active':''}" data-cat="${safe(c)}">${safe(c)}</button>`).join('');const subs=['전체',...new Set(products.filter(p=>category==='전체'||p.category===category).map(p=>p.subcategory))];if(!subs.includes(subcat))subcat='전체';$('#subChips').innerHTML=subs.map(c=>`<button class="chip ${subcat===c?'active':''}" data-sub="${safe(c)}">${safe(c)}</button>`).join('')}
 function filtered(){const q=query.toLowerCase();return products.filter(p=>(category==='전체'||p.category===category)&&(subcat==='전체'||p.subcategory===subcat)&&(!q||[p.name,p.model,p.category,...p.features].join(' ').toLowerCase().includes(q)))}
 function renderLibrary(){renderStats();renderFilters();let arr=filtered();$('#resultCount').textContent=`총 ${arr.length}개 제품`;$('#productGrid').innerHTML=arr.length?arr.map(p=>`<article class="product"><div class="product-visual" data-open="${safe(p.id)}"><span class="status ${p.verified.startsWith('공식 일부')?'ok':''}">${p.verified.startsWith('공식 일부')?'공식 일부확인':'검증 필요'}</span>${(p.hero||officialInfo(p).cover||officialGalleryCache[p.id]?.[0])?`<img src="${safe(p.hero||officialInfo(p).cover||officialGalleryCache[p.id][0])}" alt="${safe(p.name)}" loading="lazy" ${p.heroFallback?`data-fallback="${safe(p.heroFallback)}"`:''} onerror="if(this.dataset.fallback){this.src=this.dataset.fallback;this.removeAttribute('data-fallback');}else{this.style.display='none';this.parentNode.classList.add('photo-unavailable');}"/>`:`<span class="product-icon">${ic(p.category)}</span><span class="img-label">고화질 제품사진 등록 전</span>`}</div><div class="product-body"><div class="product-cat">${safe(p.subcategory)}</div><h3>${safe(p.name)}</h3><div class="code">${safe(p.model)}</div><div class="feature-row">${p.features.slice(0,3).map(f=>`<span class="fchip">${safe(f)}</span>`).join('')}</div><div class="product-bottom"><label class="compare-check"><input type="checkbox" data-check="${safe(p.id)}" ${compare.includes(p.id)?'checked':''}> 비교함 담기</label><button data-open="${safe(p.id)}">상세 보기 →</button></div></div></article>`).join(''):'<div class="empty"><div class="eicon">⌕</div><strong>검색 결과가 없어요</strong>다른 모델명이나 제품군으로 다시 검색해 보세요.</div>';$('#compareCount').textContent=compare.length}
 function cmpCheck(id,checked){if(checked){if(compare.length>=3){toast('비교는 최대 3개까지 선택할 수 있습니다.');renderLibrary();return}compare.push(id)}else compare=compare.filter(x=>x!==id);renderLibrary();if(view==='compare')renderCompare()}
 function addOrRemoveCompare(id){cmpCheck(id,!compare.includes(id));$('#compareCount').textContent=compare.length}
-const tabLabels={feature:'핵심 기능',fab:'FAB 설명',spec:'상세 정보',official:'공식 사진·설명',media:'실사용·후기',price:'월별 가격·수수료'};
-function openDetail(id,tab='feature'){productGalleryIndex=0;reviewFilter='all';officialReviewMode='list';reviewSourceMode='live';officialReviewPage=1;detail=products.find(p=>p.id===id);if(!detail)return;activeTab=tab;$('#detailLayer').classList.add('open');$('#detailLayer').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderDetail()}
+const tabLabels={feature:'핵심 기능',fab:'FAB 설명',spec:'상세 정보 · e-book',media:'실사용·후기',price:'월별 가격·수수료'};
+function openDetail(id,tab='feature'){if(tab==='official')tab='spec';productGalleryIndex=0;reviewFilter='all';officialReviewMode='list';reviewSourceMode='live';officialReviewPage=1;detail=products.find(p=>p.id===id);if(!detail)return;activeTab=tab;$('#detailLayer').classList.add('open');$('#detailLayer').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderDetail()}
 function closeDetail(){closeLightbox();officialReviewRequestSeq++;$('#detailLayer').classList.remove('open');$('#detailLayer').setAttribute('aria-hidden','true');document.body.style.overflow='';detail=null}
 // 제품 사진은 원본 비율 그대로 표시하며, 썸네일 선택만으로 이미지를 전환합니다.
 function productPhotoItems(p){
@@ -189,7 +198,13 @@ function selectProductPhoto(index){
 // 공식 제품 상세 e-book: 판매용 공식몰 URL과 분리해 관리합니다.
 // 보유 중인 브라우저 저장자료에도 seed의 e-book 링크가 반영되도록 표준화 단계에서 병합합니다.
 function officialEbookUrl(p){
-  const url=String(p?.ebookDetailUrl||'').trim();
+  // 기존 월별 제품정보 사이트의 e-book 원본 주소도 모델명 일치 시 연결.
+  // 확인되지 않은 유사 모델이나 다른 색상 페이지는 추측해 연결하지 않습니다.
+  const matchKey=normModel(p?.model||'');
+  const fromMonthly=Object.values(REMOTE_ARCHIVE).map(snap=>
+    (snap?.products||[]).find(item=>normModel(item.model)===matchKey&&item.officialDetailUrl)
+  ).find(Boolean);
+  const url=String(officialInfo(p).ebookDetailUrl||p?.ebookDetailUrl||fromMonthly?.officialDetailUrl||'').trim();
   if(!url)return '';
   try{
     const u=new URL(url);
@@ -199,14 +214,55 @@ function officialEbookUrl(p){
 // 제조사 e-book은 외부 사이트의 iframe 정책과 무관하게 보이도록
 // 연결된 공식 설명 이미지(원본 CDN)를 본문에 먼저 펼쳐 보여줍니다.
 // e-book HTML은 출처 링크로 제공하고 iframe은 부가 옵션으로만 사용합니다.
+// e-book 원본 페이지를 상세정보 탭에 처음부터 표시합니다.
+// 화면 삽입 제한이 있을 때는 제조사 원본보기 + 공식 이미지 모드로 전환할 수 있습니다.
 function showOfficialEbook(p){
   const link=officialEbookUrl(p);
   if(!link)return '';
   const media=(p.officialMedia||[]).filter(x=>/^https:\/\/static\.skmagic\.com\/image\/editor\//i.test(x.src||''));
-  return `<div class="ebook-heading"><div><span class="ebook-kicker">SKMAGIC · PRODUCT DETAIL</span><h3>제조사 e-book 상세 설명</h3><p>원본 제조사 제품 소개 이미지를 이 페이지에 세로로 펼쳐 보여줍니다. 화면을 아래로 스크롤해 확인하세요.</p></div><span class="ebook-source">제조사 원본 이미지</span></div>
-    ${media.length?`<div class="ebook-longform" aria-label="SK매직 제조사 제품 상세 이미지">${media.map((x,i)=>`<figure class="ebook-story"><img src="${safe(x.src)}" alt="${safe(x.title)}" loading="${i<2?'eager':'lazy'}" decoding="async"><figcaption><strong>${safe(x.title)}</strong>${x.description?`<span>${safe(x.description)}</span>`:''}</figcaption></figure>`).join('')}</div>`:'<div class="ebook-no-media">제조사 e-book 이미지가 아직 별도로 등록되지 않았습니다. 원본 e-book 링크를 이용해 주세요.</div>'}
-    <div class="ebook-footer"><span>실시간 이미지 연결 · 후기 및 제품 가격과는 별개입니다. 제조사 e-book의 모든 페이지를 복제한 것이 아닌 등록된 제품 상세 이미지입니다.</span><a href="${safe(link)}" target="_blank" rel="noopener noreferrer">e-book 전체 원본 보기 ↗</a></div>
-    <details class="ebook-embedded-optional"><summary>원본 e-book 화면 삽입 시도 (사이트 정책에 따라 제한될 수 있음)</summary><div class="ebook-viewport"><iframe class="ebook-frame" title="${safe(p.name)} e-book 원본" data-ebook-frame="${safe(link)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><p class="subtle">프레임 화면이 보이지 않더라도 위 상세 이미지는 별도로 표시됩니다.</p></details>`;
+  return `<section class="ebook-reader" aria-label="${safe(p.name)} 제조사 e-book 상세정보">
+    <header class="ebook-reader-header"><div><span class="ebook-kicker">SK MAGIC · OFFICIAL E-BOOK</span><h3>제조사 공식 상세페이지</h3><p>${safe(p.name)} <strong>${safe(p.model)}</strong></p></div><a class="ebook-direct-link" href="${safe(link)}" target="_blank" rel="noopener noreferrer">원본 페이지 열기 ↗</a></header>
+    <div class="ebook-browser-toolbar"><span class="ebook-live-dot"></span><span>제조사 e-book 실시간 화면</span><span class="ebook-frame-domain">ebookimage.skmagic.com</span></div>
+    <div class="ebook-reading-area"><iframe class="ebook-live-frame" title="${safe(p.name)} SK매직 공식 e-book 상세 페이지" src="${safe(link)}" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+    <div class="ebook-viewer-tools"><span>외부 사이트에서 화면 삽입을 제한할 경우 아래의 이미지 모드 또는 원본 링크를 이용하세요.</span><button class="ebook-images-toggle" type="button" data-ebook-images aria-expanded="false">${media.length?'제조사 상세 이미지로 보기':'상세 이미지 모드'} ▾</button></div>
+    <div class="ebook-inline-images" id="ebookInlineImages" hidden>${media.length?renderEbookImageStack(media):'<div class="ebook-fetch-status">제조사 e-book에 등록된 상세 이미지 주소를 조회할 수 있습니다. 별도의 후기 파일 저장은 하지 않습니다.</div>'}</div>
+    <details class="ebook-spec-support"><summary>제품 주요 사양·상담 메모 확인</summary>${renderProductFactDetails(p)}</details>
+  </section>`;
+}
+function renderEbookImageStack(list){
+  return `<div class="ebook-longform" aria-label="제조사 상세 이미지">${list.map((x,i)=>`<figure class="ebook-story"><img src="${safe(x.src)}" alt="${safe(x.title||`상세 이미지 ${i+1}`)}" loading="${i<2?'eager':'lazy'}" decoding="async" onerror="this.closest('figure').classList.add('image-failed')"><figcaption>${safe(x.title||`상세 이미지 ${i+1}`)}</figcaption></figure>`).join('')}</div>`;
+}
+const ebookImagesCache=Object.create(null),ebookImagesLoading=new Set();
+function openEbookImageMode(){
+  if(!detail)return;
+  const area=$('#ebookInlineImages'),btn=document.querySelector('[data-ebook-images]');
+  if(!area||!btn)return;
+  area.hidden=!area.hidden;btn.setAttribute('aria-expanded',String(!area.hidden));
+  if(area.hidden)return;
+  const originalMedia=(detail.officialMedia||[]).filter(x=>/^https:\/\/static\.skmagic\.com\/image\/editor\//i.test(x.src||''));
+  if(originalMedia.length)return;
+  if(ebookImagesCache[detail.id]){area.innerHTML=renderEbookImageStack(ebookImagesCache[detail.id]);return;}
+  requestEbookImages(detail);
+}
+function requestEbookImages(p){
+  const model=String(p.model||'').trim();const endpoint=String(window.SK_REVIEW_API_URL||'').trim();
+  const area=$('#ebookInlineImages');
+  if(!endpoint||!area){if(area)area.innerHTML='<div class="ebook-fetch-status">상세 이미지 서버 설정을 확인할 수 없습니다. 위 e-book 원본 페이지를 이용해 주세요.</div>';return;}
+  if(ebookImagesLoading.has(p.id))return;
+  ebookImagesLoading.add(p.id);
+  area.innerHTML='<div class="ebook-fetch-status">제조사 상세 이미지 주소를 확인하는 중입니다…</div>';
+  const callback='skEbookImages_'+Date.now()+'_'+(++officialReviewCallbackSeq);
+  const url=new URL(endpoint);url.searchParams.set('action','ebook');url.searchParams.set('model',model);url.searchParams.set('ebookUrl',officialEbookUrl(p));url.searchParams.set('callback',callback);
+  const script=document.createElement('script');let finished=false;
+  const cleanup=()=>{if(finished)return;finished=true;clearTimeout(timer);script.remove();delete window[callback];ebookImagesLoading.delete(p.id)};
+  const timer=setTimeout(()=>{cleanup();const x=$('#ebookInlineImages');if(x&&!x.hidden)x.innerHTML='<div class="ebook-fetch-status">이미지 조회 시간이 초과됐습니다. 위 e-book 원본 페이지 링크를 이용해 주세요.</div>';},15000);
+  window[callback]=result=>{cleanup();const x=$('#ebookInlineImages');if(!x||detail?.id!==p.id)return;
+    if(!result?.ok||!Array.isArray(result.images)||!result.images.length){x.innerHTML='<div class="ebook-fetch-status">원본 e-book에서 이미지 파일을 확인하지 못했습니다. Apps Script 서버의 e-book 기능을 업데이트하거나 원본 링크를 이용해 주세요.</div>';return;}
+    ebookImagesCache[p.id]=result.images.filter(x=>x.src&&(/^https:\/\/ebookimage\.skmagic\.com\//i.test(x.src)||/^https:\/\/static\.skmagic\.com\//i.test(x.src))).slice(0,45);
+    x.innerHTML=renderEbookImageStack(ebookImagesCache[p.id]);
+  };
+  script.onerror=()=>{cleanup();const x=$('#ebookInlineImages');if(x&&!x.hidden)x.innerHTML='<div class="ebook-fetch-status">서버에서 e-book 이미지를 불러오지 못했습니다. 원본 페이지를 이용해 주세요.</div>';};
+  script.src=url.toString();document.head.appendChild(script);
 }
 function renderProductFactDetails(p){
   const entries=Object.entries(p.attributes||{}).filter(([key,val])=>key&&val!=null&&String(val).trim());
@@ -225,7 +281,7 @@ function renderProductFactDetails(p){
 function renderProductDetails(p){
   const original=officialEbookUrl(p);
   const guide=renderProductFactDetails(p);
-  return original?`${showOfficialEbook(p)}<details class="facts-expand"><summary>제품 사양표·상담 가이드 함께 보기</summary>${guide}</details>`:guide;
+  return original?showOfficialEbook(p):guide;
 }
 function goOfficialDetail(){
   if(!detail)return;
@@ -237,7 +293,7 @@ function goOfficialDetail(){
 function renderDetail(){
   if(!detail)return;
   const p=detail;
-  $('#detailContent').innerHTML=`<div class="detail-eyebrow">${safe(p.category)} / ${safe(p.subcategory)}</div><h2>${safe(p.name)}</h2><div class="detail-model">${safe(p.model)} · ${safe(p.verified)}</div>${activeTab!=='official'&&activeTab!=='spec'?`<div class="ebook-quick-action"><button class="ebook-open-cta" type="button" data-ebook-detail>📖 상세설명 전체 보기</button></div>`:''}${(activeTab==='media'||activeTab==='price'||activeTab==='spec'||activeTab==='official')?'':`${renderProductGallery(p)}<div class="detail-note">${safe(p.pitch)||'상담 설명을 준비하고 있습니다.'}</div>`}<div class="detail-tabs">${Object.entries(tabLabels).map(([key,v])=>`<button class="tab ${activeTab===key?'active':''}" data-tab="${key}">${v}</button>`).join('')}</div><div class="detail-section">${renderTab(p)}</div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:26px"><button class="primary-btn" data-detail-compare="${safe(p.id)}">${compare.includes(p.id)?'비교함에서 제거':'이 제품 비교함에 추가'}</button><button class="outline-btn" data-edit="${safe(p.id)}">관리자: 자료 수정</button></div>`;
+  $('#detailContent').innerHTML=`<div class="detail-eyebrow">${safe(p.category)} / ${safe(p.subcategory)}</div><h2>${safe(p.name)}</h2><div class="detail-model">${safe(p.model)} · ${safe(p.verified)}</div>${activeTab!=='official'&&activeTab!=='spec'?`<div class="ebook-quick-action"><button class="ebook-open-cta" type="button" data-ebook-detail>📖 상세설명 전체 보기</button></div>`:''}${(activeTab==='media'||activeTab==='price'||activeTab==='spec')?'':`${renderProductGallery(p)}<div class="detail-note">${safe(p.pitch)||'상담 설명을 준비하고 있습니다.'}</div>`}<div class="detail-tabs">${Object.entries(tabLabels).map(([key,v])=>`<button class="tab ${activeTab===key?'active':''}" data-tab="${key}">${v}</button>`).join('')}</div><div class="detail-section">${renderTab(p)}</div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:26px"><button class="primary-btn" data-detail-compare="${safe(p.id)}">${compare.includes(p.id)?'비교함에서 제거':'이 제품 비교함에 추가'}</button><button class="outline-btn" data-edit="${safe(p.id)}">관리자: 자료 수정</button></div>`;
   if(activeTab==='media'&&reviewSourceMode==='live')loadOfficialReviews(p,officialReviewPage);
   else if(officialInfo(p).model)loadOfficialProductPhotos(p);
 }
@@ -245,11 +301,9 @@ function renderDetail(){
 function empty(t){return `<div class="empty-content">${safe(t)}<br><strong>→ 자료 편집에서 등록할 수 있어요.</strong></div>`}
 function renderTab(p){if(activeTab==='feature')return `${p.id==='mega606'?'<div class="verified-spotlight"><strong>공식 확인 · MEGA ICE mini</strong><div class="spotlight-grid"><span><b>195mm</b>슬림 폭</span><span><b>11g</b>라지 모드 얼음</span><span><b>약 100℃</b>고온수</span><span><b>UV</b>코크 자동살균</span></div><p>※ 조리수 연결 불가 · 설치 환경별 여유공간 확인 필요</p></div>':''}<h3>핵심 기능</h3>${p.features?.length?`<div class="pill-grid">${p.features.map(f=>`<span>${safe(f)}</span>`).join('')}</div>`:empty('핵심 기능이 아직 등록되지 않았습니다.')}<h3>상담 전 확인</h3><div class="warning-box">교육자료에 기반한 사항은 최종 모델별 공식 사양을 확인한 뒤 고객에게 확정적으로 안내하세요.</div>`;
  if(activeTab==='fab')return `<h3>FAB + Evidence · 영업 설명 카드</h3><p class="subtle">특징 → 장점 → 고객에게 주는 가치 → 증빙자료 순서로 설명할 수 있도록 설계했습니다.</p>${p.fab?.length?p.fab.map((x,i)=>`<div class="fab-card"><span class="note-tag">${safe(x.status||'상담 초안')} · ${i+1}번째 포인트</span>${[['F · 특징',x.f],['A · 장점',x.a],['B · 고객 가치',x.b],['E · 증거',x.e]].map(([a,b],j)=>`<div class="fab-row"><span class="fab-key ${j===3?'fab-e':''}">${a}</span><span>${safe(b)}</span></div>`).join('')}</div>`).join(''):empty('이 제품의 FAB 설명이 아직 준비되지 않았습니다.')}`;
- if(activeTab==='spec')return renderProductDetails(p);
- if(activeTab==='official'&&officialEbookUrl(p))return showOfficialEbook(p);
- if(activeTab==='official')return `${renderProductFactDetails(p)}<div class="photo-note">e-book 원본 페이지가 확인되지 않은 제품입니다. 아래에 등록된 제품 공식사진 및 기능자료를 함께 표시합니다.</div><div class="photo-note">제조사 공식 이미지 · 고객 실제 설치사진과 구분됩니다. <b>사진은 인터넷 연결 시 표시됩니다.</b> 원본의 형태·색상·비율을 변경하지 않았습니다.</div><h3>공식 제품 사진</h3>${productPhotoItems(p).length?`<div class="official-photo-grid">${productPhotoItems(p).map((x,i)=>`<button class="official-photo-card" type="button" data-official-photo="${i}" aria-label="${safe(x.title)} 크게 보기"><img loading="lazy" src="${safe(x.src)}" alt="${safe(x.title)}"><strong>${safe(x.title)}</strong><span>제조사 제품 이미지</span></button>`).join('')}</div>`:empty('공식 제품 사진이 아직 등록되지 않았습니다.')}<h3>기능별 상세 이미지 · 고객 설명용</h3>${p.officialMedia?.length?`<div class="official-media-grid">${p.officialMedia.map((x,i)=>`<button class="official-media-card" type="button" data-official-media="${i}"><div class="official-media-img"><img loading="lazy" src="${safe(x.src)}" alt="${safe(x.title)}"></div><div class="official-media-caption"><strong>${safe(x.title)}</strong><small>${safe(x.description||'공식 상세 이미지')}</small></div></button>`).join('')}</div>`:empty('공식 상세 이미지를 등록하는 중입니다.')}<p class="subtle">이미지 출처: SK매직 공식 제품 상세페이지 · 이미지를 누르면 팝업에서 큰 사진과 다른 사진을 넘겨 볼 수 있습니다.</p>`;
+ if(activeTab==='spec'||activeTab==='official')return renderProductDetails(p);
  if(activeTab==='media')return renderOfficialLiveReviews(p);
- return `<h3>${safe(selectedMonth.replace('-', '년 '))}월 계약조건별 구독료</h3>${priceTable(p)}<h3>검증 출처</h3><div class="info-list"><b>자료 구분</b><span>${safe(p.sourceLabel)}</span><b>검증 상태</b><span>${safe(p.verified)}</span><b>확인일</b><span>${safe(p.checkedAt||'확인 필요')}</span><b>교육 원본</b><span>${safe(p.sourceImage)}</span></div><p style="margin-top:16px"><button type="button" class="reference-link ebook-jump" data-ebook-detail>${officialEbookUrl(p)?'제조사 e-book 상세설명 보기 ↗':'공식 사진·설명 탭 보기 ↗'}</button></p>`}
+ return `<h3>${safe(selectedMonth.replace('-', '년 '))}월 계약조건별 구독료</h3>${priceTable(p)}<h3>검증 출처</h3><div class="info-list"><b>자료 구분</b><span>${safe(p.sourceLabel)}</span><b>검증 상태</b><span>${safe(p.verified)}</span><b>확인일</b><span>${safe(p.checkedAt||'확인 필요')}</span><b>교육 원본</b><span>${safe(p.sourceImage)}</span></div><p style="margin-top:16px"><button type="button" class="reference-link ebook-jump" data-ebook-detail>${officialEbookUrl(p)?'제조사 e-book 상세설명 보기 ↗':'제품 상세정보 보기 ↗'}</button></p>`}
 
 
 
@@ -569,7 +623,7 @@ window.addEventListener('resize',syncSidebar);
 syncSidebar();
 // Event delegation
 window.addEventListener('click',e=>{
-const ebookJump=e.target.closest('[data-ebook-detail]');if(ebookJump){e.preventDefault();goOfficialDetail();return;}
+const ebookJump=e.target.closest('[data-ebook-detail]');if(ebookJump){e.preventDefault();goOfficialDetail();return;}const ebookImages=e.target.closest('[data-ebook-images]');if(ebookImages){openEbookImageMode();return;}
 const cc=e.target.closest('[data-commission-close]');if(cc){closeCommission();return;}
 const pr=e.target.closest('[data-select-price]');if(pr){showCommission(Number(pr.dataset.selectPrice),pr.dataset.priceType);return;}
 const lightClose=e.target.closest('[data-lightbox-close]');if(lightClose){closeLightbox();return}
@@ -580,7 +634,7 @@ const productOpen=e.target.closest('[data-product-photo-open]');if(productOpen&&
 const officialPhoto=e.target.closest('[data-official-photo]');if(officialPhoto&&detail){openLightbox(productPhotoItems(detail),Number(officialPhoto.dataset.officialPhoto),detail.name+' · 공식 제품사진');return}
 const officialMedia=e.target.closest('[data-official-media]');if(officialMedia&&detail){openLightbox((detail.officialMedia||[]).map(x=>({src:x.src,title:x.title})),Number(officialMedia.dataset.officialMedia),detail.name+' · 제품 설명 이미지');return}
 const reviewPhoto=e.target.closest('[data-review-photo]');if(reviewPhoto){openLightbox(currentReviewImages,Number(reviewPhoto.dataset.reviewPhoto),'실제 고객 포토후기');return}
-const nav=e.target.closest('[data-view]');if(nav){navigate(nav.dataset.view);if(mobileSidebar())toggleSidebar(false);return}const go=e.target.closest('[data-view-go]');if(go){navigate(go.dataset.viewGo);return}const c=e.target.closest('[data-cat]');if(c){category=c.dataset.cat;subcat='전체';renderLibrary();return}const sub=e.target.closest('[data-sub]');if(sub){subcat=sub.dataset.sub;renderLibrary();return}const opener=e.target.closest('[data-open]');if(opener){openDetail(opener.dataset.open);return}const tb=e.target.closest('[data-tab]');if(tb){activeTab=tb.dataset.tab;renderDetail();return}const edit=e.target.closest('[data-edit]');if(edit){openEdit(edit.dataset.edit);return}const rsm=e.target.closest('[data-review-source]');if(rsm){reviewSourceMode=rsm.dataset.reviewSource;officialReviewPage=1;renderDetail();return}const orm=e.target.closest('[data-official-review-mode]');if(orm){officialReviewMode=orm.dataset.officialReviewMode;/* 필터 전환 시 현재 페이지 유지: 2페이지에서 사진만 보기 → 2페이지 */renderDetail();return}const rp=e.target.closest('[data-review-page]');if(rp&&!rp.disabled){const action=rp.dataset.reviewPage;const max=Number(document.querySelector('[data-review-page="last"]')?.dataset.max||0);if(action==='first')officialReviewPage=1;else if(action==='prev')officialReviewPage=Math.max(1,officialReviewPage-1);else if(action==='next')officialReviewPage+=1;else if(action==='last'&&max)officialReviewPage=max;loadOfficialReviews(detail,officialReviewPage);return}const retry=e.target.closest('[data-review-retry]');if(retry&&detail){loadOfficialReviews(detail,officialReviewPage);return}const rf=e.target.closest('[data-review-filter]');if(rf){reviewFilter=rf.dataset.reviewFilter;const s=$('.detail-section');if(s&&detail)s.innerHTML=renderTab(detail);return}
+const nav=e.target.closest('[data-view]');if(nav){navigate(nav.dataset.view);if(mobileSidebar())toggleSidebar(false);return}const go=e.target.closest('[data-view-go]');if(go){navigate(go.dataset.viewGo);return}const c=e.target.closest('[data-cat]');if(c){category=c.dataset.cat;subcat='전체';renderLibrary();return}const sub=e.target.closest('[data-sub]');if(sub){subcat=sub.dataset.sub;renderLibrary();return}const opener=e.target.closest('[data-open]');if(opener){openDetail(opener.dataset.open);return}const tb=e.target.closest('[data-tab]');if(tb){activeTab=tb.dataset.tab==='official'?'spec':tb.dataset.tab;renderDetail();return}const edit=e.target.closest('[data-edit]');if(edit){openEdit(edit.dataset.edit);return}const rsm=e.target.closest('[data-review-source]');if(rsm){reviewSourceMode=rsm.dataset.reviewSource;officialReviewPage=1;renderDetail();return}const orm=e.target.closest('[data-official-review-mode]');if(orm){officialReviewMode=orm.dataset.officialReviewMode;/* 필터 전환 시 현재 페이지 유지: 2페이지에서 사진만 보기 → 2페이지 */renderDetail();return}const rp=e.target.closest('[data-review-page]');if(rp&&!rp.disabled){const action=rp.dataset.reviewPage;const max=Number(document.querySelector('[data-review-page="last"]')?.dataset.max||0);if(action==='first')officialReviewPage=1;else if(action==='prev')officialReviewPage=Math.max(1,officialReviewPage-1);else if(action==='next')officialReviewPage+=1;else if(action==='last'&&max)officialReviewPage=max;loadOfficialReviews(detail,officialReviewPage);return}const retry=e.target.closest('[data-review-retry]');if(retry&&detail){loadOfficialReviews(detail,officialReviewPage);return}const rf=e.target.closest('[data-review-filter]');if(rf){reviewFilter=rf.dataset.reviewFilter;const s=$('.detail-section');if(s&&detail)s.innerHTML=renderTab(detail);return}
 const rr=e.target.closest('[data-review-remove]');if(rr){const pp=products.find(x=>x.id===rr.dataset.reviewProduct);const ix=Number(rr.dataset.reviewRemove);if(pp&&confirm('이 후기를 삭제할까요? 입력 중인 다른 수정 내용은 저장되지 않습니다.')){pp.reviews.splice(ix,1);save();openEdit(pp.id);toast('후기를 삭제했어요.')}return}
 const gr=e.target.closest('[data-gallery-remove]');if(gr){const pp=products.find(x=>x.id===gr.dataset.galleryProduct);const ix=Number(gr.dataset.galleryRemove);if(pp&&confirm('이 고객 사진을 삭제할까요? 입력 중인 다른 수정 내용은 저장되지 않습니다.')){pp.gallery.splice(ix,1);save();openEdit(pp.id);toast('고객 사진을 삭제했어요.')}return}const rm=e.target.closest('[data-remove]');if(rm){compare=compare.filter(x=>x!==rm.dataset.remove);$('#compareCount').textContent=compare.length;renderCompare();return}const dc=e.target.closest('[data-detail-compare]');if(dc){addOrRemoveCompare(dc.dataset.detailCompare);renderDetail();return}});
 window.addEventListener('toggle',e=>{if(e.target?.matches?.('.ebook-embedded-optional')&&e.target.open){const f=e.target.querySelector('iframe[data-ebook-frame]');if(f&&!f.src)f.src=f.dataset.ebookFrame;}},true);

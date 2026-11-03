@@ -435,3 +435,46 @@ button:focus-visible,input:focus-visible,select:focus-visible,.product:focus-wit
 }
 @media(max-width:375px){.product-grid{grid-template-columns:1fr}.product-visual{height:195px}.product-body h3{font-size:17px}.product-body .code{font-size:14px!important}.product-bottom button{width:auto}}
 @media(prefers-reduced-motion:reduce){.sidebar,.sidebar-edge-toggle,.product,.product-visual img,.chip{transition:none!important}}
+
+
+/* ====== V0.7.8: official e-book, verified brand image, condensed modern landing ====== */
+.brand{gap:10px;align-items:center;margin:0 5px 34px;padding:8px 0 16px;border-bottom:1px solid rgba(255,255,255,.14)}
+.brand-official-logo{position:relative;display:flex;align-items:center;justify-content:center;width:95px;height:55px;flex:0 0 95px;border-radius:10px;background:#fff;overflow:hidden}
+.brand-official-logo img{width:108px;height:108px;object-fit:contain;max-width:none;flex:0 0 auto}
+.brand-official-logo strong{display:none;color:#ea002c;font-size:17px;font-weight:900}
+.brand-official-logo.logo-unavailable strong{display:block}
+.brand-wordmark{min-width:0;flex:1}.brand-wordmark strong{font-size:13px;letter-spacing:.04em;display:block;color:#fff;font-weight:850}.brand-wordmark small{font-size:11px;letter-spacing:-.03em;line-height:1.4;color:#b5d2e5;display:block;margin-top:3px}
+.sidebar-footer{border:0;margin-top:auto;padding:16px 8px 10px}.sidebar-developer{border-top:1px solid rgba(255,255,255,.16);padding-top:15px;color:#a9bfd3;font-size:11px;letter-spacing:0}.sidebar-developer strong{color:#fff;font-size:12px;letter-spacing:-.02em}
+.sidebar{background:#102540}.nav{font-weight:750}.nav.active{background:#195479;color:white;box-shadow:inset 3px 0 #45cfcb}.nav-label{font-size:10px;letter-spacing:.15em}
+.library-intro{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:25px 27px;background:#fff;border:1px solid #dce6ef;border-radius:18px;box-shadow:0 5px 20px rgba(14,42,70,.035)}
+.library-eyebrow{display:block;font-size:10px;font-weight:900;letter-spacing:.14em;color:#147a84;margin-bottom:9px}
+.library-intro h1{margin:0;font-size:clamp(22px,2.1vw,29px);line-height:1.3;font-weight:900;letter-spacing:-.045em;color:#102944}
+.library-intro p{font-size:13px;margin:9px 0 0;line-height:1.65;color:#52677c;font-weight:550}
+.library-intro-tools{display:flex;align-items:flex-end;flex-direction:column;gap:12px;min-width:205px}.intro-note{font-size:11px;font-weight:750;color:#496a7f;background:#eef7f7;padding:8px 12px;border-radius:999px}.intro-quick{border:0;background:#103758;color:white;padding:10px 15px;border-radius:9px;cursor:pointer;font-size:12px;font-weight:850}.intro-quick span{padding-left:8px;color:#9fe6e3}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:16px 0 30px}.stat{min-width:0;border:1px solid #dce6ef;border-radius:15px;background:#fff;padding:17px 20px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 5px 17px rgba(10,42,65,.03);min-height:115px}
+.stat-index{font-size:12px;flex:0 0 34px;height:34px;display:flex;align-items:center;justify-content:center;background:#e8f4f3;color:#077e7b;border-radius:10px;font-weight:900;letter-spacing:.04em}
+.stat-content{display:flex;flex-direction:column;gap:3px;min-width:0}.stat-label{font-size:11px;color:#526579;font-weight:800;white-space:nowrap}.stat-value{font-size:29px;color:#102a46;font-weight:900;line-height:1.35;letter-spacing:-.045em;font-variant-numeric:tabular-nums}.stat-value small{font-size:10px;margin-left:5px;color:#728297;font-weight:700}.stat-desc{font-size:10px;color:#7b8ca0;line-height:1.45}
+.browse-title h2{color:#102943;font-weight:900}.browse-title p{font-size:12px;color:#63758a}.product{box-shadow:0 5px 17px #133b5b0c}.product h3{color:#102943;font-weight:900}.product .code{color:#09517d;font-size:14px;font-weight:900}
+.ebook-reader{display:flex;flex-direction:column;gap:0;overflow:hidden;border:1px solid #d6e2ec;border-radius:17px;background:#fff;box-shadow:0 8px 32px rgba(20,50,77,.04)}
+.ebook-reader-header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:17px 20px;background:#fff}
+.ebook-reader-header h3{font-size:19px;margin:6px 0 4px;letter-spacing:-.04em;color:#102b47;font-weight:900}.ebook-reader-header p{font-size:12px;color:#62788c;margin:0}.ebook-reader-header p strong{font-size:12px;color:#15577b;font-weight:900}
+.ebook-direct-link{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;padding:10px 13px;border:1px solid #b8d6db;border-radius:10px;text-decoration:none;font-size:12px;font-weight:850;color:#0b6973;background:#f2fbfb}
+.ebook-browser-toolbar{display:flex;gap:9px;align-items:center;padding:8px 17px;background:#f1f5f8;border-top:1px solid #e4edf4;border-bottom:1px solid #dce8f0;color:#415e72;font-size:11px;font-weight:750}
+.ebook-live-dot{display:inline-block;flex:0 0 7px;height:7px;border-radius:50%;background:#169b83;box-shadow:0 0 0 3px #d0ece5}.ebook-frame-domain{color:#788d9e;margin-left:auto;font-size:10px}
+.ebook-reading-area{position:relative;background:#fff;min-height:640px}.ebook-live-frame{width:100%;height:clamp(700px,105vh,1250px);border:0;display:block;background:white}
+.ebook-viewer-tools{padding:11px 16px;background:#fafcfd;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border-top:1px solid #e5edf2}.ebook-viewer-tools>span{font-size:11px;line-height:1.6;color:#667b8e}
+.ebook-images-toggle{border:1px solid #d0e0e8;border-radius:9px;background:#fff;color:#195672;font-weight:850;font-size:12px;padding:10px 14px;cursor:pointer;white-space:nowrap}
+.ebook-inline-images{background:#f6f9fb;padding:13px}.ebook-inline-images[hidden]{display:none}.ebook-fetch-status{background:white;border:1px dashed #cbdce7;border-radius:12px;padding:20px;text-align:center;font-size:12px;color:#61788a}
+.ebook-inline-images .ebook-longform{margin:0;background:transparent}.ebook-inline-images .ebook-story{max-width:100%;margin:0 0 10px;border-radius:10px;overflow:hidden;background:white;padding:0}.ebook-inline-images .ebook-story img{width:100%;height:auto;display:block;object-fit:contain}.ebook-inline-images .ebook-story figcaption{font-size:11px;padding:10px 12px;color:#506d80}.ebook-inline-images .image-failed{display:none}
+.ebook-spec-support{padding:0 16px 16px}.ebook-spec-support>summary{margin-top:12px;border:1px solid #dce6ef;border-radius:10px;padding:12px 16px;background:#f6f9fc;font-size:12px;font-weight:850;color:#395870;cursor:pointer}
+.ebook-spec-support>.product-facts{margin-top:14px}
+.detail-tabs{gap:4px;overflow-x:auto}.tab{white-space:nowrap;font-weight:800}.tab.active{color:#087a85;border-bottom:3px solid #0b98a0}
+@media(max-width:1150px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.brand-official-logo{width:104px;flex-basis:104px}.sidebar-footer{padding-bottom:20px}}
+@media(max-width:630px){.library-intro{padding:20px 18px;flex-direction:column;align-items:flex-start;gap:15px}.library-intro-tools{flex-direction:row;align-items:center;min-width:0;width:100%;justify-content:space-between}.stats{gap:9px;margin:12px 0 24px}.stat{padding:12px;gap:9px;min-height:100px}.stat-index{height:27px;flex-basis:27px;font-size:10px}.stat-value{font-size:24px}.stat-desc{font-size:9px}.ebook-reader-header{flex-direction:column;align-items:stretch}.ebook-direct-link{align-self:flex-start}.ebook-live-frame{height:82vh;min-height:580px}.ebook-frame-domain{display:none}.ebook-viewer-tools{align-items:flex-start}.ebook-viewer-tools .ebook-images-toggle{width:100%}}
+
+/* official brand image loads over a safe, clearly labeled textual fallback */
+.brand-official-logo{width:110px;flex-basis:110px}.brand-official-logo img{width:178px;height:178px;position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%)}.brand-official-logo strong{display:block;font-size:17px;font-weight:900;white-space:nowrap;color:#df1540}.brand-official-logo.logo-loaded strong{display:none}
+
+.brand-official-logo img{visibility:hidden}.brand-official-logo.logo-loaded img{visibility:visible}.brand-official-logo strong{position:relative;z-index:1}.brand-official-logo.logo-loaded strong{display:none}
+.brand .brand-official-logo strong{color:#df1540;letter-spacing:-.04em;font-size:17px;font-weight:900}

@@ -1,36 +1,27 @@
 <!doctype html>
 <html lang="ko">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#101e37"><title>SK 스마트 세일즈 | 제품 자료실</title><link rel="stylesheet" href="styles.css?v=077"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#101e37"><title>SK 스마트 세일즈 | 제품 자료실</title><link rel="stylesheet" href="styles.css?v=078"></head>
 <body>
 <div class="layout" id="appLayout">
   <div class="sidebar-scrim" id="sidebarScrim" aria-hidden="true"></div>
   <aside class="sidebar" id="appSidebar" aria-label="주요 메뉴">
-    <div class="brand"><div class="brandmark">S<span>✦</span></div><div><strong>SMART SALES</strong><small>제품 자료실 · 공식 이미지 연동</small></div></div>
+    <div class="brand"><div class="brand-official-logo"><img src="https://cdn.litt.ly/images/B6Hn7DROO3LYhANhi2yyEffOQsg8cUov?m=inside&amp;s=1200x630" alt="SK magic 공식 로고" loading="eager" onload="this.parentElement.classList.add('logo-loaded')" onerror="this.style.display='none'"><strong>SK매직</strong></div><div class="brand-wordmark"><strong>SMART SALES</strong><small>SK 제품 자료실</small></div></div>
     <p class="nav-label">WORKSPACE</p>
     <button class="nav active" data-view="library"><span>▦</span> 제품 자료실</button>
     <button class="nav" data-view="compare"><span>⚖</span> 라인업 비교 <b id="compareCount">0</b></button>
     <button class="nav" data-view="dashboard"><span>◫</span> 자료 등록 현황</button>
     <p class="nav-label" style="margin-top:30px">MANAGEMENT</p>
     <button class="nav" data-view="admin"><span>✎</span> 자료 편집 / 백업</button>
-    <div class="sidebar-footer" aria-label="SK 브랜드 및 개발자 정보">
-      <div class="sk-footer-brand">
-        <svg class="sk-footer-mark" width="55" height="48" viewBox="0 0 86 72" role="img" aria-label="SK 마크" xmlns="http://www.w3.org/2000/svg">
-          <path d="M38 6 C51 5 60 10 67 17 L51 33Z" fill="#FF7C20"/>
-          <path d="M69 19 C78 24 82 31 80 40 L57 34Z" fill="#EF1849"/>
-          <path d="M56 35 C67 39 72 48 72 59 L48 44Z" fill="#FF7C20"/>
-          <path d="M39 8 C31 17 28 27 31 38 L49 34Z" fill="#EF1849"/>
-          <text x="1" y="68" font-size="42" font-family="Arial, sans-serif" font-weight="900" font-style="italic" letter-spacing="-5" fill="#EF1849">SK</text>
-        </svg>
-        <div><strong>SK매직</strong><span>SMART SALES</span></div>
-      </div>
-      <div class="sidebar-developer">개발자 : <strong>김건일 팀장</strong></div>
-    </div>
+    <div class="sidebar-footer"><div class="sidebar-developer">개발자 <strong>김건일 팀장</strong></div></div>
   </aside>
   <button id="sidebarEdgeToggle" class="sidebar-edge-toggle" type="button" aria-controls="appSidebar" aria-label="왼쪽 메뉴 접기" aria-expanded="true" title="메뉴 접기"><span aria-hidden="true">‹</span></button>
   <main class="main">
-    <header class="topbar"><div class="topbar-heading"><button class="sidebar-toggle" id="sidebarToggle" type="button" aria-controls="appSidebar" aria-expanded="true" aria-label="왼쪽 메뉴 접기"><span aria-hidden="true">☰</span></button><div><div class="eyebrow" id="crumb">PRODUCT LIBRARY</div><div class="page-title" id="pageTitle">제품 자료실</div></div></div><div class="header-actions"><label class="month-selector-label" for="globalMonth"><span>가격 기준월</span><select id="globalMonth" aria-label="가격 기준월"><option value="2026-11">2026년 11월</option></select></label><span class="draft-pill">v0.7.7 · 화면/가독성 개선</span><button class="outline-btn" id="resetView">처음 화면</button></div></header>
+    <header class="topbar"><div class="topbar-heading"><button class="sidebar-toggle" id="sidebarToggle" type="button" aria-controls="appSidebar" aria-expanded="true" aria-label="왼쪽 메뉴 접기"><span aria-hidden="true">☰</span></button><div><div class="eyebrow" id="crumb">PRODUCT LIBRARY</div><div class="page-title" id="pageTitle">제품 자료실</div></div></div><div class="header-actions"><label class="month-selector-label" for="globalMonth"><span>가격 기준월</span><select id="globalMonth" aria-label="가격 기준월"><option value="2026-11">2026년 11월</option></select></label><span class="draft-pill">v0.7.8 · e-book / UI 개편</span><button class="outline-btn" id="resetView">처음 화면</button></div></header>
     <section class="screen active" id="libraryView">
-      <div class="hero"><div><span class="hero-kicker">SALES CONTENT HUB</span><h1>설명은 더 선명하게.<br><em>상담은 더 자연스럽게.</em></h1><p>제품 사양과 실제 후기, 월별 구독료와 예상 판매수수료까지 한곳에서 확인하세요.</p><div class="hero-note">기존 모델도 보존 · 월별 가격은 SK매직 제품정보 사이트와 연계</div></div><div class="hero-decor" aria-hidden="true"><div class="deco-card"><span>FEATURE</span><strong>01</strong><p>핵심 기능</p></div><div class="deco-card float"><span>BENEFIT</span><strong>02</strong><p>고객의 가치</p></div><div class="deco-ring"></div></div></div>
+      <section class="library-intro" aria-label="제품 자료실 안내">
+        <div class="library-intro-text"><span class="library-eyebrow">SK MAGIC · PRODUCT LIBRARY</span><h1>SK매직 제품 자료실</h1><p>모델별 제품 설명, 고객 실사용 후기, 구독료와 예상 수수료를 확인하세요.</p></div>
+        <div class="library-intro-tools"><span class="intro-note">공식 e-book · 실제 고객 후기</span><button type="button" class="intro-quick" data-view-go="compare">라인업 비교 <span aria-hidden="true">↗</span></button></div>
+      </section>
       <div class="stats" id="statsBar"></div>
       <div class="browse-title"><div><h2>제품 찾아보기</h2><p>제품군을 고른 뒤 원하는 모델을 빠르게 찾을 수 있어요.</p></div><div class="search"><span>⌕</span><input id="searchInput" placeholder="모델명, 코드, 특징 검색" autocomplete="off"></div></div>
       <div class="chips" id="catChips"></div><div class="chips subchips" id="subChips"></div><div class="result-row"><span id="resultCount"></span><small>제품 카드를 누르면 상세 설명이 열립니다</small></div><div class="product-grid" id="productGrid"></div>
@@ -56,6 +47,6 @@
   </section>
 </div>
 <div class="calc-layer" id="commissionLayer" aria-hidden="true"><div class="calc-backdrop" data-commission-close></div><section class="calc-dialog" role="dialog" aria-modal="true" aria-labelledby="calcTitle"><header class="calc-header"><div><small>SALES COMMISSION ESTIMATE</small><h2 id="calcTitle">예상 판매수수료</h2><p id="calcContext"></p></div><button type="button" class="calc-close" data-commission-close aria-label="수수료 계산 닫기">✕</button></header><div id="calcBody"></div></section></div><div class="toast" id="toast"></div>
-<script src="data.js?v=076"></script><script src="prices.js?v=072"></script><script src="https://kiuja78.github.io/skmagic-product-info/data.js?v=6.12" onerror="window.SK_PRICE_REMOTE_ERROR=true"></script><script src="official_links.js?v=076"></script>
-<script src="config.js?v=072"></script><script src="app.js?v=077"></script>
+<script src="data.js?v=078"></script><script src="prices.js?v=072"></script><script src="https://kiuja78.github.io/skmagic-product-info/data.js?v=6.12" onerror="window.SK_PRICE_REMOTE_ERROR=true"></script><script src="official_links.js?v=078"></script>
+<script src="config.js?v=072"></script><script src="app.js?v=078"></script>
 </body></html>

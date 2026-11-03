@@ -53,7 +53,7 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": "",
+    "ebookDetailUrl": "https://ebookimage.skmagic.com/images/%EC%A0%95%EC%88%98%EA%B8%B0%20%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%9A%A9/425/WPUIAC425SNW,DS(%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0).html",
     "heroFallback": "교육자료원본/WPU-IAC425_교육자료_대표사진.jpg",
     "detailSummary": "물과 얼음을 자주 함께 사용하는 고객에게 원코크 편의성을 설명. 정확한 판매 코드/색상/관리 유형별 구독 조건은 별도 확인."
   },

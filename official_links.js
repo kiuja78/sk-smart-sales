@@ -1,11 +1,12 @@
-/* 공식몰에서 모델코드·goodsId가 확인된 제품만 연결합니다. 색상/관리형태는 해당 상품 기준입니다. */
+/* 공식몰과 e-book 주소는 별도로 관리하며 실제로 확인된 주소만 등록합니다. */
 window.SK_OFFICIAL_LINKS = {
   "ice425": {
     "model": "WPU-IAC425",
     "goodsId": "G000070085",
     "prdtCd": "WPUIAC425SNW",
     "cover": "https://static.skmagic.com/image/goods/G000070085/G000070085_2_480x480.png",
-    "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000070085"
+    "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000070085",
+    "ebookDetailUrl": "https://ebookimage.skmagic.com/images/%EC%A0%95%EC%88%98%EA%B8%B0%20%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%9A%A9/425/WPUIAC425SNW,DS(%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0).html"
   },
   "water115": {
     "model": "WPU-JAC115",
