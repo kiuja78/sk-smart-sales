@@ -4,7 +4,7 @@ window.SK_OFFICIAL_LINKS = {
     "model": "WPU-IAC425",
     "goodsId": "G000070085",
     "prdtCd": "WPUIAC425SNW",
-    "cover": "",
+    "cover": "https://static.skmagic.com/image/goods/G000070085/G000070085_2_480x480.png",
     "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000070085"
   },
   "water115": {

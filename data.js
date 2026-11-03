@@ -5,7 +5,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "얼음정수기",
     "name": "원코크 플러스 얼음물 정수기",
     "model": "WPU-IAC425",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000070085/G000070085_2_480x480.png",
     "gallery": [],
     "features": [
       "물·얼음 원코크 구조",
@@ -22,7 +22,12 @@ window.SEED_PRODUCTS = [
       "냉수": "지원",
       "보관량": "0.94kg (교육)",
       "일일제빙": "6.3kg (교육)",
-      "특징": "LED 디스플레이 / 제빙 모드"
+      "특징": "LED 디스플레이 / 제빙 모드",
+      "제품 크기": "W245 × D515 × H482mm (공식몰)",
+      "무게": "16.5kg (공식몰)",
+      "스테인리스 직수관": "적용 (공식몰)",
+      "UV 코크 자동살균": "적용 (공식몰)",
+      "조리수 연결": "가능 (공식몰)"
     },
     "fab": [
       {
@@ -48,7 +53,9 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "heroFallback": "교육자료원본/WPU-IAC425_교육자료_대표사진.jpg",
+    "detailSummary": "물과 얼음을 자주 함께 사용하는 고객에게 원코크 편의성을 설명. 정확한 판매 코드/색상/관리 유형별 구독 조건은 별도 확인."
   },
   {
     "id": "ice414",
@@ -108,7 +115,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "2026년 11월 가격표상 단종·기존고객 참고",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "단종 표기 제품: 기존 고객과 과거 라인업 비교 참고 전용. 새 구독 추천 전 판매 여부 반드시 확인."
   },
   {
     "id": "water115",
@@ -149,7 +157,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "복잡한 기능이 필요하고 주방 공간이 좁은 고객에게 비교용. 세부 사양은 판매 색상·구성별 확인."
   },
   {
     "id": "water104",
@@ -188,7 +197,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "초소형 라인업 비교용. 색상별/관리방식별 모델코드 검증 필요."
   },
   {
     "id": "water125",
@@ -227,7 +237,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "비교적 간결한 기능 구성을 선호하는 고객에게 설명할 모델."
   },
   {
     "id": "water103",
@@ -265,7 +276,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "직수정수기 비교 후보. 상세 스펙 공식 검증 필요."
   },
   {
     "id": "waterpbc",
@@ -302,7 +314,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "온·냉수가 필요 없는 고객에게 설명하는 후보."
   },
   {
     "id": "watergbc",
@@ -340,7 +353,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "최소 공간과 단순한 정수 기능에 집중하는 고객에게 비교."
   },
   {
     "id": "bidet51",
@@ -377,7 +391,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "비데 위생관리와 노즐 구조를 중심으로 비교. 교육표와 공식몰 모델별 스펙이 다를 수 있어 정확한 판매코드 확인."
   },
   {
     "id": "bidet17",
@@ -414,7 +429,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "노즐·위생 관리 중심 비교 후보."
   },
   {
     "id": "bidetf17",
@@ -451,7 +467,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "풀스텐 케어와 모델별 기능 차이 검증 필요."
   },
   {
     "id": "bidet96",
@@ -488,7 +505,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "저수압 환경 상담용 후보. 설치 가능 조건 반드시 현장 확인."
   },
   {
     "id": "air22pet",
@@ -542,7 +560,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "반려동물 있는 집의 먼지·털 관리 니즈를 확인한 뒤 설명. 의학적 효능 등 과장 표현은 피함."
   },
   {
     "id": "air22alarm",
@@ -579,7 +598,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "필터 종류와 알러지/펫의 차이를 모델코드별로 확인할 것."
   },
   {
     "id": "air22",
@@ -616,7 +636,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "색상·모델 세부 구분 확인."
   },
   {
     "id": "air16",
@@ -652,7 +673,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "16평형 제품군 비교 후보."
   },
   {
     "id": "airround",
@@ -688,7 +710,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "면적별로 독립 모델을 추가 등록해야 정확한 추천이 가능."
   },
   {
     "id": "mega506",
@@ -729,7 +752,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "2026년 11월 가격표 조건별 조회",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "큰 얼음 사용량이나 사용 환경에 따른 추천 후보. 구체 제빙량은 추가 확인 필요."
   },
   {
     "id": "mega606",
@@ -949,7 +973,8 @@ window.SEED_PRODUCTS = [
     "officialReviewUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069931&menuNo=100104",
     "customerReviewStatus": "외부 판매처에 공개된 후기 3건을 출처를 표기하여 요약. 공식 SK매직몰 후기 원문/사진은 직접 수집하지 않음.",
     "mediaOnlineOnly": true,
-    "ebookDetailUrl": "https://ebookimage.skmagic.com/images/%EC%A0%95%EC%88%98%EA%B8%B0%20%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%9A%A9/606/WPU-IAC606S(%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0).html"
+    "ebookDetailUrl": "https://ebookimage.skmagic.com/images/%EC%A0%95%EC%88%98%EA%B8%B0%20%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%9A%A9/606/WPU-IAC606S(%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0).html",
+    "detailSummary": "얼음정수기가 필요하지만 주방 공간은 아끼고 싶은 고객에게 우선 비교 추천. 195mm 폭, 얼음 모드, 약 100℃ 고온수와 위생 기능을 소개하고 조리수 연결 불가 여부를 반드시 함께 안내하세요."
   },
   {
     "id": "twowater306",
@@ -991,7 +1016,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "2026년 11월 가격표 조건별 조회",
     "lastEdited": "2026-11-01",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "미네랄워터와 일반 정수 관련 기능에 관심 있는 고객의 비교 후보. 구체 물 기능은 공식 상세페이지 참조."
   },
   {
     "id": "standice110",
@@ -1027,7 +1053,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요."
   },
   {
     "id": "airclean15",
@@ -1058,7 +1085,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요."
   },
   {
     "id": "airclean20",
@@ -1089,7 +1117,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요."
   },
   {
     "id": "airclean25",
@@ -1120,7 +1149,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요."
   },
   {
     "id": "namuhx",
@@ -1155,7 +1185,8 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요."
   },
   {
     "id": "ice302",
@@ -1190,6 +1221,7 @@ window.SEED_PRODUCTS = [
     "price": null,
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
-    "ebookDetailUrl": ""
+    "ebookDetailUrl": "",
+    "detailSummary": "기존 올인원 플러스 얼음정수기 사용자 상담용 보존 모델입니다. 현재 계약 가능 여부를 확인하세요."
   }
 ];
