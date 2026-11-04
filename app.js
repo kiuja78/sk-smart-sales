@@ -10,11 +10,14 @@ const officialInfo=p=>((window.SK_OFFICIAL_LINKS||{})[p?.id]||{});
 const deep=x=>JSON.parse(JSON.stringify(x));
 const safe=x=>String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const PRICE_ROWS=(window.SK_PRICE_DATA&&window.SK_PRICE_DATA.rows)||[];
+// 매트리스(3).xlsx 2026년 11월을 기반으로 한 비상용 가격표. 월별 기준 앱이 확인되면 그 값을 우선 적용합니다.
+const MATTRESS_FALLBACK=window.SK_MATTRESS_FALLBACK||{month:'2026-11',rows:[]};
+const MATTRESS_ROWS=MATTRESS_FALLBACK.rows||[];
 const REMOTE_ARCHIVE=window.SK_MONTH_ARCHIVE||{};
 const PRICE_MONTH_KEY='sk_smart_sales_price_month_v074';
 let selectedMonth=(()=>{let m='2026-11';try{m=localStorage.getItem(PRICE_MONTH_KEY)||'2026-11'}catch(e){}return m})();
 let selectedCommission=null;
-const modelToken=p=>((p.model||'').match(/(WPU-[A-Z0-9]+|ACL-[A-Z0-9]+|BID[-A-Z0-9]+|WRB-[A-Z0-9]+)/i)||[])[1]||'';
+const modelToken=p=>((p.model||'').match(/(WPU-[A-Z0-9]+|ACL-[A-Z0-9]+|BID[-A-Z0-9]+|WRB-[A-Z0-9]+|MAT-?[A-Z0-9]+(?:\/[A-Z0-9]+)?)/i)||[])[1]||'';
 const normModel=s=>String(s||'').replace(/[^a-zA-Z0-9]/g,'').toUpperCase();
 const priceKRW=v=>typeof v==='number'&&Number.isFinite(v)?v.toLocaleString('ko-KR')+'원':'—';
 const availableMonths=()=>[...new Set([...Object.keys(REMOTE_ARCHIVE),...(PRICE_ROWS.length?[window.SK_PRICE_DATA.month||'2026-11']:[])])].sort().reverse();
@@ -26,6 +29,24 @@ function renderMonthSelect(){
 const PRICE_FAMILY={"WPUPBC204":"WPUPBC204S","WPUGBC102":"WPUGBC102S","ACL22P1C":"ACL22P","ACL22C1":"ACL22C","ACL22C12":"ACL22C","ACL16C":"ACL16C","ACL252015C1A":"ACL25C1ASK","BIDS51D":"BIDS51D","BIDS17D":"BIDS17D","BIDF17D":"BIDF17D","BID096P":"BID096P"};
 const priceKey=p=>PRICE_FAMILY[normModel(modelToken(p))]||normModel(modelToken(p));
 function priceRows(p){return PRICE_ROWS.filter(r=>normModel(r.model)===priceKey(p));}
+function isMattress(p){return normModel(p?.model).startsWith('MAT');}
+function mattressFallbackRows(p){
+  if(selectedMonth!==MATTRESS_FALLBACK.month || !isMattress(p))return [];
+  const code=normModel(p.model);
+  return MATTRESS_ROWS.filter(r=>normModel(r.model)===code).map((r,i)=>({
+    ...r,idx:i,source:'mattress-excel',model:p.model,contractYears:Number(String(r.contract).split('/')[0])/12,
+    management:r.management==='프레임'?'프레임':r.management==='무방문'?'무방문':r.management+' 관리',
+    rate:{
+      sheetContractMultiplier:r.multipliers?.single,
+      sheetProfitMultiplier:r.profitMultipliers?.single,
+      sheetPayoutRates:{'신규':r.payoutRates?.single,'신규단품':r.payoutRates?.single,
+        '크로스':r.payoutRates?.cross,'패키지':r.payoutRates?.package,
+        '재구독':r.payoutRates?.renew,'재구독단품':r.payoutRates?.renew,
+        '재구독패키지':r.payoutRates?.renewPackage},
+      sheetCommissions:r.commissions
+    },month:selectedMonth
+  }));
+}
 function archiveMonth(){return REMOTE_ARCHIVE[selectedMonth]||null;}
 function archiveProduct(p){
  const snap=archiveMonth();if(!snap?.products)return null;
@@ -36,11 +57,15 @@ function archiveRows(p){
  const snap=archiveMonth(),prod=archiveProduct(p);
  if(!snap||!prod)return [];
  const rows=snap.finalRates?.[String(prod.apiId)]||[];
- return rows.map((r,i)=>({source:'archive',idx:i,model:p.model,model_raw:'',management:r.management||'',contract:r.contractYears?String(r.contractYears)+'년':'',contractYears:Number(r.contractYears)||0,base:r.sheetBasePrice??prod.prices?.beforePrice??null,single:priceValue(r.pricesByCustomer,['신규단품','신규']),cross:priceValue(r.pricesByCustomer,['크로스','크로스/재구독/우대','재구독/우대']),package:priceValue(r.pricesByCustomer,['패키지']),renew:priceValue(r.pricesByCustomer,['재구독단품','재구독/우대','재구독']),rate:r,variant:r.variant||'',plan:r.plan||'',size:r.size||'',cycle:r.visitCycleMonths,month:selectedMonth}));
+ return rows.map((r,i)=>({source:'archive',idx:i,model:p.model,model_raw:'',management:r.management||'',contract:r.contractYears?String(r.contractYears)+'년':'',contractYears:Number(r.contractYears)||0,base:r.sheetBasePrice??prod.prices?.beforePrice??null,single:priceValue(r.pricesByCustomer,['신규단품','신규']),cross:priceValue(r.pricesByCustomer,['크로스','크로스/재구독/우대','재구독/우대']),package:priceValue(r.pricesByCustomer,['패키지']),renew:priceValue(r.pricesByCustomer,['재구독단품','재구독/우대','재구독']),renewPackage:priceValue(r.pricesByCustomer,['재구독패키지','재구독 패키지']),rate:r,variant:r.variant||'',plan:r.plan||'',size:r.size||'',cycle:r.visitCycleMonths,month:selectedMonth}));
 }
 function priceValue(prices,keys){for(const k of keys){const n=Number(prices?.[k]);if(n>0)return n;}return null;}
 function priceRowsForMonth(p){
- const arch=archiveRows(p);if(arch.length)return arch;
+ const arch=archiveRows(p);
+ // If the shared monthly archive contains actual customer prices, it is always authoritative.
+ // For mattress, a generic/incomplete archive row must not conceal the validated Excel rows.
+ if(arch.length && (!isMattress(p) || arch.some(r=>['single','cross','package','renew','renewPackage'].some(k=>r[k]>0))))return arch;
+ const mattress=mattressFallbackRows(p);if(mattress.length)return mattress;
  if(selectedMonth!==(window.SK_PRICE_DATA?.month||'2026-11'))return [];
  let rows=priceRows(p).filter(r=>r.source_type==='2026년11월 프로모션');
  if(!rows.length)rows=priceRows(p);
@@ -48,13 +73,13 @@ function priceRowsForMonth(p){
 }
 function priceTable(p){
  const rows=priceRowsForMonth(p),s=archiveMonth(),prod=archiveProduct(p);
- const source=s&&prod?'SK매직 제품정보 앱 공통 월별 가격자료':'내장된 2026년 11월 참고 가격';
- const guide=`<div class="price-table-tools"><div><strong>월별 구독료 확인</strong><p>${safe(source)} · 금액을 누르면 수수료 계산창이 열립니다.</p></div><div class="price-month-controls"><label>기준월 <select data-price-month aria-label="가격표 기준월">${availableMonths().map(m=>`<option value="${safe(m)}" ${m===selectedMonth?'selected':''}>${safe(m.replace('-','년 '))}월</option>`).join('')}</select></label><span class="price-source-tag">${s&&prod?'온라인 월별 연동':'검증 원본 내장'}</span></div></div>`;
+ const source=rows[0]?.source==='archive'?'SK매직 제품정보 앱 공통 월별 가격자료':rows[0]?.source==='mattress-excel'?'매트리스(3).xlsx · 2026년 11월 검증 원본':'내장된 2026년 11월 참고 가격';
+ const guide=`<div class="price-table-tools"><div><strong>월별 구독료 확인</strong><p>${safe(source)} · 금액을 누르면 수수료 계산창이 열립니다.</p></div><div class="price-month-controls"><label>기준월 <select data-price-month aria-label="가격표 기준월">${availableMonths().map(m=>`<option value="${safe(m)}" ${m===selectedMonth?'selected':''}>${safe(m.replace('-','년 '))}월</option>`).join('')}</select></label><span class="price-source-tag">${rows[0]?.source==='archive'?'공통 월별 연동':'11월 원본 백업'}</span></div></div>`;
  if(!rows.length){return `${guide}<div class="warning-box">선택한 월에 해당 모델의 계약가격이 확인되지 않았습니다. 다른 기준월을 선택하거나 관리자가 가격표를 추가해 주세요. 임의의 금액은 표시하지 않습니다.</div>`;}
  const cell=(r,k,label)=>{const val=r[k];return typeof val==='number'&&val>0?`<button type="button" class="price-select" data-select-price="${r.idx}" data-price-type="${k}" title="${safe(label)} ${priceKRW(val)} 수수료 계산">${priceKRW(val)}<span>계산 ↗</span></button>`:'<span class="no-rate">—</span>';};
  const seen=new Set();
- const display=rows.filter(r=>{const key=[r.management,r.contract,r.variant,r.plan,r.size,r.cycle,r.base,r.single,r.cross,r.package,r.renew].join('|');if(seen.has(key))return false;seen.add(key);return true;});
- return `${guide}<div class="price-scroll"><table class="compare-table price-table"><thead><tr><th>관리</th><th>의무/계약</th><th>기준 구독료</th><th>신규 단품</th><th>크로스</th><th>패키지</th><th>재구독</th></tr></thead><tbody>${display.map(r=>`<tr><td><strong>${safe(r.management||'—')}</strong>${(r.variant||r.plan||r.size)?`<small>${safe([r.variant,r.plan,r.size].filter(Boolean).join(' · '))}</small>`:''}</td><td>${safe(r.contract||'—')}${r.status==='단종 표시·추천 제외'?'<span class="retired-tag">단종·기존고객 참고</span>':''}</td><td>${cell(r,'base','기준 구독료')}</td><td>${cell(r,'single','신규 단품')}</td><td>${cell(r,'cross','크로스')}</td><td>${cell(r,'package','패키지')}</td><td>${cell(r,'renew','재구독')}</td></tr>`).join('')}</tbody></table></div><p class="price-footnote">${safe(source)} · 실제 계약 시 계약형태, 프로모션 및 관리조건 최종 확인 필요. 모델 구성 반복 컬럼은 제외했습니다.</p>`;
+ const display=rows.filter(r=>{const key=[r.management,r.contract,r.variant,r.plan,r.size,r.cycle,r.base,r.single,r.cross,r.package,r.renew,r.renewPackage].join('|');if(seen.has(key))return false;seen.add(key);return true;});
+ return `${guide}<div class="price-scroll"><table class="compare-table price-table"><thead><tr><th>관리</th><th>의무/계약</th><th>기준 구독료</th><th>신규 단품</th><th>크로스</th><th>패키지</th><th>재구독</th>${isMattress(p)?'<th>재구독 패키지</th>':''}</tr></thead><tbody>${display.map(r=>`<tr><td><strong>${safe(r.management||'—')}</strong>${(r.variant||r.plan||r.size)?`<small>${safe([r.variant,r.plan,r.size].filter(Boolean).join(' · '))}</small>`:''}</td><td>${safe(r.contract||'—')}${r.status==='단종 표시·추천 제외'?'<span class="retired-tag">단종·기존고객 참고</span>':''}</td><td>${cell(r,'base','기준 구독료')}</td><td>${cell(r,'single','신규 단품')}</td><td>${cell(r,'cross','크로스')}</td><td>${cell(r,'package','패키지')}</td><td>${cell(r,'renew','재구독')}</td>${isMattress(p)?`<td>${cell(r,'renewPackage','재구독 패키지')}</td>`:''}</tr>`).join('')}</tbody></table></div><p class="price-footnote">${safe(source)} · 실제 계약 시 계약형태, 프로모션 및 관리조건 최종 확인 필요. 모델 구성 반복 컬럼은 제외했습니다.</p>`;
 }
 function numericField(label,id,value,hint=''){
  return `<label class="calc-field">${safe(label)}<input type="number" id="${id}" step="0.01" min="0" value="${value??''}" placeholder="정책값 입력" inputmode="decimal">${hint?`<small>${safe(hint)}</small>`:''}</label>`;
@@ -68,10 +93,10 @@ function showCommission(idx,type){
  const normalized=normModel(modelToken(detail));
  const referenceProfit=/^ACL(15C|20C|25C)|^BID(F17|S17)|^WPUB(600|610|700|710)|^WPUIC110F|^WPUJCC104|^WPUTD(C|F)(104|114)|^WPUB400/.test(normalized)?0.8:1;
  const profit=rateRow?.sheetProfitMultiplier??(snap&&prod?referenceProfit:null);
- const policyName={base:'기준 구독료',single:'신규 단품',cross:'크로스',package:'패키지',renew:'재구독'}[type];
- const payKind={base:'신규',single:'신규',cross:'크로스',package:'패키지',renew:'교체'}[type];
+ const policyName={base:'기준 구독료',single:'신규 단품',cross:'크로스',package:'패키지',renew:'재구독',renewPackage:'재구독 패키지'}[type];
+ const payKind={base:'신규',single:'신규',cross:'크로스',package:'패키지',renew:'교체',renewPackage:'교체'}[type];
  const payoutFromRow=rateRow?.sheetPayoutRates||{};
- const rateType={base:['신규','신규단품'],single:['신규','신규단품'],cross:['크로스','크로스/재구독/우대'],package:['패키지'],renew:['재구독','재구독단품']}[type];
+ const rateType={base:['신규','신규단품'],single:['신규','신규단품'],cross:['크로스','크로스/재구독/우대'],package:['패키지'],renew:['재구독','재구독단품'],renewPackage:['재구독패키지']}[type];
  let payout=null;for(const key of rateType){if(payoutFromRow[key]!=null){payout=Number(payoutFromRow[key]);break;}}
  if(payout===null&&policy.rateByType?.[payKind]!=null)payout=Number(policy.rateByType[payKind]);
  const payoutPercent=payout!=null?+(payout*100).toFixed(2):null;
@@ -85,14 +110,15 @@ function calcCommission(){
  const inp=id=>$('#'+id)?.value||'';
  const mul=Number(inp('calcMultiplier')),prof=Number(inp('calcProfit')),payout=Number(inp('calcPayout')),extra=Number(inp('calcExtra'));
  if(!inp('calcMultiplier')||!inp('calcProfit')||!inp('calcPayout')||mul<=0||prof<=0||payout<=0){$('#calcResult').textContent='정책값 입력 필요';$('#calcFormula').textContent='계약배수·이익배수·지급률 확인 후 자동 계산됩니다.';return;}
- const total=Math.round(selectedCommission.amount*mul*prof*payout/100+extra);
+ const raw=selectedCommission.amount*mul*prof*payout/100;
+ const total=isMattress(selectedCommission.p)?Math.round(raw/10)*10+extra:Math.round(raw+extra);
  $('#calcResult').textContent=priceKRW(total);
- $('#calcFormula').textContent=`${selectedCommission.amount.toLocaleString('ko-KR')} × ${mul} × ${prof} × ${payout}% + ${extra.toLocaleString('ko-KR')}원`;
+ $('#calcFormula').textContent=`${selectedCommission.amount.toLocaleString('ko-KR')} × ${mul} × ${prof} × ${payout}%${isMattress(selectedCommission.p)?' (10원 단위 반올림)':''} + ${extra.toLocaleString('ko-KR')}원`;
 }
 function closeCommission(){$('#commissionLayer').classList.remove('open');$('#commissionLayer').setAttribute('aria-hidden','true');selectedCommission=null;}
 let products=load().map(standardizeProduct),category='전체',subcat='전체',query='',compare=[],view='library',detail=null,activeTab='feature',reviewFilter='all';
 const $=sel=>document.querySelector(sel);
-const ic=cat=>cat==='정수기'?'💧':cat==='공기청정기'?'🌿':cat==='비데'?'✦':'▧';
+const ic=cat=>cat==='정수기'?'💧':cat==='공기청정기'?'🌿':cat==='비데'?'✦':cat==='매트리스'?'🛏️':'▧';
 function load(){
   const seed=deep(window.SEED_PRODUCTS);
   try{
