@@ -113,7 +113,7 @@
       "subcategory": "직수정수기",
       "name": "초소형 플러스 직수 정수기",
       "model": "WPU-JAC115 계열",
-      "hero": "",
+      "hero": "https://static.skmagic.com/image/goods/G000069985/G000069985_2_480x480.png",
       "gallery": [],
       "features": [
         "고온수",
@@ -145,7 +145,13 @@
       "checkedAt": "2026-11-01",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069985",
+        "kind": "공식몰",
+        "model": "WPUJAC115DNW",
+        "seriesRepresentative": false
+      }
     },
     {
       "id": "water104",
@@ -153,7 +159,7 @@
       "subcategory": "직수정수기",
       "name": "초소형 직수 정수기",
       "model": "WPU-JAC104 계열",
-      "hero": "",
+      "hero": "https://static.skmagic.com/image/goods/G000070005/G000070005_2_480x480.png",
       "gallery": [],
       "features": [
         "고온수",
@@ -183,7 +189,13 @@
       "checkedAt": "",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000070005",
+        "kind": "공식몰",
+        "model": "WPUJAC104DWH",
+        "seriesRepresentative": false
+      }
     },
     {
       "id": "water125",
@@ -191,7 +203,7 @@
       "subcategory": "직수정수기",
       "name": "초소형 라이트 직수 정수기",
       "model": "WPU-JAC125 계열",
-      "hero": "",
+      "hero": "https://static.skmagic.com/image/goods/G000069526/G000069526_2_480x480.png",
       "gallery": [],
       "features": [
         "고온수",
@@ -221,7 +233,13 @@
       "checkedAt": "2026-11-01",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069526",
+        "kind": "공식몰",
+        "model": "WPUJAC125SNW",
+        "seriesRepresentative": false
+      }
     },
     {
       "id": "water103",
@@ -229,7 +247,7 @@
       "subcategory": "직수정수기",
       "name": "스스로 플러스 직수 정수기",
       "model": "WPU-JAC103 계열",
-      "hero": "",
+      "hero": "https://cdn.rentre.kr/product-detail/83c6d83e90f9466ea2c47ffc6b49b887.png",
       "gallery": [],
       "features": [
         "고온수 (교육)",
@@ -258,7 +276,13 @@
       "checkedAt": "",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://rentre.kr/product/1522011862",
+        "kind": "판매자료",
+        "model": "WPU-JAC103SWH",
+        "seriesRepresentative": false
+      }
     },
     {
       "id": "waterpbc",
@@ -302,7 +326,7 @@
       "subcategory": "직수정수기",
       "name": "에코 미니 정수기",
       "model": "WPU-GBC102 계열",
-      "hero": "",
+      "hero": "https://skbest.speedycdn.net/data/file/item_product/thumb-31283557_wzNSd4LE_WPU-GBC102_5_494x494.jpg",
       "gallery": [],
       "features": [
         "정수 전용 (교육)",
@@ -331,7 +355,13 @@
       "checkedAt": "",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://skhome.kr/product.php?cid=1439&no=22005",
+        "kind": "인증파트너",
+        "model": "WPU-GBC102",
+        "seriesRepresentative": false
+      }
     },
     {
       "id": "bidet51",
@@ -339,7 +369,7 @@
       "subcategory": "비데",
       "name": "올클린 케어 비데",
       "model": "BID-S51D 계열",
-      "hero": "",
+      "hero": "https://static.skmagic.com/image/goods/G000069623/G000069623_2_480x480.png",
       "gallery": [],
       "features": [
         "순간온수 방식 (교육)",
@@ -367,7 +397,13 @@
       "checkedAt": "2026-11-01",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069623",
+        "kind": "공식몰",
+        "model": "BIDS51DR15WH",
+        "seriesRepresentative": false
+      }
     },
     {
       "id": "bidet17",
@@ -375,7 +411,7 @@
       "subcategory": "비데",
       "name": "풀스텐 케어 비데",
       "model": "BID-S17D 계열",
-      "hero": "",
+      "hero": "https://cdn.imweb.me/thumbnail/20251110/8f3505e53b1d4.png",
       "gallery": [],
       "features": [
         "연속온수 (교육)",
@@ -403,7 +439,13 @@
       "checkedAt": "",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://online-mall.co.kr/106/?idx=2531",
+        "kind": "판매자료",
+        "model": "BID-S17D",
+        "seriesRepresentative": false
+      }
     },
     {
       "id": "bidetf17",
@@ -411,7 +453,7 @@
       "subcategory": "비데",
       "name": "풀스텐 스파 비데",
       "model": "BID-F17D 계열",
-      "hero": "",
+      "hero": "https://m.new-skmagic.co.kr/web/product/big/202307/ad83583a5c6616390465e7c61f0da9fd.jpg",
       "gallery": [],
       "features": [
         "연속온수 (교육)",
@@ -439,7 +481,13 @@
       "checkedAt": "",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://new-skmagic.co.kr/product/sk매직-비데-bid-f17d-렌탈-화이트-풀스텐-스파-방수-의무-3년-방문관리형/227/",
+        "kind": "인증파트너",
+        "model": "BID-F17D",
+        "seriesRepresentative": false
+      }
     },
     {
       "id": "bidet96",
@@ -447,7 +495,7 @@
       "subcategory": "비데",
       "name": "파워업 비데 (저수압용)",
       "model": "BID-096P 계열",
-      "hero": "",
+      "hero": "https://cdn.imweb.me/thumbnail/20220823/21725b953ba2d.jpg",
       "gallery": [],
       "features": [
         "저수압용 (교육)",
@@ -475,7 +523,13 @@
       "checkedAt": "",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://rentalview.kr/sk-24/?idx=2094",
+        "kind": "판매자료",
+        "model": "BID-096P",
+        "seriesRepresentative": false
+      }
     },
     {
       "id": "air22pet",
@@ -483,7 +537,7 @@
       "subcategory": "공기청정기",
       "name": "디아트 펫 공기청정기",
       "model": "ACL-22P1C 계열",
-      "hero": "",
+      "hero": "https://static.skmagic.com/image/goods/G000067179/G000067179_21_480x480.png",
       "gallery": [],
       "features": [
         "360° 흡입 (교육)",
@@ -528,7 +582,13 @@
       "checkedAt": "2026-11-01",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000067179",
+        "kind": "공식몰",
+        "model": "ACL22P1CSKSL",
+        "seriesRepresentative": false
+      }
     },
     {
       "id": "air22alarm",
@@ -536,7 +596,7 @@
       "subcategory": "공기청정기",
       "name": "디아트 공기청정기 (알러지/펫)",
       "model": "ACL-22C1 알러지/펫 계열",
-      "hero": "",
+      "hero": "https://sitem.ssgcdn.com/30/21/72/item/1000593722130_i1_1200.jpg",
       "gallery": [],
       "features": [
         "72.6㎡ (교육)",
@@ -564,7 +624,14 @@
       "checkedAt": "",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069142",
+        "kind": "공식몰/유통자료",
+        "model": "ACL-22C1A",
+        "seriesRepresentative": true
+      },
+      "photoNote": "알러지 필터형과 본체가 같은 디아트 시리즈 대표 이미지"
     },
     {
       "id": "air22",
@@ -572,7 +639,7 @@
       "subcategory": "공기청정기",
       "name": "디아트 공기청정기",
       "model": "ACL-22C1/2 계열",
-      "hero": "",
+      "hero": "https://sitem.ssgcdn.com/30/21/72/item/1000593722130_i1_1200.jpg",
       "gallery": [],
       "features": [
         "72.6㎡ (교육)",
@@ -600,7 +667,14 @@
       "checkedAt": "",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000067184",
+        "kind": "공식몰/유통자료",
+        "model": "ACL-22C1A",
+        "seriesRepresentative": true
+      },
+      "photoNote": "ACL-22C1/2 계열 대표 이미지"
     },
     {
       "id": "air16",
@@ -608,7 +682,7 @@
       "subcategory": "공기청정기",
       "name": "디아트 공기청정기",
       "model": "ACL-16C 계열",
-      "hero": "",
+      "hero": "https://static.skmagic.com/image/goods/G000067189/G000067189_15_480x480.png",
       "gallery": [],
       "features": [
         "52.8㎡ (교육)",
@@ -635,7 +709,14 @@
       "checkedAt": "",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000067189",
+        "kind": "공식몰",
+        "model": "ACL16C1ASKOB",
+        "seriesRepresentative": true
+      },
+      "photoNote": "ACL-16C 계열 16평 디아트 대표 이미지"
     },
     {
       "id": "airround",
@@ -643,7 +724,7 @@
       "subcategory": "공기청정기",
       "name": "올클린 공기청정기",
       "model": "ACL-25/20/15C1A 계열",
-      "hero": "",
+      "hero": "https://static.skmagic.com/image/goods/G000067380/G000067380_3_480x480.png",
       "gallery": [],
       "features": [
         "25/20/15평 제품군 (교육)",
@@ -670,7 +751,24 @@
       "checkedAt": "",
       "price": null,
       "priceStatus": "미검증·고객노출 금지",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000067380",
+        "kind": "공식몰",
+        "model": "ACL20C1ASKWH",
+        "seriesRepresentative": true
+      },
+      "photoNote": "올클린 15·20·25평 계열 중 20평 대표 이미지",
+      "officialPhotos": [
+        {
+          "src": "https://static.skmagic.com/image/goods/G000069681/G000069681_7_480x480.png",
+          "title": "올클린 15평 대표 이미지"
+        },
+        {
+          "src": "https://static.skmagic.com/image/goods/G000069683/G000069683_3_480x480.png",
+          "title": "올클린 25평 대표 이미지"
+        }
+      ]
     },
     {
       "id": "mega506",
@@ -695,7 +793,7 @@
       },
       "pitch": "큰 얼음 사용량이나 사용 환경에 따른 추천 후보. 구체 제빙량은 추가 확인 필요.",
       "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069846",
-      "hero": "",
+      "hero": "https://static.skmagic.com/image/goods/G000069846/G000069846_2_480x480.png",
       "gallery": [],
       "fab": [],
       "benefits": [],
@@ -710,7 +808,13 @@
       "checkedAt": "2026-11-01",
       "price": null,
       "priceStatus": "2026년 11월 가격표 조건별 조회",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069846",
+        "kind": "공식몰",
+        "model": "WPUIAC506SNW",
+        "seriesRepresentative": false
+      }
     },
     {
       "id": "mega606",
@@ -955,7 +1059,7 @@
       },
       "pitch": "미네랄워터와 일반 정수 관련 기능에 관심 있는 고객의 비교 후보. 구체 물 기능은 공식 상세페이지 참조.",
       "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069843",
-      "hero": "",
+      "hero": "https://static.skmagic.com/image/goods/G000069843/G000069843_2_480x480.png",
       "gallery": [],
       "fab": [],
       "benefits": [],
@@ -970,7 +1074,13 @@
       "checkedAt": "2026-11-01",
       "price": null,
       "priceStatus": "2026년 11월 가격표 조건별 조회",
-      "lastEdited": "2026-11-01"
+      "lastEdited": "2026-11-01",
+      "photoSource": {
+        "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069843",
+        "kind": "공식몰",
+        "model": "WPUMAC306SWH",
+        "seriesRepresentative": false
+      }
     }
   ]
 }

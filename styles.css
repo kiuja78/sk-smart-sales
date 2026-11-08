@@ -587,3 +587,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
  .product-body h3{font-size:13.5px}.product-body .code{font-size:12.5px}
 }
 @media(prefers-reduced-motion:reduce){.sidebar,.nav,.product{transition:none!important}}
+
+/* v0.8.2 · 출처 검증 이미지와 실패 시 안내 */
+.product-visual:before{display:none!important}
+.product-visual img{position:relative;z-index:1;object-fit:contain;object-position:center;padding:13px 10px}
+.product-visual .status{z-index:3}
+.series-photo-label{position:absolute;z-index:3;right:8px;bottom:8px;font-size:10px;font-weight:700;padding:5px 8px;background:rgba(255,255,255,.93);border:1px solid #b8d6da;color:#376c75;border-radius:9px}
+.image-failure-label{position:absolute;z-index:3;bottom:18px;left:16px;right:16px;font-size:11px;font-weight:700;color:#597488;background:#fff;border:1px dashed #becbd7;padding:10px;border-radius:10px;text-align:center}
+.product-gallery-main .image-failure-label{position:absolute;z-index:5;bottom:40%;left:10%;right:10%}

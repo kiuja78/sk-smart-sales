@@ -55,7 +55,13 @@ window.SEED_PRODUCTS = [
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "https://ebookimage.skmagic.com/images/%EC%A0%95%EC%88%98%EA%B8%B0%20%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%9A%A9/425/WPUIAC425SNW,DS(%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0).html",
     "heroFallback": "교육자료원본/WPU-IAC425_교육자료_대표사진.jpg",
-    "detailSummary": "물과 얼음을 자주 함께 사용하는 고객에게 원코크 편의성을 설명. 정확한 판매 코드/색상/관리 유형별 구독 조건은 별도 확인."
+    "detailSummary": "물과 얼음을 자주 함께 사용하는 고객에게 원코크 편의성을 설명. 정확한 판매 코드/색상/관리 유형별 구독 조건은 별도 확인.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000070085&menuNo=100104",
+      "kind": "기존 등록 사진",
+      "model": "WPU-IAC425",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "ice414",
@@ -116,7 +122,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "2026년 11월 가격표상 단종·기존고객 참고",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "단종 표기 제품: 기존 고객과 과거 라인업 비교 참고 전용. 새 구독 추천 전 판매 여부 반드시 확인."
+    "detailSummary": "단종 표기 제품: 기존 고객과 과거 라인업 비교 참고 전용. 새 구독 추천 전 판매 여부 반드시 확인.",
+    "photoSource": {
+      "page": "https://m.skmagic.com/goods/indexGoodsDetail?goodsId=G000068401",
+      "kind": "기존 등록 사진",
+      "model": "WPU-IAC414",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "water115",
@@ -124,7 +136,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "초소형",
     "name": "초소형 플러스 직수 정수기",
     "model": "WPU-JAC115",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000069985/G000069985_2_480x480.png",
     "gallery": [],
     "features": [
       "고온수",
@@ -158,7 +170,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "복잡한 기능이 필요하고 주방 공간이 좁은 고객에게 비교용. 세부 사양은 판매 색상·구성별 확인."
+    "detailSummary": "복잡한 기능이 필요하고 주방 공간이 좁은 고객에게 비교용. 세부 사양은 판매 색상·구성별 확인.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069985",
+      "kind": "공식몰",
+      "model": "WPUJAC115DNW",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "water104",
@@ -166,7 +184,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "초소형",
     "name": "초소형 직수 정수기",
     "model": "WPU-JAC104",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000070005/G000070005_2_480x480.png",
     "gallery": [],
     "features": [
       "고온수",
@@ -198,7 +216,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "초소형 라인업 비교용. 색상별/관리방식별 모델코드 검증 필요."
+    "detailSummary": "초소형 라인업 비교용. 색상별/관리방식별 모델코드 검증 필요.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000070005",
+      "kind": "공식몰",
+      "model": "WPUJAC104DWH",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "water125",
@@ -206,7 +230,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "초소형",
     "name": "초소형 라이트 직수 정수기",
     "model": "WPU-JAC125",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000069526/G000069526_2_480x480.png",
     "gallery": [],
     "features": [
       "고온수",
@@ -238,7 +262,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "비교적 간결한 기능 구성을 선호하는 고객에게 설명할 모델."
+    "detailSummary": "비교적 간결한 기능 구성을 선호하는 고객에게 설명할 모델.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069526",
+      "kind": "공식몰",
+      "model": "WPUJAC125SNW",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "water103",
@@ -246,7 +276,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "초소형",
     "name": "스스로 플러스 직수 정수기",
     "model": "WPU-JAC103",
-    "hero": "",
+    "hero": "https://cdn.rentre.kr/product-detail/83c6d83e90f9466ea2c47ffc6b49b887.png",
     "gallery": [],
     "features": [
       "고온수 (교육)",
@@ -277,7 +307,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "직수정수기 비교 후보. 상세 스펙 공식 검증 필요."
+    "detailSummary": "직수정수기 비교 후보. 상세 스펙 공식 검증 필요.",
+    "photoSource": {
+      "page": "https://rentre.kr/product/1522011862",
+      "kind": "판매자료",
+      "model": "WPU-JAC103SWH",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "waterpbc",
@@ -315,7 +351,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "온·냉수가 필요 없는 고객에게 설명하는 후보."
+    "detailSummary": "온·냉수가 필요 없는 고객에게 설명하는 후보.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000068821",
+      "kind": "기존 등록 사진",
+      "model": "WPU-PBC204",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "watergbc",
@@ -323,7 +365,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "정수",
     "name": "에코 미니 정수기",
     "model": "WPU-GBC102",
-    "hero": "",
+    "hero": "https://skbest.speedycdn.net/data/file/item_product/thumb-31283557_wzNSd4LE_WPU-GBC102_5_494x494.jpg",
     "gallery": [],
     "features": [
       "정수 전용 (교육)",
@@ -354,7 +396,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "최소 공간과 단순한 정수 기능에 집중하는 고객에게 비교."
+    "detailSummary": "최소 공간과 단순한 정수 기능에 집중하는 고객에게 비교.",
+    "photoSource": {
+      "page": "https://skhome.kr/product.php?cid=1439&no=22005",
+      "kind": "인증파트너",
+      "model": "WPU-GBC102",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "bidet51",
@@ -362,7 +410,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "비데",
     "name": "올클린 케어 비데",
     "model": "BID-S51D",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000069623/G000069623_2_480x480.png",
     "gallery": [],
     "features": [
       "순간온수 방식 (교육)",
@@ -392,7 +440,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "비데 위생관리와 노즐 구조를 중심으로 비교. 교육표와 공식몰 모델별 스펙이 다를 수 있어 정확한 판매코드 확인."
+    "detailSummary": "비데 위생관리와 노즐 구조를 중심으로 비교. 교육표와 공식몰 모델별 스펙이 다를 수 있어 정확한 판매코드 확인.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069623",
+      "kind": "공식몰",
+      "model": "BIDS51DR15WH",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "bidet17",
@@ -400,7 +454,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "비데",
     "name": "풀스텐 케어 비데",
     "model": "BID-S17D",
-    "hero": "",
+    "hero": "https://cdn.imweb.me/thumbnail/20251110/8f3505e53b1d4.png",
     "gallery": [],
     "features": [
       "연속온수 (교육)",
@@ -430,7 +484,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "노즐·위생 관리 중심 비교 후보."
+    "detailSummary": "노즐·위생 관리 중심 비교 후보.",
+    "photoSource": {
+      "page": "https://online-mall.co.kr/106/?idx=2531",
+      "kind": "판매자료",
+      "model": "BID-S17D",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "bidetf17",
@@ -438,7 +498,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "비데",
     "name": "풀스텐 스파 비데",
     "model": "BID-F17D",
-    "hero": "",
+    "hero": "https://m.new-skmagic.co.kr/web/product/big/202307/ad83583a5c6616390465e7c61f0da9fd.jpg",
     "gallery": [],
     "features": [
       "연속온수 (교육)",
@@ -468,7 +528,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "풀스텐 케어와 모델별 기능 차이 검증 필요."
+    "detailSummary": "풀스텐 케어와 모델별 기능 차이 검증 필요.",
+    "photoSource": {
+      "page": "https://new-skmagic.co.kr/product/sk매직-비데-bid-f17d-렌탈-화이트-풀스텐-스파-방수-의무-3년-방문관리형/227/",
+      "kind": "인증파트너",
+      "model": "BID-F17D",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "bidet96",
@@ -476,7 +542,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "비데",
     "name": "파워업 비데 (저수압용)",
     "model": "BID-096P",
-    "hero": "",
+    "hero": "https://cdn.imweb.me/thumbnail/20220823/21725b953ba2d.jpg",
     "gallery": [],
     "features": [
       "저수압용 (교육)",
@@ -506,7 +572,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "저수압 환경 상담용 후보. 설치 가능 조건 반드시 현장 확인."
+    "detailSummary": "저수압 환경 상담용 후보. 설치 가능 조건 반드시 현장 확인.",
+    "photoSource": {
+      "page": "https://rentalview.kr/sk-24/?idx=2094",
+      "kind": "판매자료",
+      "model": "BID-096P",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "air22pet",
@@ -514,7 +586,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "디아트",
     "name": "디아트 펫 공기청정기",
     "model": "ACL-22P1C",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000067179/G000067179_21_480x480.png",
     "gallery": [],
     "features": [
       "360° 흡입 (교육)",
@@ -561,7 +633,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "반려동물 있는 집의 먼지·털 관리 니즈를 확인한 뒤 설명. 의학적 효능 등 과장 표현은 피함."
+    "detailSummary": "반려동물 있는 집의 먼지·털 관리 니즈를 확인한 뒤 설명. 의학적 효능 등 과장 표현은 피함.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000067179",
+      "kind": "공식몰",
+      "model": "ACL22P1CSKSL",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "air22alarm",
@@ -569,7 +647,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "디아트",
     "name": "디아트 공기청정기 (알러지/펫)",
     "model": "ACL-22C1",
-    "hero": "",
+    "hero": "https://sitem.ssgcdn.com/30/21/72/item/1000593722130_i1_1200.jpg",
     "gallery": [],
     "features": [
       "72.6㎡ (교육)",
@@ -599,7 +677,14 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "필터 종류와 알러지/펫의 차이를 모델코드별로 확인할 것."
+    "detailSummary": "필터 종류와 알러지/펫의 차이를 모델코드별로 확인할 것.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069142",
+      "kind": "공식몰/유통자료",
+      "model": "ACL-22C1A",
+      "seriesRepresentative": true
+    },
+    "photoNote": "알러지 필터형과 본체가 같은 디아트 시리즈 대표 이미지"
   },
   {
     "id": "air22",
@@ -607,7 +692,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "디아트",
     "name": "디아트 공기청정기",
     "model": "ACL-22C1/2",
-    "hero": "",
+    "hero": "https://sitem.ssgcdn.com/30/21/72/item/1000593722130_i1_1200.jpg",
     "gallery": [],
     "features": [
       "72.6㎡ (교육)",
@@ -637,7 +722,14 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "색상·모델 세부 구분 확인."
+    "detailSummary": "색상·모델 세부 구분 확인.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000067184",
+      "kind": "공식몰/유통자료",
+      "model": "ACL-22C1A",
+      "seriesRepresentative": true
+    },
+    "photoNote": "ACL-22C1/2 계열 대표 이미지"
   },
   {
     "id": "air16",
@@ -645,7 +737,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "디아트",
     "name": "디아트 공기청정기",
     "model": "ACL-16C",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000067189/G000067189_15_480x480.png",
     "gallery": [],
     "features": [
       "52.8㎡ (교육)",
@@ -674,7 +766,14 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "16평형 제품군 비교 후보."
+    "detailSummary": "16평형 제품군 비교 후보.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000067189",
+      "kind": "공식몰",
+      "model": "ACL16C1ASKOB",
+      "seriesRepresentative": true
+    },
+    "photoNote": "ACL-16C 계열 16평 디아트 대표 이미지"
   },
   {
     "id": "airround",
@@ -682,7 +781,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "올클린",
     "name": "올클린 공기청정기",
     "model": "ACL-25/20/15C1A",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000067380/G000067380_3_480x480.png",
     "gallery": [],
     "features": [
       "25/20/15평 제품군 (교육)",
@@ -711,7 +810,24 @@ window.SEED_PRODUCTS = [
     "priceStatus": "미검증·고객노출 금지",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "면적별로 독립 모델을 추가 등록해야 정확한 추천이 가능."
+    "detailSummary": "면적별로 독립 모델을 추가 등록해야 정확한 추천이 가능.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000067380",
+      "kind": "공식몰",
+      "model": "ACL20C1ASKWH",
+      "seriesRepresentative": true
+    },
+    "officialPhotos": [
+      {
+        "src": "https://static.skmagic.com/image/goods/G000069681/G000069681_7_480x480.png",
+        "title": "올클린 15평 대표 이미지"
+      },
+      {
+        "src": "https://static.skmagic.com/image/goods/G000069683/G000069683_3_480x480.png",
+        "title": "올클린 25평 대표 이미지"
+      }
+    ],
+    "photoNote": "올클린 15·20·25평 계열 중 20평 대표 이미지"
   },
   {
     "id": "mega506",
@@ -736,7 +852,7 @@ window.SEED_PRODUCTS = [
     },
     "pitch": "큰 얼음 사용량이나 사용 환경에 따른 추천 후보. 구체 제빙량은 추가 확인 필요.",
     "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069846",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000069846/G000069846_2_480x480.png",
     "gallery": [],
     "fab": [],
     "benefits": [],
@@ -753,7 +869,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "2026년 11월 가격표 조건별 조회",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "큰 얼음 사용량이나 사용 환경에 따른 추천 후보. 구체 제빙량은 추가 확인 필요."
+    "detailSummary": "큰 얼음 사용량이나 사용 환경에 따른 추천 후보. 구체 제빙량은 추가 확인 필요.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069846",
+      "kind": "공식몰",
+      "model": "WPUIAC506SNW",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "mega606",
@@ -974,7 +1096,13 @@ window.SEED_PRODUCTS = [
     "customerReviewStatus": "외부 판매처에 공개된 후기 3건을 출처를 표기하여 요약. 공식 SK매직몰 후기 원문/사진은 직접 수집하지 않음.",
     "mediaOnlineOnly": true,
     "ebookDetailUrl": "https://ebookimage.skmagic.com/images/%EC%A0%95%EC%88%98%EA%B8%B0%20%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%9A%A9/606/WPU-IAC606S(%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0).html",
-    "detailSummary": "얼음정수기가 필요하지만 주방 공간은 아끼고 싶은 고객에게 우선 비교 추천. 195mm 폭, 얼음 모드, 약 100℃ 고온수와 위생 기능을 소개하고 조리수 연결 불가 여부를 반드시 함께 안내하세요."
+    "detailSummary": "얼음정수기가 필요하지만 주방 공간은 아끼고 싶은 고객에게 우선 비교 추천. 195mm 폭, 얼음 모드, 약 100℃ 고온수와 위생 기능을 소개하고 조리수 연결 불가 여부를 반드시 함께 안내하세요.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069931&menuNo=100104",
+      "kind": "기존 등록 사진",
+      "model": "WPU-IAC606",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "twowater306",
@@ -1000,7 +1128,7 @@ window.SEED_PRODUCTS = [
     },
     "pitch": "미네랄워터와 일반 정수 관련 기능에 관심 있는 고객의 비교 후보. 구체 물 기능은 공식 상세페이지 참조.",
     "officialUrl": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069843",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000069843/G000069843_2_480x480.png",
     "gallery": [],
     "fab": [],
     "benefits": [],
@@ -1017,7 +1145,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "2026년 11월 가격표 조건별 조회",
     "lastEdited": "2026-11-01",
     "ebookDetailUrl": "",
-    "detailSummary": "미네랄워터와 일반 정수 관련 기능에 관심 있는 고객의 비교 후보. 구체 물 기능은 공식 상세페이지 참조."
+    "detailSummary": "미네랄워터와 일반 정수 관련 기능에 관심 있는 고객의 비교 후보. 구체 물 기능은 공식 상세페이지 참조.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069843",
+      "kind": "공식몰",
+      "model": "WPUMAC306SWH",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "standice110",
@@ -1054,7 +1188,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
     "ebookDetailUrl": "",
-    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요."
+    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요.",
+    "photoSource": {
+      "page": "https://www.skmagic-promotion.com/WPU-IC110F",
+      "kind": "기존 등록 사진",
+      "model": "WPU-IC110F",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "airclean15",
@@ -1086,7 +1226,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
     "ebookDetailUrl": "",
-    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요."
+    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069681",
+      "kind": "기존 등록 사진",
+      "model": "ACL-15C1ASK",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "airclean20",
@@ -1094,7 +1240,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "올클린",
     "name": "20평 올클린 공기청정기",
     "model": "ACL-20C1ASK",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000067380/G000067380_3_480x480.png",
     "gallery": [],
     "features": [
       "20평형",
@@ -1118,7 +1264,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
     "ebookDetailUrl": "",
-    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요."
+    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000067380",
+      "kind": "공식몰",
+      "model": "ACL20C1ASKWH",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "airclean25",
@@ -1126,7 +1278,7 @@ window.SEED_PRODUCTS = [
     "subcategory": "올클린",
     "name": "25평 올클린 공기청정기",
     "model": "ACL-25C1ASK",
-    "hero": "",
+    "hero": "https://static.skmagic.com/image/goods/G000069683/G000069683_3_480x480.png",
     "gallery": [],
     "features": [
       "25평형",
@@ -1150,7 +1302,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
     "ebookDetailUrl": "",
-    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요."
+    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요.",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069683",
+      "kind": "공식몰",
+      "model": "ACL25C1ASKCE",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "namuhx",
@@ -1186,7 +1344,13 @@ window.SEED_PRODUCTS = [
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
     "ebookDetailUrl": "",
-    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요."
+    "detailSummary": "제품별 설치·관리조건 및 구독 여부는 해당 월의 정책을 확인해 주세요.",
+    "photoSource": {
+      "page": "https://www.namuhx.com/goods/goods_view_plan.php?goodsNo=1000000017",
+      "kind": "기존 등록 사진",
+      "model": "WRBA1M10KRNG",
+      "seriesRepresentative": false
+    }
   },
   {
     "id": "ice302",
@@ -1222,614 +1386,765 @@ window.SEED_PRODUCTS = [
     "priceStatus": "월별 가격표 기준 조회",
     "lastEdited": "2026-11-03",
     "ebookDetailUrl": "",
-    "detailSummary": "기존 올인원 플러스 얼음정수기 사용자 상담용 보존 모델입니다. 현재 계약 가능 여부를 확인하세요."
+    "detailSummary": "기존 올인원 플러스 얼음정수기 사용자 상담용 보존 모델입니다. 현재 계약 가능 여부를 확인하세요.",
+    "photoSource": {
+      "page": "https://withus-rental.shop/product/sk매직-올인원-플러스-직수-얼음-정수기-wpu-iac302/202/",
+      "kind": "기존 등록 사진",
+      "model": "WPU-IAC302",
+      "seriesRepresentative": false
+    }
   },
-{
-  "id": "mattress-matsm430r",
-  "category": "매트리스",
-  "subcategory": "워커힐 클라우드",
-  "name": "워커힐 클라우드 매트리스 (슈퍼싱글)",
-  "model": "MAT-SM430R",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "12개"
+  {
+    "id": "mattress-matsm430r",
+    "category": "매트리스",
+    "subcategory": "워커힐 클라우드",
+    "name": "워커힐 클라우드 매트리스 (슈퍼싱글)",
+    "model": "MAT-SM430R",
+    "hero": "https://static.skmagic.com/image/goods/G000069405/G000069405_2_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "12개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069405",
+      "kind": "공식몰",
+      "model": "MATSM430RLWH",
+      "seriesRepresentative": false
+    }
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matqm430r",
-  "category": "매트리스",
-  "subcategory": "워커힐 클라우드",
-  "name": "워커힐 클라우드 매트리스 (퀸)",
-  "model": "MAT-QM430R",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "12개"
+  {
+    "id": "mattress-matqm430r",
+    "category": "매트리스",
+    "subcategory": "워커힐 클라우드",
+    "name": "워커힐 클라우드 매트리스 (퀸)",
+    "model": "MAT-QM430R",
+    "hero": "https://static.skmagic.com/image/goods/G000069405/G000069405_2_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "12개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069405",
+      "kind": "공식몰",
+      "model": "MATSM430RLWH",
+      "seriesRepresentative": true
+    },
+    "photoNote": "워커힐 클라우드 시리즈 대표 이미지 (MAT-QM430R: 규격 별도)"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matkm430r",
-  "category": "매트리스",
-  "subcategory": "워커힐 클라우드",
-  "name": "워커힐 클라우드 매트리스 (킹)",
-  "model": "MAT-KM430R",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "12개"
+  {
+    "id": "mattress-matkm430r",
+    "category": "매트리스",
+    "subcategory": "워커힐 클라우드",
+    "name": "워커힐 클라우드 매트리스 (킹)",
+    "model": "MAT-KM430R",
+    "hero": "https://static.skmagic.com/image/goods/G000069405/G000069405_2_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "12개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069405",
+      "kind": "공식몰",
+      "model": "MATSM430RLWH",
+      "seriesRepresentative": true
+    },
+    "photoNote": "워커힐 클라우드 시리즈 대표 이미지 (MAT-KM430R: 규격 별도)"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matsm230",
-  "category": "매트리스",
-  "subcategory": "워커힐 스위트",
-  "name": "워커힐 스위트 매트리스 (슈퍼싱글)",
-  "model": "MATSM230",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "12개"
+  {
+    "id": "mattress-matsm230",
+    "category": "매트리스",
+    "subcategory": "워커힐 스위트",
+    "name": "워커힐 스위트 매트리스 (슈퍼싱글)",
+    "model": "MATSM230",
+    "hero": "https://static.skmagic.com/image/goods/G000069422/G000069422_4_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "12개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069422",
+      "kind": "공식몰",
+      "model": "MATSM230RSBR",
+      "seriesRepresentative": false
+    }
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matqm230",
-  "category": "매트리스",
-  "subcategory": "워커힐 스위트",
-  "name": "워커힐 스위트 매트리스 (퀸)",
-  "model": "MATQM230",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "12개"
+  {
+    "id": "mattress-matqm230",
+    "category": "매트리스",
+    "subcategory": "워커힐 스위트",
+    "name": "워커힐 스위트 매트리스 (퀸)",
+    "model": "MATQM230",
+    "hero": "https://static.skmagic.com/image/goods/G000069422/G000069422_4_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "12개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069422",
+      "kind": "공식몰",
+      "model": "MATSM230RSBR",
+      "seriesRepresentative": true
+    },
+    "photoNote": "워커힐 스위트 시리즈 이미지 · 규격별 외형 확인 필요"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matkm230",
-  "category": "매트리스",
-  "subcategory": "워커힐 스위트",
-  "name": "워커힐 스위트 매트리스 (킹)",
-  "model": "MATKM230",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "12개"
+  {
+    "id": "mattress-matkm230",
+    "category": "매트리스",
+    "subcategory": "워커힐 스위트",
+    "name": "워커힐 스위트 매트리스 (킹)",
+    "model": "MATKM230",
+    "hero": "https://static.skmagic.com/image/goods/G000069422/G000069422_4_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "12개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069422",
+      "kind": "공식몰",
+      "model": "MATSM230RSBR",
+      "seriesRepresentative": true
+    },
+    "photoNote": "워커힐 스위트 시리즈 이미지 · 규격별 외형 확인 필요"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matsm730",
-  "category": "매트리스",
-  "subcategory": "워커힐 스탠다드",
-  "name": "워커힐 스탠다드 매트리스 (슈퍼싱글)",
-  "model": "MATSM730",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "12개"
+  {
+    "id": "mattress-matsm730",
+    "category": "매트리스",
+    "subcategory": "워커힐 스탠다드",
+    "name": "워커힐 스탠다드 매트리스 (슈퍼싱글)",
+    "model": "MATSM730",
+    "hero": "https://static.skmagic.com/image/goods/G000069429/G000069429_2.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "12개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069429",
+      "kind": "공식몰",
+      "model": "MATSM730RZOM",
+      "seriesRepresentative": false
+    }
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matqm730",
-  "category": "매트리스",
-  "subcategory": "워커힐 스탠다드",
-  "name": "워커힐 스탠다드 매트리스 (퀸)",
-  "model": "MATQM730",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "12개"
+  {
+    "id": "mattress-matqm730",
+    "category": "매트리스",
+    "subcategory": "워커힐 스탠다드",
+    "name": "워커힐 스탠다드 매트리스 (퀸)",
+    "model": "MATQM730",
+    "hero": "https://static.skmagic.com/image/goods/G000069429/G000069429_2.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "12개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069429",
+      "kind": "공식몰",
+      "model": "MATSM730RZOM",
+      "seriesRepresentative": true
+    },
+    "photoNote": "워커힐 스탠다드 시리즈 이미지 · 규격별 외형 확인 필요"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matsf520530",
-  "category": "매트리스",
-  "subcategory": "침대 프레임",
-  "name": "패브릭 / PVC 레더 파운데이션",
-  "model": "MATSF520/530",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "3개"
+  {
+    "id": "mattress-matsf520530",
+    "category": "매트리스",
+    "subcategory": "침대 프레임",
+    "name": "패브릭 / PVC 레더 파운데이션",
+    "model": "MATSF520/530",
+    "hero": "https://static.skmagic.com/image/goods/G000069436/G000069436_7_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "3개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069436",
+      "kind": "공식몰",
+      "model": "MATSF520RKIV",
+      "seriesRepresentative": true
+    },
+    "officialPhotos": [
+      {
+        "src": "https://static.skmagic.com/image/goods/G000069442/G000069442_7_480x480.png",
+        "title": "PVC 레더 530 파운데이션 대표 이미지"
+      }
+    ],
+    "photoNote": "패브릭 520 파운데이션 대표 이미지 · PVC 530은 다음 사진"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matqf520530",
-  "category": "매트리스",
-  "subcategory": "침대 프레임",
-  "name": "패브릭 / PVC 레더 파운데이션",
-  "model": "MATQF520/530",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "3개"
+  {
+    "id": "mattress-matqf520530",
+    "category": "매트리스",
+    "subcategory": "침대 프레임",
+    "name": "패브릭 / PVC 레더 파운데이션",
+    "model": "MATQF520/530",
+    "hero": "https://static.skmagic.com/image/goods/G000069436/G000069436_7_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "3개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069436",
+      "kind": "공식몰",
+      "model": "MATSF520RKIV",
+      "seriesRepresentative": true
+    },
+    "officialPhotos": [
+      {
+        "src": "https://static.skmagic.com/image/goods/G000069442/G000069442_7_480x480.png",
+        "title": "PVC 레더 530 파운데이션 대표 이미지"
+      }
+    ],
+    "photoNote": "패브릭 520 파운데이션 대표 이미지 · PVC 530은 다음 사진"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matkf520530",
-  "category": "매트리스",
-  "subcategory": "침대 프레임",
-  "name": "패브릭 / PVC 레더 파운데이션",
-  "model": "MATKF520/530",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "3개"
+  {
+    "id": "mattress-matkf520530",
+    "category": "매트리스",
+    "subcategory": "침대 프레임",
+    "name": "패브릭 / PVC 레더 파운데이션",
+    "model": "MATKF520/530",
+    "hero": "https://static.skmagic.com/image/goods/G000069436/G000069436_7_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "3개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069436",
+      "kind": "공식몰",
+      "model": "MATSF520RKIV",
+      "seriesRepresentative": true
+    },
+    "officialPhotos": [
+      {
+        "src": "https://static.skmagic.com/image/goods/G000069442/G000069442_7_480x480.png",
+        "title": "PVC 레더 530 파운데이션 대표 이미지"
+      }
+    ],
+    "photoNote": "패브릭 520 파운데이션 대표 이미지 · PVC 530은 다음 사진"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matsh520",
-  "category": "매트리스",
-  "subcategory": "침대 프레임",
-  "name": "패브릭 헤드보드",
-  "model": "MATSH520",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "3개"
+  {
+    "id": "mattress-matsh520",
+    "category": "매트리스",
+    "subcategory": "침대 프레임",
+    "name": "패브릭 헤드보드",
+    "model": "MATSH520",
+    "hero": "https://static.skmagic.com/image/goods/G000069433/G000069433_5_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "3개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069433",
+      "kind": "공식몰",
+      "model": "MATSH520RKIV",
+      "seriesRepresentative": false
+    }
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matqh520",
-  "category": "매트리스",
-  "subcategory": "침대 프레임",
-  "name": "패브릭 헤드보드",
-  "model": "MATQH520",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "3개"
+  {
+    "id": "mattress-matqh520",
+    "category": "매트리스",
+    "subcategory": "침대 프레임",
+    "name": "패브릭 헤드보드",
+    "model": "MATQH520",
+    "hero": "https://static.skmagic.com/image/goods/G000069433/G000069433_5_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "3개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069433",
+      "kind": "공식몰",
+      "model": "MATSH520RKIV",
+      "seriesRepresentative": true
+    },
+    "photoNote": "패브릭 헤드보드 시리즈 대표 이미지"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matkh520",
-  "category": "매트리스",
-  "subcategory": "침대 프레임",
-  "name": "패브릭 헤드보드",
-  "model": "MATKH520",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "3개"
+  {
+    "id": "mattress-matkh520",
+    "category": "매트리스",
+    "subcategory": "침대 프레임",
+    "name": "패브릭 헤드보드",
+    "model": "MATKH520",
+    "hero": "https://static.skmagic.com/image/goods/G000069433/G000069433_5_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "3개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069433",
+      "kind": "공식몰",
+      "model": "MATSH520RKIV",
+      "seriesRepresentative": true
+    },
+    "photoNote": "패브릭 헤드보드 시리즈 대표 이미지"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matsh530",
-  "category": "매트리스",
-  "subcategory": "침대 프레임",
-  "name": "PVC 레더 헤드보드",
-  "model": "MATSH530",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "3개"
+  {
+    "id": "mattress-matsh530",
+    "category": "매트리스",
+    "subcategory": "침대 프레임",
+    "name": "PVC 레더 헤드보드",
+    "model": "MATSH530",
+    "hero": "https://static.skmagic.com/image/goods/G000069439/G000069439_4_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "3개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069439",
+      "kind": "공식몰",
+      "model": "MATSH530RKBE",
+      "seriesRepresentative": false
+    }
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matqh530",
-  "category": "매트리스",
-  "subcategory": "침대 프레임",
-  "name": "PVC 레더 헤드보드",
-  "model": "MATQH530",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "3개"
+  {
+    "id": "mattress-matqh530",
+    "category": "매트리스",
+    "subcategory": "침대 프레임",
+    "name": "PVC 레더 헤드보드",
+    "model": "MATQH530",
+    "hero": "https://static.skmagic.com/image/goods/G000069439/G000069439_4_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "3개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069439",
+      "kind": "공식몰",
+      "model": "MATSH530RKBE",
+      "seriesRepresentative": true
+    },
+    "photoNote": "PVC 레더 헤드보드 시리즈 대표 이미지"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matkh530",
-  "category": "매트리스",
-  "subcategory": "침대 프레임",
-  "name": "PVC 레더 헤드보드",
-  "model": "MATKH530",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "3개"
+  {
+    "id": "mattress-matkh530",
+    "category": "매트리스",
+    "subcategory": "침대 프레임",
+    "name": "PVC 레더 헤드보드",
+    "model": "MATKH530",
+    "hero": "https://static.skmagic.com/image/goods/G000069439/G000069439_4_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "3개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069439",
+      "kind": "공식몰",
+      "model": "MATSH530RKBE",
+      "seriesRepresentative": true
+    },
+    "photoNote": "PVC 레더 헤드보드 시리즈 대표 이미지"
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matsh510",
-  "category": "매트리스",
-  "subcategory": "침대 프레임",
-  "name": "수납형 프레임",
-  "model": "MATSH510",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "3개"
+  {
+    "id": "mattress-matsh510",
+    "category": "매트리스",
+    "subcategory": "침대 프레임",
+    "name": "수납형 프레임",
+    "model": "MATSH510",
+    "hero": "https://static.skmagic.com/image/goods/G000069431/G000069431_7_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "3개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069431",
+      "kind": "공식몰",
+      "model": "MATSH510RKWH",
+      "seriesRepresentative": false
+    }
   },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-},
-{
-  "id": "mattress-matqh510",
-  "category": "매트리스",
-  "subcategory": "침대 프레임",
-  "name": "수납형 프레임",
-  "model": "MATQH510",
-  "hero": "",
-  "heroFallback": "",
-  "gallery": [],
-  "features": [
-    "2026년 11월 구독료표 등록",
-    "계약기간·케어주기별 가격 확인 가능"
-  ],
-  "attributes": {
-    "자료 출처": "매트리스(3).xlsx · 2026년 11월",
-    "가격 조건": "3개"
-  },
-  "fab": [],
-  "benefits": [],
-  "installation": [],
-  "reviews": [],
-  "video": [],
-  "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
-  "sourceImage": "매트리스(3).xlsx",
-  "officialUrl": "",
-  "ebookDetailUrl": "",
-  "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
-  "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
-  "checkedAt": "2026-11-05",
-  "price": null,
-  "priceStatus": "월별 가격자료 연결"
-}
+  {
+    "id": "mattress-matqh510",
+    "category": "매트리스",
+    "subcategory": "침대 프레임",
+    "name": "수납형 프레임",
+    "model": "MATQH510",
+    "hero": "https://static.skmagic.com/image/goods/G000069431/G000069431_7_480x480.png",
+    "heroFallback": "",
+    "gallery": [],
+    "features": [
+      "2026년 11월 구독료표 등록",
+      "계약기간·케어주기별 가격 확인 가능"
+    ],
+    "attributes": {
+      "자료 출처": "매트리스(3).xlsx · 2026년 11월",
+      "가격 조건": "3개"
+    },
+    "fab": [],
+    "benefits": [],
+    "installation": [],
+    "reviews": [],
+    "video": [],
+    "pitch": "매트리스 구독료 엑셀의 모델명과 가격 조건을 연결했습니다. 정확한 제품 이미지·상세 사양은 확인 후 추가합니다.",
+    "sourceImage": "매트리스(3).xlsx",
+    "officialUrl": "",
+    "ebookDetailUrl": "",
+    "verified": "2026년 11월 엑셀 금액 확인 · 제품자료 준비",
+    "sourceLabel": "첨부 매트리스(3).xlsx · 매트리스(26년11월) 시트",
+    "checkedAt": "2026-11-05",
+    "price": null,
+    "priceStatus": "월별 가격자료 연결",
+    "photoSource": {
+      "page": "https://www.skmagic.com/goods/indexGoodsDetail?goodsId=G000069431",
+      "kind": "공식몰",
+      "model": "MATSH510RKWH",
+      "seriesRepresentative": true
+    },
+    "photoNote": "수납형 프레임 시리즈 대표 이미지"
+  }
 ];
