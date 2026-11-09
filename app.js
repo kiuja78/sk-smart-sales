@@ -315,25 +315,11 @@ function showOfficialEbook(p){
   const link=officialEbookUrl(p);
   if(!link)return '';
   if(p?.id==='namuhx'){
-    // Cross-origin official pages include the site's navigation and cannot be safely clipped.
-    // Show only the verified product image and catalog data, and retain the full official link.
     const brandUrl='https://www.namuhx.com/a1';
-    const imgs=productImageCandidates(p).filter(x=>/^https:\/\//i.test(x));
-    const gallery=imgs.length?imgs.slice(0,3).map((src,i)=>`<img src="${safe(src)}" alt="나무엑스 A1 제품 이미지 ${i+1}" loading="lazy" style="max-width:100%;max-height:760px;object-fit:contain;display:block;margin:0 auto 18px" />`).join(''):'';
-    const features=(p.features||[]).map(v=>`<li style="margin:7px 0">${safe(v)}</li>`).join('');
-    return `<section class="ebook-reader namuhx-reader" aria-label="나무엑스 A1 제품 상세정보">
-      <header class="ebook-reader-header"><div><span class="ebook-kicker">NAMUHX · OFFICIAL PRODUCT</span><h3>나무엑스 A1 제품 상세</h3><p>${safe(p.name)} <strong>${safe(p.model)}</strong></p></div><a class="ebook-direct-link" href="${brandUrl}" target="_blank" rel="noopener noreferrer">원본 페이지 열기 ↗</a></header>
-      <div style="padding:clamp(18px,4vw,42px);background:#fff;color:#263140">
-        <h3 style="font-size:clamp(23px,4vw,34px);margin:4px 0 24px;text-align:center">웰니스 로보틱스 나무엑스 A1</h3>
-        ${gallery}
-        <div style="border-top:1px solid #e2e7ee;padding-top:22px;margin-top:24px">
-          <h4 style="font-size:20px;margin:0 0 12px">등록된 제품 특징</h4>
-          <ul style="font-size:15px;line-height:1.8;padding-left:23px">${features}</ul>
-          <p style="font-size:14px;line-height:1.8">확인된 색상 모델: WRBA1M10KRNG / WRBA1M10KRDW</p>
-          <p style="font-size:13px;line-height:1.7;color:#66768a">정확한 전체 기능·상세 규격·서비스 조건은 원본 페이지 열기로 확인해 주세요.</p>
-        </div>
-      </div>
-      <details class="ebook-spec-support"><summary>제품 주요 사양·상담 메모 확인</summary>${renderProductFactDetails(p)}</details>
+    const internal=window.NAMUHX_DETAIL?.render(p)||renderProductFactDetails(p);
+    return `<section class="ebook-reader" aria-label="나무엑스 A1 제품 상세정보">
+      <header class="ebook-reader-header"><div><span class="ebook-kicker">NAMUHX · PRODUCT DETAIL</span><h3>나무엑스 A1 제품 상세정보</h3><p>공식 제품 소개를 프로그램 내부에서 확인</p></div><a class="ebook-direct-link" href="${brandUrl}" target="_blank" rel="noopener noreferrer">원본 페이지 열기 ↗</a></header>
+      <div class="nhx-reader">${internal}</div>
     </section>`;
   }
   const media=(p.officialMedia||[]).filter(x=>/^https:\/\/static\.skmagic\.com\/image\/editor\//i.test(x.src||''));
