@@ -93,6 +93,17 @@ function archiveRows(p){
 }
 function priceValue(prices,keys){for(const k of keys){const n=Number(prices?.[k]);if(n>0)return n;}return null;}
 function priceRowsForMonth(p){
+ if(p?.id==='namuhx'){
+   const rows=window.NAMUHX_RATES?.rows||[];
+   return rows.map((r,idx)=>({
+     ...r,idx,source:'namuhx-image',model:p.model,contractYears:r.contractYears,
+     contract:r.contract,management:r.management+(r.visitCycleMonths?' · '+r.visitCycleMonths+'개월':' · 무방문'),
+     rate:{sheetContractMultiplier:null,sheetProfitMultiplier:null,
+       sheetPayoutRates:{'신규':1,'신규단품':1,'크로스':.8,'패키지':.7,'재구독':.7,'재구독단품':.7,'재구독패키지':.7,'타사보상':1},
+       sheetCommissions:r.commissions},
+     month:selectedMonth
+   }));
+ }
  const arch=archiveRows(p);
  // If the shared monthly archive contains actual customer prices, it is always authoritative.
  // For mattress, a generic/incomplete archive row must not conceal the validated Excel rows.
@@ -104,6 +115,18 @@ function priceRowsForMonth(p){
  return rows.map((r,i)=>({...r,idx:i,source:'local',contractYears:Number(String(r.contract||'').split('/')[0])/12||0,package:null,renew:null,rate:null,month:selectedMonth}));
 }
 function priceTable(p){
+ if(p?.id==='namuhx'){
+   const rows=priceRowsForMonth(p);
+   if(!rows.length)return '<div class="warning-box">나무엑스 구독료 자료를 불러오지 못했습니다.</div>';
+   const fmt=n=>Number(n).toLocaleString('ko-KR')+'원';
+   const types=[['single','신규 단품'],['cross','크로스'],['package','패키지'],['renew','재구독 단품'],['renewPackage','재구독 패키지'],['trade','타사보상']];
+   return `<div class="price-table-tools"><div><strong>나무엑스 A1 · 프로모션 구독료</strong><p>제공된 나무엑스 프로모션 표 기준 · 16개 관리/약정 조건</p></div><span class="price-source-tag">첨부 원본 기준</span></div>
+   <p class="price-footnote">표의 할인액 및 수수료를 원본대로 표시합니다. 원본에 적용월이 명시되지 않아 적용 기간은 계약 전 확인이 필요합니다.</p>
+   <div class="price-scroll"><table class="compare-table price-table"><thead><tr><th>관리 방식</th><th>약정</th><th>구분</th><th>월 구독료</th><th>할인액</th><th>지급률</th><th>원본 수수료</th></tr></thead><tbody>
+   ${rows.map(r=>types.map(([k,t],ti)=>`<tr>${ti===0?`<td rowspan="6"><strong>${safe(r.management)}</strong></td><td rowspan="6">${safe(r.contract)}</td>`:''}<td>${safe(t)}</td><td><button type="button" class="price-select" data-select-price="${r.idx}" data-price-type="${k}">${fmt(r[k])}<span>원본 수수료 보기 ↗</span></button></td><td>${k==='single'?'—':fmt(r.discounts[k])}</td><td>${Math.round(r.payoutRates[k]*100)}%</td><td><strong>${fmt(r.commissions[k])}</strong></td></tr>`).join('')).join('')}
+   </tbody></table></div>
+   <p class="price-footnote">타사보상은 지급률 100%, 재구독 패키지에는 추가 할인액이 반영된 구독료를 적용합니다. 상품 판매조건과 실제 지급 기준은 최종 확인하세요.</p>`;
+ }
  const rows=priceRowsForMonth(p),s=archiveMonth(),prod=archiveProduct(p);
  const source=rows[0]?.source==='archive'?'SK매직 제품정보 앱 공통 월별 가격자료':rows[0]?.source==='mattress-excel'?'매트리스(3).xlsx · 2026년 11월 검증 원본':'내장된 2026년 11월 참고 가격';
  const guide=`<div class="price-table-tools"><div><strong>월별 구독료 확인</strong><p>${safe(source)} · 금액을 누르면 수수료 계산창이 열립니다.</p></div><div class="price-month-controls"><label>기준월 <select data-price-month aria-label="가격표 기준월">${availableMonths().map(m=>`<option value="${safe(m)}" ${m===selectedMonth?'selected':''}>${safe(m.replace('-','년 '))}월</option>`).join('')}</select></label><span class="price-source-tag">${rows[0]?.source==='archive'?'공통 월별 연동':'11월 원본 백업'}</span></div></div>`;
@@ -117,6 +140,17 @@ function numericField(label,id,value,hint=''){
  return `<label class="calc-field">${safe(label)}<input type="number" id="${id}" step="0.01" min="0" value="${value??''}" placeholder="정책값 입력" inputmode="decimal">${hint?`<small>${safe(hint)}</small>`:''}</label>`;
 }
 function showCommission(idx,type){
+ if(detail?.id==='namuhx'){
+   const r=priceRowsForMonth(detail).find(x=>x.idx===idx);
+   const map={single:'신규 단품',cross:'크로스',package:'패키지',renew:'재구독 단품',renewPackage:'재구독 패키지',trade:'타사보상'};
+   if(!r||!map[type])return;
+   const fmt=n=>Number(n).toLocaleString('ko-KR')+'원';
+   selectedCommission={p:detail,row:r,amount:r[type],type,sourceFee:r.commissions[type],month:selectedMonth};
+   $('#calcContext').textContent=`나무엑스 A1 · ${r.management} · ${r.contract} · ${map[type]}`;
+   $('#calcBody').innerHTML=`<div class="calc-amount"><span>첨부 원본 월 구독료</span><strong>${fmt(r[type])}</strong><small>할인액 ${type==='single'?'0원':fmt(r.discounts[type])} · 지급률 ${Math.round(r.payoutRates[type]*100)}%</small></div><div class="calc-result"><span>첨부표의 판매수수료</span><strong>${fmt(r.commissions[type])}</strong><p>표에 기재된 수수료를 그대로 적용했습니다. 별도 배수로 재계산하지 않았습니다.</p></div><div class="calc-caution">자료 출처: 제공된 '나무엑스 프로모션 구독료' 표. 적용기간·실제 지급 조건은 계약 시 재확인해야 합니다.</div>`;
+   $('#commissionLayer').classList.add('open');$('#commissionLayer').setAttribute('aria-hidden','false');
+   return;
+ }
  if(!detail)return;
  const r=priceRowsForMonth(detail).find(x=>x.idx===idx);if(!r||typeof r[type]!=='number'||r[type]<=0)return;
  const amount=r[type],snap=archiveMonth(),prod=archiveProduct(detail),policy=snap?.referencePolicy||{};
