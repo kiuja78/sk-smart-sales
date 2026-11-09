@@ -1,0 +1,44 @@
+name: Inspect NAMUHX A1 source detail media
+on:
+  push:
+    paths:
+      - '.github/workflows/inspect-namuhx.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect page source
+        shell: bash
+        run: |
+          python -m pip -q install requests beautifulsoup4
+          python - <<'PY'
+          import requests,json,re,html
+          from bs4 import BeautifulSoup
+          u='https://www.namuhx.com/a1'
+          r=requests.get(u,timeout=30,headers={'User-Agent':'Mozilla/5.0'})
+          soup=BeautifulSoup(r.text,'html.parser')
+          images=[]
+          for i,img in enumerate(soup.select('img')):
+              attrs=dict(img.attrs)
+              parent=img.parent
+              grandparents=[]
+              for _ in range(3):
+                  if parent is None:break
+                  grandparents.append({'tag':parent.name,'id':parent.get('id'),'class':parent.get('class')})
+                  parent=parent.parent
+              images.append({'index':i,'alt':img.get('alt','')[:160],'src':img.get('src','')[:500],'dataSrc':img.get('data-src','')[:500],'srcset':img.get('srcset','')[:250],'parents':grandparents})
+          report={'status':r.status_code,'redirect':r.url,'length':len(r.text),'title':soup.title.get_text(' ',strip=True) if soup.title else '', 'images':images[:180],'scripts':[(s.get('src') or '')[:300] for s in soup.select('script[src]')][:50], 'classHits':[str(x)[:1500] for x in soup.find_all(string=re.compile('제품 상세|에어솔루션|제품 규격'))[:15]],'html_start':r.text[:800]}
+          open('namuhx_inspection.json','w').write(json.dumps(report,ensure_ascii=False,indent=2))
+          print('HTTP',r.status_code,'IMAGE_COUNT',len(images))
+          PY
+      - name: Save inspection
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add namuhx_inspection.json
+          git commit -m 'Inspect NAMUHX detail assets [skip ci]' || exit 0
+          git push
