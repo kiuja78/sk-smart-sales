@@ -94,6 +94,7 @@ function archiveRows(p){
 function priceValue(prices,keys){for(const k of keys){const n=Number(prices?.[k]);if(n>0)return n;}return null;}
 function priceRowsForMonth(p){
  if(p?.id==='namuhx'){
+   if(selectedMonth!=='2026-11')return []; // 이전 월 가격은 자료로 확인되지 않았습니다.
    const rows=window.NAMUHX_RATES?.rows||[];
    return rows.map((r,idx)=>({
      ...r,idx,source:'namuhx-image',model:p.model,contractYears:r.contractYears,
