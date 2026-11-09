@@ -1,50 +1,248 @@
-/* 나무엑스 A1 공식 제품 소개의 핵심 정보만 별도 화면으로 구성합니다.
-   제품사진은 저장소에 이미 검증되어 등록된 원본 URL을 사용하며 AI 생성 이미지는 사용하지 않습니다.
-   출처: https://www.namuhx.com/a1 */
+/* NAMUHX A1 original product-detail image sequence.
+ * Source: https://www.namuhx.com/a1
+ * Product detail images s01_01 through s11_03 only.
+ * Official source imagery, in original order. No AI image recreation.
+ */
 (() => {
-'use strict';
-const original='https://www.namuhx.com/a1';
-const sections=[
- {title:'에어솔루션 · 자율주행 이동 청정',subtitle:'오염된 공간을 스스로 찾아가는 공기청정',body:'공기질 변화를 인지하면 이동 경로를 판단해 필요한 공간으로 이동하고, 청정을 마친 뒤 충전 스테이션으로 돌아갑니다. 집 안의 여러 공간을 한 대로 관리하도록 설계되었습니다.',points:['실시간 공기질 확인 및 오염 인지','자율이동 · 청정 · 스테이션 복귀','이동청정 / 고정청정 / 스캐닝 / All Time 청정 모드'],note:'일부 감지 및 청정 모드는 별도 구매하는 에어센서가 필요합니다.'},
- {title:'세이프 케어',subtitle:'집 안의 상태를 살펴보는 안전 관리',body:'설정한 공간을 순찰하며 움직임을 감지하고, 알림을 통해 외부에서도 실내 상황을 살필 수 있습니다.',points:['공간 순찰과 움직임 감지','알림 기반 실내 상황 확인','선택한 서비스에 따라 에스원 긴급출동 연계'],note:'세이프 케어는 유료 구독 서비스이며 긴급출동은 별도 플러스 서비스 조건에 따릅니다.'},
- {title:'라이브 뷰',subtitle:'보고 싶은 위치로 이동해 실내를 확인',body:'로봇이 원하는 위치로 이동해 집 안을 실시간으로 보여줍니다. 양방향 대화와 사진 캡처, 영상 녹화 기능을 지원합니다.',points:['원하는 위치로 이동','실시간 영상 확인','양방향 대화 · 녹화 · 캡처']},
- {title:'바이탈사인 체크',subtitle:'비접촉 방식의 간편한 건강 신호 확인',body:'제품 전면의 카메라와 센서를 이용해 약 10초 동안 다섯 가지 생체 신호를 측정하도록 설계되었습니다. 개인별 기록은 하이나무 앱과 연계해 확인합니다.',points:['별도 장비 부착 없이 비접촉 측정','약 10초 내 5가지 생체 신호 확인','하이나무 앱의 개인별 기록 관리'],note:'의료기기나 질병 진단 기능이 아니며 측정 결과는 웰니스 참고용입니다.'},
- {title:'마이 헬스케어',subtitle:'나의 건강 기록을 활용한 안내',body:'하이나무 앱을 통해 개인 기록을 바탕으로 생활 속 건강 관리와 관련된 정보를 확인하고 상담형 기능을 이용할 수 있습니다.',points:['개인별 건강 기록 활용','생활 관리 정보 안내']},
- {title:'지능형 AI 음성 대화',subtitle:'말로 제어하고 일상의 질문을 나누는 AI',body:'기기 제어에는 네트워크 연결 없이 동작하는 온디바이스 음성 인식을 활용하며, 대화와 정보 탐색에는 Gemini 기반 AI 기능을 활용합니다.',points:['음성으로 공기청정 등 기기 제어','일상 질문 · 정보 탐색 · 자연어 대화','기기 제어와 클라우드 대화 기능의 구분']},
- {title:'팔로우미',subtitle:'말 한마디로 따라오는 이동 청정',body:'음성 명령을 통해 사용자를 따라 이동하거나 정지할 수 있어, 로봇을 직접 옮기지 않고 필요한 공간으로 이동시키는 데 도움이 됩니다.',points:['“하이나무, 나를 따라와” 호출','음성 명령으로 정지']},
- {title:'AI 컴패니언',subtitle:'일상의 시간을 함께하는 생활 케어',body:'알림과 일상 루틴을 보조하는 기능으로 복약 시간 안내, 웨이크업, 웰컴, 릴랙스 등을 제공합니다.',points:['복약 시간 알림','웨이크업 · 웰컴','릴랙스 등 일상 편의 기능']},
- {title:'개인정보 및 보안',subtitle:'기기 내 처리와 단계별 보호',body:'제품은 정보 보호를 위한 온디바이스 처리, 정보 비식별화 및 전송 보호 등을 강조합니다. 상세 처리 범위와 인증 정보는 공식 페이지에서 확인할 수 있습니다.',points:['기기 내 데이터 처리 원칙','민감정보 보호 및 보안 설계']}
+  'use strict';
+  const images=[
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s01_01.1h4q4pe130gon.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "Wellness Robotics NAMUHX A1 — 공기부터 건강과 안전까지 일상을 챙기는 웰니스 로봇"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s01_02.0dozr_h02l4_q.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "에어솔루션(스마트한 AI 자율주행으로 사각지대 없는 이동청정) · 세이프 케어 · 라이브 뷰 · 바이탈사인 체크 · 마이 헬스케어 · 지능형 AI 음성 대화 · 팔로우미 · 철저한 보안 기능"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s02_01.1rya2dhqclk8g.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "에어솔루션 — 공기질에 따라 알아서 이동 청정. 감지부터 복귀까지, 알아서 청정"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s02_02.0pvyzmxy9lgla.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "실시간 감시 · 오염 인지 · 자율이동 · 자동호출 · 청정 실시 · 스테이션 복귀 — 오염 인지에서 이동, 청정, 복귀까지 전체 공간에 1대면 충분합니다. 상황에 맞춰 자동으로 시작하는 청정"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s02_03.3-1y3z58utvug.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "실외 대기질 연동, 누적 공기질 연동"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s02_04.2c5iasdp__id6.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "All Care Mode — 에어센서는 별도 구매품입니다. 맞춤형 4가지 청정 모드"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s02_05.0g9p35cilmv1e.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "이동청정 · 고정청정 · 스캐닝 청정 · All Time Mode. 올인원 필터와 UV케어로 오염물질 28종 99% 제거"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s02_06.19r62v363-tdx.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "큰 먼지부터 극초미세먼지까지 — 세균·곰팡이·바이러스 제거율 99.9%, 유해가스 6종 제거율 99%, 극초미세먼지(0.01μm) 제거율 99.999%"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s02_07.0t2-tje4dvlno.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "유해가스 누적 정화량 1.62배 향상. 고정형 기기 1대 대비 10배 빠른 청정"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s02_08.3-vhngjgsyziu.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "고정형 3대와 나무엑스 1대의 청정 속도 비교. 에어솔루션의 완성, 에어센서"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s02_09.112nayt2ri_j2.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "에어센서(별매품). 넓은 공간의 청정, 움직이는 A1 하나로."
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s02_10.3i1suecxwxp2k.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "고정형은 제자리에서, A1은 오염된 곳으로. 직접 찾아가 10배 빠르게 청정하고, 공간을 이동하며 남은 오염까지 줄입니다."
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s03_01.0m0ry52fupva2.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "세이프 케어 — 로봇이 지키는 공간 보안. 이상 감지부터 긴급출동 연결까지"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s03_02.1mud54dqfz272.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "공간 순찰과 움직임 감지, 영상과 함께 알림"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s03_03.0f0-z7_ll859r.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "에스원 긴급 출동 — 하이나무앱에서 순찰 공간과 주기 등 다양한 설정을 할 수 있습니다. 세이프케어 서비스는 월 정액제로 구독하는 유료 서비스입니다. 에스원 긴급출동 서비스는 세이프케어 플러스 구독 시에만 제공됩니다."
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s04_01.0e3lf_aj1u2xb.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "라이브 뷰 — 집 안이 궁금할 땐, 실시간 확인"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s04_02.2lmcy6i6sx35_.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "고정형 홈캠과 달리 A1에게는 사각지대가 없습니다"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s04_03.2phf0-i66_g21.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "원하는 위치로 직접 이동 · 실시간 상황 확인 · 양방향 대화 · 녹화 · 캡처"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s04_04.2961l0ef4eeta.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "추가 비용 없이 이용하는 라이브 뷰로, 어디서든 집 안의 상황을 확인하세요."
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s05_01.1d1u0l-9b1_t4.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "바이탈사인체크 — 10초만에 확인하는 건강 신호. 간편한 사용, 검증 받은 정확도"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/vital_slide_1.00jo_xt2sez53.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "비접촉 AI 측정 — 전면 카메라와 센서를 마주하는 것만으로 측정이 완료되어, 별도의 장비 준비 및 부착이나 접촉이 필요 없습니다"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/vital_slide_2.04ci8nq1_ipx7.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "약 10초 내 5가지 생체 신호 확인"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/vital_slide_3.2j0_gxuq5r1ll.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "KCL 시험에서 검증한 높은 정확도"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/vital_slide_4.33_vetlwjgvbe.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "하이나무앱을 통한 사용자별 관리"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s05_02.0-t1karv7_mcr.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "이상 감지 시 알림 및 철저한 정보 보호 — 보호자 알림, 측정 시 촬영한 영상 삭제"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s06_01.05bwig8ittq-f.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "마이헬스케어 — 나를 위한 건강 상담. 하이나무 앱에서 간편하게, 나만의 건강 관리를 상담하세요."
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s06_02.2f9j7zjt1i-_l.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "간편한 사용, 검증 받은 정확도 — 공신력 있는 의학 데이터 기반 상담"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s06_03.3vdon3whkor2l.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "내 건강 기록으로 ‘나’를 위한 상담"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s06_04.2yekn79xg6bqb.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "다양한 데이터로 종합적인 솔루션 — 나를 잘 아는 건강 상담, 마이헬스케어입니다."
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s06_05.1osyczet95-_7.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "건강 상태는 각자 다르기 때문에, 같은 질문이라도 답은 달라야 합니다. 나의 바이탈 사인을 읽고, 나의 기록을 기억하기 때문에, 물어볼수록 더 나에게 꼭 맞는 답이 됩니다."
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s07_01.27umldleqlp1z.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "지능형 AI 음성 대화 — 가족처럼, Gemini로 더 똑똑하게. 음성만으로 A1을 100% 제어하고, 대화와 정보는 더 똑똑하게 나눕니다. Gemini × LLaMA(Meta)"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s07_02.2m5j43jmdevno.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "인터넷 없이 빠르게, 필요할 땐 더 똑똑하게"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/ai_voice_slide_1.2m0myuk20go_j.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "인터넷 없이도, 100% 음성 제어 — \"하이나무, 공기 청정 켜줘.\" \"공기 청정을 시작합니다.\" 네트워크 연결 없이도 음성만으로 100% 제어합니다"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/ai_voice_slide_2.0p3q8fe23nthd.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "일상 대화는 Gemini로 더 똑똑하게"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/ai_voice_slide_3.2rtafq12bbpje.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "정교하게 알아듣고, 흐름을 기억"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s07_03.07o03r0t08jg1.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "이렇게 활용하기"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s07_04.1wt-tiga4--__.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "기기 제어 · 제품 문의 · 날씨 · 공기질 · 일상 대화 · 정보 탐색 · 가족의 말벗"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s07_05.3mv4oaa_jjxs7.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "호출어 \"하이나무\"로 부르면 대화가 시작됩니다."
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s08_01.010jxxngcyg32.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "팔로우미 — 필요할 때, 필요한 곳으로. 손 안 대고, 한 마디로 바로 동작"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s08_02.42hecxgcombp7.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "나의 움직임에 맞춘 청정 케어"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s08_03.3reuphgkiba_d.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "와이파이 연결 없이 원활한 기능 사용. 버튼을 누를 필요도, 기기를 만질 필요도, 힘들여 옮길 필요도 없습니다."
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s08_04.0_kmnt441lxbr.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "호출할 때는 \"하이나무, 나를 따라와\", 멈출 때는 \"하이나무, 멈춰 / 정지\" 한마디면 됩니다."
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s09_01.073sy_i-9u-9v.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "AI 컴패니언 — 하루를 함께하는 A1. 간편한 사용, 검증 받은 정확도. 복약관리 — 약 먹을 시간, 잊지 않도록"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s09_02.3apv_ohusmkwa.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "웨이크업 — 기상시간에 맞춘 상쾌한 아침. 웰컴 — 현관 앞에서 건네는 인사"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s09_03.0g8685t9tby84.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "릴렉스 — 하루의 끝을 다독이는 휴식. 오늘도 나를 챙기는 웰니스 로봇 NAMUHX A1"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s10_01.0xwfdhxofw8bi.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "철저한 보안 기능 — 당신의 정보는 가장 안전하게. 당신을 위한 케어의 범위에는 당신의 정보도 포함됩니다."
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/security_01_open.3ge4t3q2dqg1d.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "01 데이터를 밖으로 내보내지 않습니다 — 수집하는 정보는 원칙적으로 기기 안에서 처리합니다. 온디바이스 처리 기본, 비식별 후 전송, 단계별 차단 설계"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/security_02_closed.0-fb2oepzcmr2.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "02 민감한 정보는 남기지 않습니다"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/security_03_closed.2olp9de20pjaf.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "03 오가는 길목마다 잠급니다"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/security_04_closed.1e60hm8sjwv5h.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "04 믿을 수 있는 인증을 받았습니다"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/security_05_closed.3elgne30kw56t.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "05 실전처럼 계속 점검합니다"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s10_02.1l0rqazz8_38y.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "나무엑스 A1 공식 상세 이미지"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s11_01.2o7m9slfle90f.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "제품 규격"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s11_02.2-fkpwv8_c5wf.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "A1 — 제품코드 WRBA1M10KRNG / WRBA1M10KRDW, 제조사 SK인텔릭스, 컬러 Night Gray / Dawn White, 크기 376×376×650~753mm, 중량 14kg, 정격 소비 전력 156W, 표준 사용면적 20평형(66.0㎡), 충전 시간 급속 150분·"
+  },
+  {
+    "src": "https://www.namuhx.com/_next/static/media/s11_03.3cv0idfjp7mxt.webp?dpl=16dd0194f90642488507d7f9045b55c183249b2c",
+    "alt": "충전 스테이션 — 크기 318×238×113mm, 중량 2.5kg"
+  }
 ];
-const specs=[['모델 코드','WRBA1M10KRNG / WRBA1M10KRDW'],['제품 색상','Night Gray / Dawn White'],['제품 크기','376 × 376 × 650~753mm'],['무게','14kg'],['표준 사용면적','66.0㎡ (20평형)'],['소비전력','156W'],['배터리','18.2V · 9.4Ah'],['충전 시간','급속 150분 / 완속 240분'],['충전 스테이션','318 × 238 × 113mm / 2.5kg']];
-const css=`
-.nhx-info{background:#fff;color:#192b40;border-radius:16px;overflow:hidden;font-family:inherit}
-.nhx-info *{box-sizing:border-box}.nhx-info .nhx-hero{padding:clamp(22px,5vw,60px);background:linear-gradient(140deg,#071c31,#183955);color:#fff}
-.nhx-info .nhx-tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#9cd7d0;font-weight:800}
-.nhx-info .nhx-hero h2{font-size:clamp(30px,6vw,55px);line-height:1.17;margin:14px 0 12px;color:#fff}
-.nhx-info .nhx-hero p{font-size:clamp(14px,2vw,18px);line-height:1.8;color:#e3f0fa;max-width:690px}
-.nhx-info .nhx-hero img{display:block;width:auto;max-width:min(100%,540px);max-height:590px;object-fit:contain;margin:25px auto 0}
-.nhx-info .nhx-section{padding:clamp(22px,4vw,42px);border-bottom:1px solid #e5ecf1}
-.nhx-info .nhx-section:nth-of-type(2n+1){background:#f3f8fa}
-.nhx-info .nhx-section h3{font-size:clamp(22px,3.5vw,30px);line-height:1.35;color:#102f45;margin:0 0 8px}
-.nhx-info .nhx-section h4{font-size:16px;font-weight:650;color:#268387;margin:0 0 13px}
-.nhx-info .nhx-section p{font-size:15px;line-height:1.9;margin:8px 0 14px;color:#344b60}
-.nhx-info .nhx-section ul{margin:13px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px;list-style:none}
-.nhx-info .nhx-section li{padding:12px 14px;border-radius:10px;background:#e8f1f4;color:#23485b;line-height:1.65;font-size:14px}
-.nhx-info .nhx-note{font-size:12px!important;color:#6b7681!important;margin-top:18px!important}
-.nhx-info .nhx-specgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.nhx-info .nhx-specgrid div{background:#edf3f6;padding:15px;border-radius:12px}
-.nhx-info .nhx-specgrid small{display:block;color:#526b7c;margin-bottom:6px}.nhx-info .nhx-specgrid strong{font-size:14px;line-height:1.5}
-.nhx-info .nhx-bottom{text-align:center;padding:22px;background:#e8f5f3;font-size:13px;line-height:1.7}
-.nhx-info .nhx-bottom a{display:inline-block;margin:12px auto 0;padding:10px 16px;background:#0e5260;color:#fff;border-radius:9px;font-weight:700;text-decoration:none}
-`;
-function render(p={}){
- const photo='https://godomall-storage.cdn-nhncommerce.com/666491d955848ac771719e187e418aef/goods/1000000017/image/detail/1000000017_detail_024.png';
- return `<style>${css}</style><article class="nhx-info" aria-label="나무엑스 A1 제품 상세정보">
-  <div class="nhx-hero"><span class="nhx-tag">Wellness Robotics · NAMUHX</span><h2>나무엑스 A1</h2><p>공기청정부터 안전·건강 관리까지 일상에 필요한 순간을 찾아가는 웰니스 로봇</p><img src="${photo}" alt="나무엑스 A1 공식 등록 제품 사진" loading="eager"></div>
-  ${sections.map((s,i)=>`<section class="nhx-section"><span class="nhx-tag" style="color:#308887">A1 FEATURE ${String(i+1).padStart(2,'0')}</span><h3>${s.title}</h3><h4>${s.subtitle}</h4><p>${s.body}</p><ul>${s.points.map(x=>`<li>${x}</li>`).join('')}</ul>${s.note?`<p class="nhx-note">※ ${s.note}</p>`:''}</section>`).join('')}
-  <section class="nhx-section"><h3>제품 규격</h3><div class="nhx-specgrid">${specs.map(([k,v])=>`<div><small>${k}</small><strong>${v}</strong></div>`).join('')}</div></section>
-  <footer class="nhx-bottom">공식 사이트의 제품 소개를 상담용으로 재구성한 자료입니다. 제조사 상세 이미지 전체 복제본은 아니며, 최신 사양과 서비스 조건은 원본을 확인하세요.<div><a href="${original}" target="_blank" rel="noopener noreferrer">나무엑스 A1 공식 원본 페이지 열기 ↗</a></div></footer>
- </article>`;
-}
-window.NAMUHX_DETAIL={render};
+  const originalUrl='https://www.namuhx.com/a1';
+  const css=`
+    .namuhx-original-detail{width:100%;background:#fff;color:#152539;margin:0 auto}
+    .namuhx-original-detail *{box-sizing:border-box}
+    .namuhx-original-detail .nhx-original-body{width:100%;margin:0;padding:0;line-height:0}
+    .namuhx-original-detail .nhx-original-body figure{display:block;margin:0;padding:0;border:0;line-height:0}
+    .namuhx-original-detail .nhx-original-body img{width:100%;max-width:100%;height:auto;display:block;margin:0;padding:0;border:0;object-fit:contain}
+    .namuhx-original-detail .nhx-original-source{font-size:12px;line-height:1.6;padding:12px 16px;background:#f4f8fa;color:#546477;text-align:center}
+    .namuhx-original-detail .nhx-original-source a{color:#215f74;text-decoration:underline}
+  `;
+  const escapeHtml=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  function render(){
+    return `<style>${css}</style><article class="namuhx-original-detail" aria-label="나무엑스 A1 제조사 원본 제품 상세페이지">
+      <div class="nhx-original-body">${images.map((img,i)=>`<figure><img src="${escapeHtml(img.src)}" alt="${escapeHtml(img.alt)}" loading="${i<3?'eager':'lazy'}" decoding="async"></figure>`).join('')}</div>
+      <div class="nhx-original-source">출처: 나무엑스 A1 공식 제품 상세 이미지 · <a href="${originalUrl}" target="_blank" rel="noopener noreferrer">원본 페이지 열기 ↗</a></div>
+    </article>`;
+  }
+  window.NAMUHX_DETAIL={render,source:originalUrl,imageCount:images.length};
 })();
