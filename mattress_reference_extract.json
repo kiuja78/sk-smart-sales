@@ -1,0 +1,79 @@
+{
+  "months": [
+    "2026-10",
+    "2026-11"
+  ],
+  "found": [
+    {
+      "month": "2026-10",
+      "apiId": 7956,
+      "title": "워커힐 클라우드 매트리스",
+      "model": "MAT-SM430",
+      "family": "cloud",
+      "officialDetailUrl": "https://ebookimage.skmagic.com/images/매트리스 모바일용/클라우드/MAT-SM430R(미리보기).html",
+      "officialUrl": "",
+      "cover": "https://ebookimage.skmagic.com/images/0801cloud/250731_MAT-SM430R.png",
+      "category": "매트리스"
+    },
+    {
+      "month": "2026-10",
+      "apiId": 7965,
+      "title": "워커힐 스위트 매트리스",
+      "model": "MAT-SM230",
+      "family": "sweet",
+      "officialDetailUrl": "https://ebookimage.skmagic.com/images/매트리스 모바일용/스위트/MAT-M230(미리보기).html",
+      "officialUrl": "",
+      "cover": "https://ebookimage.skmagic.com/images/01mat230/250812_MAT-M230.png",
+      "category": "매트리스"
+    },
+    {
+      "month": "2026-10",
+      "apiId": 7974,
+      "title": "워커힐 스탠다드 매트리스",
+      "model": "MAT-SM730",
+      "family": "standard",
+      "officialDetailUrl": "https://ebookimage.skmagic.com/images/매트리스 모바일용/스탠다듣/MAT-730(미리보기).html",
+      "officialUrl": "",
+      "cover": "https://ebookimage.skmagic.com/images/01mat730/250812_MAT-730.png",
+      "category": "매트리스"
+    },
+    {
+      "month": "2026-11",
+      "apiId": 7956,
+      "title": "워커힐 클라우드 매트리스",
+      "model": "MAT-SM430",
+      "family": "cloud",
+      "officialDetailUrl": "https://ebookimage.skmagic.com/images/매트리스 모바일용/클라우드/MAT-SM430R(미리보기).html",
+      "officialUrl": "",
+      "cover": "https://ebookimage.skmagic.com/images/0801cloud/250731_MAT-SM430R.png",
+      "category": "매트리스"
+    },
+    {
+      "month": "2026-11",
+      "apiId": 7965,
+      "title": "워커힐 스위트 매트리스",
+      "model": "MAT-SM230",
+      "family": "sweet",
+      "officialDetailUrl": "https://ebookimage.skmagic.com/images/매트리스 모바일용/스위트/MAT-M230(미리보기).html",
+      "officialUrl": "",
+      "cover": "https://ebookimage.skmagic.com/images/01mat230/250812_MAT-M230.png",
+      "category": "매트리스"
+    },
+    {
+      "month": "2026-11",
+      "apiId": 7974,
+      "title": "워커힐 스탠다드 매트리스",
+      "model": "MAT-SM730",
+      "family": "standard",
+      "officialDetailUrl": "https://ebookimage.skmagic.com/images/매트리스 모바일용/스탠다듣/MAT-730(미리보기).html",
+      "officialUrl": "",
+      "cover": "https://ebookimage.skmagic.com/images/01mat730/250812_MAT-730.png",
+      "category": "매트리스"
+    }
+  ],
+  "familyUrls": {
+    "cloud": "https://ebookimage.skmagic.com/images/매트리스 모바일용/클라우드/MAT-SM430R(미리보기).html",
+    "sweet": "https://ebookimage.skmagic.com/images/매트리스 모바일용/스위트/MAT-M230(미리보기).html",
+    "standard": "https://ebookimage.skmagic.com/images/매트리스 모바일용/스탠다듣/MAT-730(미리보기).html"
+  }
+}
