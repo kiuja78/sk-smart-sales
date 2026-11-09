@@ -1,0 +1,52 @@
+name: Extract official mattress details from calculator reference
+on:
+  push:
+    paths:
+      - '.github/workflows/extract-mattress-reference.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read published calculator archive and e-book links
+        run: |
+          python - <<'PY'
+          import requests,re,json
+          url='https://kiuja78.github.io/skmagic-product-info/data.js?reference=20261110'
+          t=requests.get(url,timeout=35).text
+          print('data bytes',len(t))
+          # Data is a JS variable assignment. Use Node to evaluate in a constrained process.
+          open('/tmp/mattress-reference-data.js','w').write(t)
+          PY
+          node <<'JS'
+          const fs=require('fs'),vm=require('vm');
+          const text=fs.readFileSync('/tmp/mattress-reference-data.js','utf8');
+          const window={},ctx={window};
+          vm.createContext(ctx);
+          vm.runInContext(text,ctx,{timeout:10000});
+          const archive=window.SK_MONTH_ARCHIVE||{};
+          let result={months:Object.keys(archive),found:[],familyUrls:{}};
+          for(const [month,snap] of Object.entries(archive)){
+            const list=snap.products||[];
+            for(const p of list){
+              if(p.category!=='매트리스'&&!/^MAT/i.test(p.model||''))continue;
+              const title=String(p.title||'');
+              const family=/클라우드/.test(title)?'cloud':/스위트/.test(title)?'sweet':/스탠다드/.test(title)?'standard':'other';
+              const entry={month,apiId:p.apiId,title:p.title,model:p.model,family,officialDetailUrl:p.officialDetailUrl||'',officialUrl:p.officialUrl||'',cover:p.cover||'',category:p.category};
+              if(family!=='other')result.found.push(entry);
+              if(family!=='other'&&p.officialDetailUrl)result.familyUrls[family]=result.familyUrls[family]||p.officialDetailUrl;
+            }
+          }
+          fs.writeFileSync('mattress_reference_extract.json',JSON.stringify(result,null,2));
+          console.log('matching',result.found.length,'urls',JSON.stringify(result.familyUrls));
+          JS
+      - name: Record public reference lookup
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add mattress_reference_extract.json
+          git commit -m 'Extract mattress references from SK calculator [skip ci]' || exit 0
+          git push
