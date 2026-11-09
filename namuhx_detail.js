@@ -247,11 +247,18 @@
       const [kind,label,left,top,width,height,url]=item;
       const style='left:'+left+'%;top:'+top+'%;width:'+width+'%;height:'+height+'%;';
       return kind==='link'
-        ? '<a class="nhx-hotspot" style="'+style+'" href="'+url+'" target="_blank" rel="noopener noreferrer" aria-label="'+label+'" title="'+label+'"></a>'
+        ? '<button type="button" class="nhx-hotspot" style="'+style+'" data-nhx-subdetail="'+(url.includes('all-in-1-filter')?'filter':url.includes('air-sensor')?'sensor':'care')+'" aria-label="'+label+'" title="'+label+'"></button>'
         : '<button type="button" class="nhx-hotspot" style="'+style+'" data-nhx-video="'+label+'" aria-label="'+label+' 안내" title="'+label+' 안내"></button>';
     }).join('');
   }
   document.addEventListener('click',function(event){
+    const openButton=event.target.closest('.namuhx-original-detail [data-nhx-subdetail]');
+    if(openButton){
+      event.preventDefault();event.stopPropagation();
+      const key=openButton.getAttribute('data-nhx-subdetail');
+      if(window.NAMUHX_SUBDETAIL?.open)window.NAMUHX_SUBDETAIL.open(key);
+      return;
+    }
     const btn=event.target.closest('.namuhx-original-detail [data-nhx-video]');
     if(!btn)return;
     event.preventDefault();
