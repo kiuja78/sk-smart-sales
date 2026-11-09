@@ -1,0 +1,41 @@
+name: Inspect NAMUHX clickable detail areas
+on:
+  push:
+    paths: ['.github/workflows/inspect-namuhx-clicks.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Identify official detail destinations
+        run: |
+          python -m pip -q install requests beautifulsoup4
+          python - <<'PY'
+          import requests,re,json
+          from bs4 import BeautifulSoup
+          url='https://www.namuhx.com/a1'
+          s=requests.Session()
+          res=s.get(url,timeout=25,headers={'User-Agent':'Mozilla/5.0'})
+          soup=BeautifulSoup(res.text,'html.parser')
+          detail=[]
+          patterns=['영상으로','필터 자세히','에어센서 자세히','자세히 보기','s02_08','s03_02','s08_04']
+          for pat in patterns:
+            for m in list(re.finditer(re.escape(pat),res.text,re.I))[:5]:
+              detail.append({'term':pat,'context':res.text[max(0,m.start()-550):m.end()+850]})
+          links=[{'href':x.get('href'),'text':x.get_text(' ',strip=True)[:120]} for x in soup.select('a[href]')]
+          buttons=[{'text':x.get_text(' ',strip=True)[:130],'html':str(x)[:900]} for x in soup.select('button') if x.get_text(' ',strip=True)]
+          media=re.findall(r'https?[^"\\s]+(?:mp4|youtube|youtu.be|vimeo)[^"\\s]*',res.text,re.I)
+          out={'status':res.status_code,'links':links[:300],'buttons':buttons[:80],'matchingContexts':detail,'videoMatches':media[:35]}
+          open('namuhx_click_targets.json','w').write(json.dumps(out,ensure_ascii=False,indent=2))
+          print('links',len(links),'buttons',len(buttons),'matches',len(detail),'video',len(media))
+          PY
+      - name: Commit public-site analysis
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add namuhx_click_targets.json
+          git commit -m 'Inspect official NAMUHX click destinations [skip ci]' || exit 0
+          git push
