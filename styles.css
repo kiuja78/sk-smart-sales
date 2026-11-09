@@ -625,3 +625,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .mattress-price-choice .mattress-half{background:#fff0e5;color:#b45522;font-size:12px;font-weight:800;padding:4px 9px;border-radius:6px}
 .mattress-choice-type{font-size:14px;font-weight:800}
 @media(max-width:520px){.mattress-price-summary{grid-template-columns:1fr 1fr}.mattress-price-summary>div{padding:12px}.mattress-family-buttons button,.mattress-filter-buttons button{padding:10px 13px}}
+
+
+.mattress-family-buttons button:disabled{cursor:not-allowed;opacity:.48;background:#f2f2f2;color:#82919b;border-style:dashed}
+.price-friendly-select{width:100%;max-width:100%;background:white;border:1px solid #c2d2df;color:#254b61;font-size:15px;font-weight:750;border-radius:9px;padding:12px;cursor:pointer}
+.price-friendly-select:focus-visible{outline:2px solid #258b9f;outline-offset:2px}
