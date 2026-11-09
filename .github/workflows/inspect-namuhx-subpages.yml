@@ -1,0 +1,39 @@
+name: Inspect NAMUHX product subpage visuals
+on:
+  push:
+    paths: ['.github/workflows/inspect-namuhx-subpages.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Capture official product-page asset references
+        shell: bash
+        run: |
+          python -m pip -q install requests beautifulsoup4
+          python - <<'PY'
+          import requests,json,re
+          from bs4 import BeautifulSoup
+          from urllib.parse import urljoin
+          sources={'filter':'https://www.namuhx.com/store/all-in-1-filter','sensor':'https://www.namuhx.com/air-sensor','care':'https://www.namuhx.com/subscription/safe-care'}
+          result={}
+          for key,url in sources.items():
+            try:
+              r=requests.get(url,timeout=30,headers={'User-Agent':'Mozilla/5.0'})
+              soup=BeautifulSoup(r.text,'html.parser')
+              pictures=[{'src':urljoin(url,x.get('src') or ''),'alt':x.get('alt',''),'w':x.get('width'),'h':x.get('height'),'parent':x.parent.name if x.parent else ''} for x in soup.select('img[src]')]
+              result[key]={'url':url,'status':r.status_code,'title':soup.title.get_text(' ',strip=True) if soup.title else '', 'images':pictures,'html_length':len(r.content)}
+            except Exception as ex:result[key]={'url':url,'error':str(ex)}
+          open('namuhx_subpages.json','w').write(json.dumps(result,ensure_ascii=False,indent=2))
+          for k,v in result.items():print(k,v.get('status'),len(v.get('images',[])))
+          PY
+      - name: Commit inspected image sources
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add namuhx_subpages.json
+          git commit -m 'Inspect original NAMUHX subpage details [skip ci]' || exit 0
+          git push
