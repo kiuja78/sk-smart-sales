@@ -281,15 +281,38 @@ function showOfficialEbook(p){
   const link=officialEbookUrl(p);
   if(!link)return '';
   if(p?.id==='namuhx'){
+    // 외부 iframe은 공식몰의 헤더, 메뉴, 주문 영역까지 그대로 보여주므로
+    // 검증된 A1 핵심 사양·기능을 내부 전용 설명 화면으로 제공합니다.
     const brandUrl='https://www.namuhx.com/a1';
-    const src=productImageSource(p);
-    const images=(src.images||[]).filter(x=>/^https:\/\/godomall-storage\.cdn-nhncommerce\.com\//i.test(x));
-    return `<section class="ebook-reader" aria-label="나무엑스 A1 공식 상세정보">
-      <header class="ebook-reader-header"><div><span class="ebook-kicker">NAMUHX · OFFICIAL</span><h3>나무엑스 A1 공식 상세페이지</h3><p>${safe(p.name)} <strong>${safe(p.model)}</strong></p></div><a class="ebook-direct-link" href="${brandUrl}" target="_blank" rel="noopener noreferrer">원본 페이지 열기 ↗</a></header>
-      <div class="ebook-browser-toolbar"><span class="ebook-live-dot"></span><span>나무엑스 공식 사이트</span><span class="ebook-frame-domain">namuhx.com</span></div>
-      <div class="ebook-reading-area"><iframe class="ebook-live-frame" title="나무엑스 A1 공식 상세페이지" src="${brandUrl}" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-      <div class="ebook-viewer-tools"><span>공식 사이트에서 화면 삽입을 차단하면 원본 페이지 열기를 이용하세요.</span>${images.length?'<button class="ebook-images-toggle" type="button" data-ebook-images aria-expanded="false">공식 제품 이미지로 보기 ▾</button>':''}</div>
-      <div class="ebook-inline-images" id="ebookInlineImages" hidden>${images.length?renderEbookImageStack(images.map((img,i)=>({src:img,title:'나무엑스 공식 이미지 '+(i+1)}))):''}</div>
+    const photo=productImageCandidates(p).find(src=>/^https:\/\//i.test(src))||'';
+    const features=[
+      ['스마트 이동청정','오염된 공간을 인지해 스스로 이동하고 청정한 뒤 스테이션으로 복귀합니다.','에어솔루션'],
+      ['맞춤 청정 모드','이동청정·고정청정·스캐닝 청정·All Time 모드를 지원합니다. 일부 기능에는 별매 에어센서가 필요합니다.','에어솔루션'],
+      ['세이프 케어','집안 순찰과 움직임 감지를 통해 공간의 상태를 살펴봅니다. 에스원 긴급출동은 별도 유료 서비스 조건에 따릅니다.','안전'],
+      ['라이브 뷰','원하는 곳으로 이동해 실시간 영상 확인과 양방향 대화, 녹화·캡처 기능을 이용할 수 있습니다.','안전'],
+      ['바이탈사인 체크','비접촉 방식으로 약 10초 동안 5가지 생체 신호를 확인하는 기능입니다. 의료 진단을 대체하지 않습니다.','헬스케어'],
+      ['마이 헬스케어','하이나무 앱에서 측정 기록을 활용한 맞춤형 건강 관리 상담을 제공합니다.','헬스케어'],
+      ['AI 음성 대화','기기 제어는 온디바이스 음성 인식을 활용하고, 일상적인 대화와 정보 탐색에는 Gemini 기반 기능을 활용합니다.','AI'],
+      ['팔로우미','음성 명령으로 사용자를 따라 이동하며 필요한 공간에서 청정을 돕습니다.','AI'],
+      ['AI 컴패니언','복약 알림·웨이크업·웰컴·릴랙스 등 일상 케어 기능을 제공합니다.','라이프케어']
+    ];
+    return `<section class="ebook-reader namuhx-reader" aria-label="나무엑스 A1 제품 상세정보">
+      <header class="ebook-reader-header"><div><span class="ebook-kicker">NAMUHX A1 · PRODUCT GUIDE</span><h3>나무엑스 A1 상세정보</h3><p>공식 제품 소개 자료를 바탕으로 정리한 메뉴 없는 제품 설명 화면</p></div><a class="ebook-direct-link" href="${brandUrl}" target="_blank" rel="noopener noreferrer">원본 페이지 열기 ↗</a></header>
+      <div style="padding:clamp(16px,4vw,38px);background:var(--card,#fff);color:inherit">
+        <div style="display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;padding:22px 12px 30px;border-bottom:1px solid #dce1eb">
+          ${photo?`<img src="${safe(photo)}" alt="나무엑스 A1 실제 제품 사진" loading="lazy" style="width:min(260px,100%);max-height:320px;object-fit:contain" />`:''}
+          <div style="flex:1;min-width:220px;max-width:480px"><span style="font-size:12px;font-weight:800;letter-spacing:.12em;color:#56808a">WELLNESS ROBOTICS</span><h3 style="font-size:clamp(26px,4vw,38px);margin:12px 0">나무엑스 A1</h3><p style="line-height:1.8">스스로 이동해 공기를 청정하고, 생활 안전·건강·AI 편의 기능을 함께 제공하는 웰니스 로봇</p><p style="font-size:13px;opacity:.7">모델 WRBA1M10KRNG / WRBA1M10KRDW</p></div>
+        </div>
+        <h3 style="font-size:23px;margin:34px 0 18px">주요 기능</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:13px">
+          ${features.map(([name,description,type])=>`<article style="border:1px solid #dce1eb;border-radius:15px;padding:18px"><small style="font-size:11px;color:#527a84;font-weight:800">${safe(type)}</small><h4 style="font-size:17px;margin:8px 0">${safe(name)}</h4><p style="font-size:14px;line-height:1.75;margin:0">${safe(description)}</p></article>`).join('')}
+        </div>
+        <h3 style="font-size:23px;margin:34px 0 16px">제품 규격</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+          ${[['표준 사용면적','66.0㎡ (20평형)'],['제품 크기','376 × 376 × 650~753mm'],['제품 중량','14kg'],['정격 소비전력','156W'],['충전 시간','급속 150분 / 완속 240분'],['배터리','18.2V · 9.4Ah']].map(([k,v])=>`<div style="padding:15px;border-radius:12px;background:rgba(118,145,171,.09)"><div style="font-size:12px;opacity:.75">${k}</div><strong style="display:block;margin-top:5px;font-size:15px">${v}</strong></div>`).join('')}
+        </div>
+        <p style="font-size:12px;line-height:1.75;margin:20px 0 0;opacity:.75">제품 기능, 서비스 조건 및 성능시험 기준의 자세한 사항은 나무엑스 공식 원본 페이지에서 확인해 주세요. 일부 기능은 별도 서비스 가입 또는 부속품이 필요합니다.</p>
+      </div>
       <details class="ebook-spec-support"><summary>제품 주요 사양·상담 메모 확인</summary>${renderProductFactDetails(p)}</details>
     </section>`;
   }
