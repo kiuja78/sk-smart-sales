@@ -265,6 +265,7 @@ function officialEbookUrl(p){
     (snap?.products||[]).find(item=>normModel(item.model)===matchKey&&item.officialDetailUrl)
   ).find(Boolean);
   const url=String(officialInfo(p).ebookDetailUrl||p?.ebookDetailUrl||fromMonthly?.officialDetailUrl||'').trim();
+  if(p?.id==='namuhx')return 'https://www.namuhx.com/a1';
   if(!url)return '';
   try{
     const u=new URL(url);
@@ -279,6 +280,19 @@ function officialEbookUrl(p){
 function showOfficialEbook(p){
   const link=officialEbookUrl(p);
   if(!link)return '';
+  if(p?.id==='namuhx'){
+    const brandUrl='https://www.namuhx.com/a1';
+    const src=productImageSource(p);
+    const images=(src.images||[]).filter(x=>/^https:\/\/godomall-storage\.cdn-nhncommerce\.com\//i.test(x));
+    return `<section class="ebook-reader" aria-label="나무엑스 A1 공식 상세정보">
+      <header class="ebook-reader-header"><div><span class="ebook-kicker">NAMUHX · OFFICIAL</span><h3>나무엑스 A1 공식 상세페이지</h3><p>${safe(p.name)} <strong>${safe(p.model)}</strong></p></div><a class="ebook-direct-link" href="${brandUrl}" target="_blank" rel="noopener noreferrer">원본 페이지 열기 ↗</a></header>
+      <div class="ebook-browser-toolbar"><span class="ebook-live-dot"></span><span>나무엑스 공식 사이트</span><span class="ebook-frame-domain">namuhx.com</span></div>
+      <div class="ebook-reading-area"><iframe class="ebook-live-frame" title="나무엑스 A1 공식 상세페이지" src="${brandUrl}" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      <div class="ebook-viewer-tools"><span>공식 사이트에서 화면 삽입을 차단하면 원본 페이지 열기를 이용하세요.</span>${images.length?'<button class="ebook-images-toggle" type="button" data-ebook-images aria-expanded="false">공식 제품 이미지로 보기 ▾</button>':''}</div>
+      <div class="ebook-inline-images" id="ebookInlineImages" hidden>${images.length?renderEbookImageStack(images.map((img,i)=>({src:img,title:'나무엑스 공식 이미지 '+(i+1)}))):''}</div>
+      <details class="ebook-spec-support"><summary>제품 주요 사양·상담 메모 확인</summary>${renderProductFactDetails(p)}</details>
+    </section>`;
+  }
   const media=(p.officialMedia||[]).filter(x=>/^https:\/\/static\.skmagic\.com\/image\/editor\//i.test(x.src||''));
   return `<section class="ebook-reader" aria-label="${safe(p.name)} 제조사 e-book 상세정보">
     <header class="ebook-reader-header"><div><span class="ebook-kicker">SK MAGIC · OFFICIAL E-BOOK</span><h3>제조사 공식 상세페이지</h3><p>${safe(p.name)} <strong>${safe(p.model)}</strong></p></div><a class="ebook-direct-link" href="${safe(link)}" target="_blank" rel="noopener noreferrer">원본 페이지 열기 ↗</a></header>
