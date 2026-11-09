@@ -313,6 +313,7 @@ function openEbookImageMode(){
   if(!area||!btn)return;
   area.hidden=!area.hidden;btn.setAttribute('aria-expanded',String(!area.hidden));
   if(area.hidden)return;
+  if(detail.id==='namuhx')return;
   const originalMedia=(detail.officialMedia||[]).filter(x=>/^https:\/\/static\.skmagic\.com\/image\/editor\//i.test(x.src||''));
   if(originalMedia.length)return;
   if(ebookImagesCache[detail.id]){area.innerHTML=renderEbookImageStack(ebookImagesCache[detail.id]);return;}
