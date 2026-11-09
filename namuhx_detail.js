@@ -228,11 +228,69 @@
   }
 ];
   const originalUrl='https://www.namuhx.com/a1';
+
+  // Official website image-relative click regions. Keep source artwork unchanged.
+  const clickRegions={
+    s02_01:[['video','에어솔루션 영상',31.18,60.65,37.65,6.05]],
+    s02_06:[['link','필터 자세히 보기',4.71,69.71,90.59,8.78,'https://www.namuhx.com/store/all-in-1-filter']],
+    s02_08:[['video','청정 속도 비교 영상',31.18,27.54,37.65,9.43]],
+    s02_09:[['link','에어센서 자세히 보기',4.71,52.36,90.59,9.88,'https://www.namuhx.com/air-sensor']],
+    s03_01:[['video','세이프 케어 영상',31.18,55.34,37.65,6.89]],
+    s03_03:[['link','세이프 케어 자세히 보기',4.71,76.31,90.59,11.22,'https://www.namuhx.com/subscription/safe-care']],
+    s04_01:[['video','라이브 뷰 영상',31.18,69.71,37.65,6.95]],
+    s05_01:[['video','바이탈사인 체크 영상',31.18,57.66,37.65,5.86]]
+  };
+  function hotspotHtml(src){
+    const match=src.match(/\/(s\d\d_\d\d)\./);
+    const list=match?clickRegions[match[1]]||[]:[];
+    return list.map(item=>{
+      const [kind,label,left,top,width,height,url]=item;
+      const style='left:'+left+'%;top:'+top+'%;width:'+width+'%;height:'+height+'%;';
+      return kind==='link'
+        ? '<a class="nhx-hotspot" style="'+style+'" href="'+url+'" target="_blank" rel="noopener noreferrer" aria-label="'+label+'" title="'+label+'"></a>'
+        : '<button type="button" class="nhx-hotspot" style="'+style+'" data-nhx-video="'+label+'" aria-label="'+label+' 안내" title="'+label+' 안내"></button>';
+    }).join('');
+  }
+  document.addEventListener('click',function(event){
+    const btn=event.target.closest('.namuhx-original-detail [data-nhx-video]');
+    if(!btn)return;
+    event.preventDefault();
+    const name=btn.getAttribute('data-nhx-video')||'영상';
+    const dialog=document.createElement('dialog');
+    dialog.className='nhx-video-dialog';
+    const heading=document.createElement('h3');
+    heading.textContent=name;
+    const description=document.createElement('p');
+    description.textContent='나무엑스 공식 홈페이지에서도 이 영상 버튼은 현재 비활성화되어 있습니다. 재생 가능한 개별 영상 주소가 확인되지 않아 임의의 영상으로 연결하지 않았습니다.';
+    const links=document.createElement('div');
+    links.className='nhx-dialog-actions';
+    const official=document.createElement('a');
+    official.href='https://www.youtube.com/@namuhx_official';
+    official.target='_blank';official.rel='noopener noreferrer';
+    official.textContent='나무엑스 공식 영상 채널 ↗';
+    const close=document.createElement('button');
+    close.type='button';close.textContent='닫기';
+    close.onclick=()=>dialog.close();
+    links.append(official,close);
+    dialog.append(heading,description,links);
+    document.body.append(dialog);
+    dialog.addEventListener('close',()=>dialog.remove(),{once:true});
+    if(dialog.showModal)dialog.showModal();else dialog.setAttribute('open','');
+  });
+
   const css=`
     .namuhx-original-detail{width:100%;background:#fff;color:#152539;margin:0 auto}
     .namuhx-original-detail *{box-sizing:border-box}
     .namuhx-original-detail .nhx-original-body{width:100%;margin:0;padding:0;line-height:0}
-    .namuhx-original-detail .nhx-original-body figure{display:block;margin:0;padding:0;border:0;line-height:0}
+    .namuhx-original-detail .nhx-original-body figure{position:relative;display:block;margin:0;padding:0;border:0;line-height:0}
+    .namuhx-original-detail .nhx-hotspot{position:absolute;display:block;z-index:3;cursor:pointer;background:transparent;border:0;padding:0;border-radius:8px}
+    .namuhx-original-detail .nhx-hotspot:hover{outline:3px solid rgba(112,220,206,.8)}
+    .namuhx-original-detail .nhx-hotspot:focus-visible{outline:3px solid #16a89a}
+    .nhx-video-dialog{position:fixed;inset:0;margin:auto;max-width:min(510px,calc(100vw - 30px));padding:24px;border:0;border-radius:16px;background:white;color:#21354a;line-height:1.7;box-shadow:0 15px 65px #0006;z-index:2147483646}
+    .nhx-video-dialog::backdrop{background:rgba(0,0,0,.72)}
+    .nhx-video-dialog h3{font-size:20px;margin:0 0 14px}
+    .nhx-dialog-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    .nhx-dialog-actions a,.nhx-dialog-actions button{padding:10px 14px;border:0;border-radius:8px;background:#176a75;color:white;font-size:14px;font-weight:700;text-decoration:none;cursor:pointer}
     .namuhx-original-detail .nhx-original-body img{width:100%;max-width:100%;height:auto;display:block;margin:0;padding:0;border:0;object-fit:contain}
     .namuhx-original-detail .nhx-original-source{font-size:12px;line-height:1.6;padding:12px 16px;background:#f4f8fa;color:#546477;text-align:center}
     .namuhx-original-detail .nhx-original-source a{color:#215f74;text-decoration:underline}
@@ -240,7 +298,7 @@
   const escapeHtml=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
   function render(){
     return `<style>${css}</style><article class="namuhx-original-detail" aria-label="나무엑스 A1 제조사 원본 제품 상세페이지">
-      <div class="nhx-original-body">${images.map((img,i)=>`<figure><img src="${escapeHtml(img.src)}" alt="${escapeHtml(img.alt)}" loading="${i<3?'eager':'lazy'}" decoding="async"></figure>`).join('')}</div>
+      <div class="nhx-original-body">${images.map((img,i)=>`<figure><img src="${escapeHtml(img.src)}" alt="${escapeHtml(img.alt)}" loading="${i<3?'eager':'lazy'}" decoding="async">${hotspotHtml(img.src)}</figure>`).join('')}</div>
       <div class="nhx-original-source">출처: 나무엑스 A1 공식 제품 상세 이미지 · <a href="${originalUrl}" target="_blank" rel="noopener noreferrer">원본 페이지 열기 ↗</a></div>
     </article>`;
   }
