@@ -9,14 +9,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="description" content="SK매직 제품 정보, 실제 고객 후기, 월별 가격과 수수료를 확인하는 스마트 세일즈 어시스턴트">
+  <meta name="description" content="SK매직 제품 정보, 실제 고객 후기, 월별 구독료를 확인하는 스마트 세일즈 어시스턴트">
   <title>SK 스마트 세일즈 어시스턴트</title>
   <link rel="icon" href="favicon.ico?v=080" sizes="any">
   <link rel="icon" href="icons/favicon-32.png?v=080" type="image/png" sizes="32x32">
   <link rel="icon" href="icons/icon-192.png?v=080" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=080" sizes="180x180">
   <link rel="manifest" href="manifest.webmanifest?v=080">
-  <link rel="stylesheet" href="styles.css?v=091">
+  <link rel="stylesheet" href="styles.css?v=083">
 </head>
 <body>
 <div class="layout" id="appLayout">
@@ -34,9 +34,9 @@
   <main class="main">
     <header class="topbar">
       <div class="topbar-heading"><button class="sidebar-toggle" id="sidebarToggle" type="button" aria-controls="appSidebar" aria-expanded="true" aria-label="왼쪽 메뉴 접기" title="메뉴 접기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-        <div class="title-stack"><div class="eyebrow" id="crumb">SK MAGIC · SMART SALES</div><div class="page-title" id="pageTitle">SK 스마트 세일즈 어시스턴트</div><p class="header-subtitle" id="pageSubtitle">제품 설명, 실사용 후기, 월별 가격과 수수료를 한눈에.</p></div>
+        <div class="title-stack"><div class="eyebrow" id="crumb">SK MAGIC · SMART SALES</div><div class="page-title" id="pageTitle">SK 스마트 세일즈 어시스턴트</div><p class="header-subtitle" id="pageSubtitle">제품 설명, 실사용 후기, 월별 구독료를 한눈에.</p></div>
       </div>
-      <div class="header-actions"><label class="month-selector-label" for="globalMonth"><span>가격 기준월</span><select id="globalMonth" aria-label="가격 기준월"><option value="2026-11">2026년 11월</option></select></label><span class="draft-pill">v0.8.2</span><button class="outline-btn" id="resetView">처음 화면</button></div>
+      <div class="header-actions"><label class="month-selector-label" for="globalMonth"><span>가격 기준월</span><select id="globalMonth" aria-label="가격 기준월"><option value="2026-11">2026년 11월</option></select></label><span class="draft-pill">v0.8.3</span><button class="outline-btn" id="resetView">처음 화면</button></div>
     </header>
     <section class="screen active" id="libraryView">
       <div class="stats" id="statsBar"></div>
@@ -66,7 +66,7 @@
 </div>
 <div class="calc-layer" id="commissionLayer" aria-hidden="true"><div class="calc-backdrop" data-commission-close></div><section class="calc-dialog" role="dialog" aria-modal="true" aria-labelledby="calcTitle"><header class="calc-header"><div><small>SALES COMMISSION ESTIMATE</small><h2 id="calcTitle">예상 판매수수료</h2><p id="calcContext"></p></div><button type="button" class="calc-close" data-commission-close aria-label="수수료 계산 닫기">✕</button></header><div id="calcBody"></div></section></div><div class="toast" id="toast"></div>
 <script src="data.js?v=082"></script><script src="prices.js?v=072"></script><script src="mattress_prices.js?v=081"></script><script src="official_links.js?v=079"></script>
-<script src="config.js?v=072"></script><script src="image_sources.js?v=082"></script><script src="namuhx_rates.js?v=1"></script><script src="namuhx_subdetails.js?v=1"></script><script src="namuhx_detail.js?v=4"></script><script src="app.js?v=091"></script>
+<script src="config.js?v=072"></script><script src="image_sources.js?v=082"></script><script src="app.js?v=083"></script>
 <script>
 (function(){
   var script=document.createElement('script');

@@ -596,37 +596,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .image-failure-label{position:absolute;z-index:3;bottom:18px;left:16px;right:16px;font-size:11px;font-weight:700;color:#597488;background:#fff;border:1px dashed #becbd7;padding:10px;border-radius:10px;text-align:center}
 .product-gallery-main .image-failure-label{position:absolute;z-index:5;bottom:40%;left:10%;right:10%}
 
-
-/* Mattress family selector and simplified source-rate selection */
-.mattress-family-switch{margin:16px 0 20px;padding:19px;border:1px solid #cddfe9;border-radius:16px;background:linear-gradient(120deg,#eef8fa,#f6f7ff)}
-.mattress-family-heading{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 15px;align-items:center;margin-bottom:12px}
-.mattress-family-heading strong{font-size:18px;color:#193f59}
-.mattress-family-heading small{color:#637c8e;font-size:12px}
-.mattress-family-buttons,.mattress-filter-buttons{display:flex;gap:8px;flex-wrap:wrap}
-.mattress-family-buttons button,.mattress-filter-buttons button{background:#fff;color:#27465d;border:1px solid #c8d7e3;border-radius:11px;padding:11px 18px;cursor:pointer;font-size:14px;font-weight:800}
-.mattress-family-buttons button.selected,.mattress-filter-buttons button.active{background:#173b63;color:white;border-color:#173b63;box-shadow:0 3px 12px #173b6320}
-.mattress-prices-simple{margin-top:15px}
-.mattress-prices-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:8px 0 20px;align-items:center}
-.mattress-prices-head strong{display:block;font-size:22px;color:#203d56}
-.mattress-prices-head small{display:block;margin-top:6px;color:#758396}
-.mattress-price-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:0 0 19px}
-.mattress-filter-field{border:1px solid #dfe8ee;background:#f7fafc;padding:15px;border-radius:12px}
-.mattress-filter-field>strong{display:block;margin-bottom:12px;color:#344b60;font-size:14px}
-.mattress-price-summary{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
-.mattress-price-summary>div{padding:18px;background:#f1f6fa;border-radius:12px;display:flex;flex-direction:column;gap:5px}
-.mattress-price-summary span{font-size:13px;color:#577189}
-.mattress-price-summary del{font-size:20px;color:#8b969d}
-.mattress-price-summary strong{font-size:clamp(24px,4vw,34px);color:#16365b}
-.mattress-customer-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px}
-.mattress-price-choice{text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:9px;border:1px solid #bfcfe1;border-radius:14px;padding:18px;background:white;color:#23405b;cursor:pointer;min-height:140px}
-.mattress-price-choice:hover,.mattress-price-choice:focus-visible{border-color:#27849f;background:#eff8fb;box-shadow:0 5px 16px #203c4a18}
-.mattress-price-choice strong{font-size:clamp(21px,3vw,29px);font-weight:900;color:#1b435f}
-.mattress-price-choice small{color:#5b7485;font-size:12px;line-height:1.5}
-.mattress-price-choice .mattress-half{background:#fff0e5;color:#b45522;font-size:12px;font-weight:800;padding:4px 9px;border-radius:6px}
-.mattress-choice-type{font-size:14px;font-weight:800}
-@media(max-width:520px){.mattress-price-summary{grid-template-columns:1fr 1fr}.mattress-price-summary>div{padding:12px}.mattress-family-buttons button,.mattress-filter-buttons button{padding:10px 13px}}
-
-
-.mattress-family-buttons button:disabled{cursor:not-allowed;opacity:.48;background:#f2f2f2;color:#82919b;border-style:dashed}
-.price-friendly-select{width:100%;max-width:100%;background:white;border:1px solid #c2d2df;color:#254b61;font-size:15px;font-weight:750;border-radius:9px;padding:12px;cursor:pointer}
-.price-friendly-select:focus-visible{outline:2px solid #258b9f;outline-offset:2px}
+/* v0.8.3: customer-facing monthly subscription prices never show commission hints. */
+.price-select{display:inline-flex;justify-content:center;align-items:center;min-height:38px;text-decoration:none}
+.price-select span{display:none!important}
+@media(max-width:760px){
+ .price-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+ .price-select{min-height:42px}
+}
